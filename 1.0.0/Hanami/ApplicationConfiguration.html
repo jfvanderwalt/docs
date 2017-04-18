@@ -1,0 +1,5058 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Class: Hanami::ApplicationConfiguration
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Class: Hanami::ApplicationConfiguration
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Hanami::ApplicationConfiguration</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-1.0.0/lib/hanami/application_configuration.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Configuration for a Hanami application</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#adapter-instance_method" title="#adapter (instance method)">#<strong>adapter</strong>(*options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adapter configuration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assets-instance_method" title="#assets (instance method)">#<strong>assets</strong>  &#x21d2; Hanami::Config::Assets </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The application will serve the static assets under these directories.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#body_parsers-instance_method" title="#body_parsers (instance method)">#<strong>body_parsers</strong>(*parsers)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Body parsing configuration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#controller-instance_method" title="#controller (instance method)">#<strong>controller</strong>  &#x21d2; Hanami::Config::FrameworkConfiguration </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::Controller’s configuration and applies them when the application is loaded.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#controller_pattern-instance_method" title="#controller_pattern (instance method)">#<strong>controller_pattern</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a relative pattern to find controllers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cookies-instance_method" title="#cookies (instance method)">#<strong>cookies</strong>(options = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Configure cookies Enable cookies (disabled by default).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_request_format-instance_method" title="#default_request_format (instance method)">#<strong>default_request_format</strong>(format = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Set a format as default fallback for all the requests without a strict requirement for the mime type.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_response_format-instance_method" title="#default_response_format (instance method)">#<strong>default_response_format</strong>(format = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Set a format to be used for all responses regardless of the request type.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#force_ssl-instance_method" title="#force_ssl (instance method)">#<strong>force_ssl</strong>(value = nil)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Force ssl redirection if http scheme is set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_exceptions-instance_method" title="#handle_exceptions (instance method)">#<strong>handle_exceptions</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Decide if handle exceptions with an HTTP status or let them uncaught.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#host-instance_method" title="#host (instance method)">#<strong>host</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The URI host for this application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#layout-instance_method" title="#layout (instance method)">#<strong>layout</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A Hanami::Layout for this application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_paths-instance_method" title="#load_paths (instance method)">#<strong>load_paths</strong>  &#x21d2; Hanami::Config::LoadPaths </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Application load paths The application will recursively load all the Ruby files under these paths.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#middleware-instance_method" title="#middleware (instance method)">#<strong>middleware</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Application middleware.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#model-instance_method" title="#model (instance method)">#<strong>model</strong>  &#x21d2; Hanami::Config::FrameworkConfiguration </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::Model’s configuration and applies them when the application is loaded.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port-instance_method" title="#port (instance method)">#<strong>port</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The URI port for this application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#root-instance_method" title="#root (instance method)">#<strong>root</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The root of the application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#routes-instance_method" title="#routes (instance method)">#<strong>routes</strong>(path = nil, &amp;blk)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Application routes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scheme-instance_method" title="#scheme (instance method)">#<strong>scheme</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The URI scheme for this application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#security-instance_method" title="#security (instance method)">#<strong>security</strong>  &#x21d2; Hanami::Config::Security </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the security policy.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sessions-instance_method" title="#sessions (instance method)">#<strong>sessions</strong>(adapter = nil, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Configure sessions Enable sessions (disabled by default).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ssl%3F-instance_method" title="#ssl? (instance method)">#<strong>ssl?</strong>  &#x21d2; FalseClass, TrueClass </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if the application uses SSL.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#templates-instance_method" title="#templates (instance method)">#<strong>templates</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Templates root.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#view-instance_method" title="#view (instance method)">#<strong>view</strong>  &#x21d2; Hanami::Config::FrameworkConfiguration </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::View’s configuration and applies them when the application is loaded.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#view_pattern-instance_method" title="#view_pattern (instance method)">#<strong>view_pattern</strong>(value = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a relative pattern to find views:.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="adapter-instance_method">
+  
+    
+      <span class="overload">#<strong>adapter</strong>(options)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>adapter</strong>  &#x21d2; <tt>Hash</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Adapter configuration.
+The application will instantiate adapter instance based on this configuration.</p>
+
+<p>The given options must have key pairs :type and :uri
+If it isn’t, at the runtime the framework will raise a
+<code>ArgumentError</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_adapter'>adapter</span> <span class='symbol'>:sql</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sqlite3://uri</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_adapter'>adapter</span>
+  <span class='comment'># =&gt; [:sql, &#39;sqlite3://uri&#39;]</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>adapter</strong>(options)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given type and uri</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a set of options for adapter</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>adapter</strong>  &#x21d2; <tt>Hash</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>adapter options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#adapter</li>
+    
+      <li><a href="http://rdoc.info/gems/hanami-model/Hanami/Model/Configuration:adapter" target="_parent" title="http://rdoc.info/gems/hanami-model/Hanami/Model/Configuration:adapter">http://rdoc.info/gems/hanami-model/Hanami/Model/Configuration:adapter</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L726" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_adapter'>adapter</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@adapter</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@adapter</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assets-instance_method">
+  
+    #<strong>assets</strong>  &#x21d2; <tt>Hanami::Config::Assets</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The application will serve the static assets under these directories.</p>
+
+<p>By default it’s equal to the <code>public/</code> directory under the application
+<code>root</code>.</p>
+
+<p>Otherwise, you can add different relatives paths under <code>root</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_assets'>assets</span>
+  <span class='comment'># =&gt; #&lt;Pathname:/root/path/public&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Adding new assets paths</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_assets'>assets</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_sources'>sources</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span>
+          <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vendor/assets</span><span class='tstring_end'>&#39;</span></span>
+        <span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_assets'>assets</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Assets @root=#&lt;Pathname:/root/path/assets&gt;, @paths=[&quot;public&quot;]&gt;</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hanami::Config::Assets</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>assets root</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L334" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_assets'>assets</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@assets</span>
+    <span class='ivar'>@assets</span><span class='period'>.</span><span class='id identifier rubyid___add'>__add</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@assets</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>FrameworkConfiguration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="body_parsers-instance_method">
+  
+    
+      <span class="overload">#<strong>body_parsers</strong>(parsers)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>body_parsers</strong>  &#x21d2; <tt>Array</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Body parsing configuration.</p>
+
+<p>Specify a set of parsers for specific mime types that your application will use. This method will
+return the application’s parsers which you can use to add existing and new custom parsers for your
+application to use.</p>
+
+<p>By default it’s an empty <code>Array</code></p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_body_parsers'>body_parsers</span>
+  <span class='comment'># =&gt; []</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_body_parsers'>body_parsers</span> <span class='symbol'>:json</span><span class='comma'>,</span> <span class='const'>XmlParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_body_parsers'>body_parsers</span>
+  <span class='comment'># =&gt; [:json, XmlParser.new]</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting a new value after one is set.</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_body_parsers'>body_parsers</span> <span class='symbol'>:json</span>
+      <span class='id identifier rubyid_body_parsers'>body_parsers</span> <span class='const'>XmlParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_body_parsers'>body_parsers</span>
+  <span class='comment'># =&gt; [XmlParser.new]</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>body_parsers</strong>(parsers)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Specify a set of body parsers.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>parsers</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the body parser definitions</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>body_parsers</strong>  &#x21d2; <tt>Array</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the set of parsers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L652" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_body_parsers'>body_parsers</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parsers'>parsers</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_parsers'>parsers</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='ivar'>@body_parsers</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@body_parsers</span> <span class='op'>=</span> <span class='id identifier rubyid_parsers'>parsers</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="controller-instance_method">
+  
+    #<strong>controller</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>It lazily collects all the low level settings for Hanami::Controller’s
+configuration and applies them when the application is loaded.</p>
+
+<p>NOTE: This forwards all the configurations to Hanami::Controller, without
+checking them. Before to use this feature, please have a look at the
+current Hanami::Controller version installed.</p>
+
+<p>NOTE: This may override some configurations of your application.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Define a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_controller'>controller</span><span class='period'>.</span><span class='id identifier rubyid_default_request_format'>default_request_format</span> <span class='symbol'>:json</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Override a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_handle_exceptions'>handle_exceptions</span>            <span class='kw'>false</span>
+      <span class='id identifier rubyid_controller'>controller</span><span class='period'>.</span><span class='id identifier rubyid_handle_exceptions'>handle_exceptions</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># Exceptions will be handled</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the configuration</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.rubydoc.info/gems/hanami-controller/Hanami/Controller/Configuration" target="_parent" title="http://www.rubydoc.info/gems/hanami-controller/Hanami/Controller/Configuration">http://www.rubydoc.info/gems/hanami-controller/Hanami/Controller/Configuration</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1438" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_controller'>controller</span>
+  <span class='ivar'>@controller</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>FrameworkConfiguration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="controller_pattern-instance_method">
+  
+    
+      <span class="overload">#<strong>controller_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a relative pattern to find controllers.</p>
+
+<p>Hanami supports multiple architectures (aka application structures), this
+setting helps to understand the namespace where to find applications’
+controllers and actions.</p>
+
+<p>By default this equals to <tt>“Controllers::%{controller}::%{action}”</tt>
+That means controllers must be structured like this:
+<tt>Bookshelf::Controllers::Dashboard::Index</tt>, where <tt>Bookshelf</tt>
+is the application module, <tt>Controllers</tt> is the first value
+specified in the pattern, <tt>Dashboard</tt> the controller and
+<tt>Index</tt> the action.</p>
+
+<p>This pattern MUST always contain <tt>”%{controller}”</tt> and <tt>%{action}</tt>.
+This pattern SHOULD be used accordingly to <tt>#view_pattern</tt> value.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Controllers</span><span class='op'>::</span><span class='const'>Dashboard</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Action</span>
+
+      <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+        <span class='comment'># ...
+</span>      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_controller_pattern'>controller_pattern</span>
+  <span class='comment'># =&gt; &quot;Controllers::%{controller}::%{action}&quot;
+</span>
+<span class='comment'># All the controllers MUST live under Bookshelf::Controllers
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Controllers::Dashboard::Index</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_controller_pattern'>controller_pattern</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%{controller}Controller::%{action}</span><span class='tstring_end'>&quot;</span></span>
+
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>DashboardController</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Action</span>
+
+      <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_controller_pattern'>controller_pattern</span>
+  <span class='comment'># =&gt; &quot;%{controller}Controller::%{action}&quot;
+</span>
+<span class='comment'># All the controllers are directly under the Bookshelf module
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::DashboardController::Index</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value for a top level name structure</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_controller_pattern'>controller_pattern</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%{controller}Controller::%{action}</span><span class='tstring_end'>&quot;</span></span>
+
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>DashboardController</span>
+  <span class='kw'>class</span> <span class='const'>Index</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Action</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_controller_pattern'>controller_pattern</span>
+  <span class='comment'># =&gt; &quot;%{controller}Controller::%{action}&quot;
+</span>
+<span class='comment'># All the controllers are at the top level namespace
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; DashboardController::Index</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>controller_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the controller pattern</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#view_pattern</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1136" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_controller_pattern'>controller_pattern</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@controller_pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@controller_pattern</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Controllers::%{controller}::%{action}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cookies-instance_method">
+  
+    
+      <span class="overload">#<strong>cookies</strong>(options)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>cookies</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Cookies</span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Configure cookies
+Enable cookies (disabled by default).</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Cookies:0x0000000329f880 @options={}, @default_options={:httponly=&gt;true, :secure=&gt;false}&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_cookies'>cookies</span> <span class='label'>domain:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanamirb.org</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_cookies'>cookies</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Cookies:0x0000000329f880 @options={:domain=&gt;&#39;hanamirb.org&#39;}, @default_options={:domain=&gt;&#39;hanamirb.org&#39;, :httponly=&gt;true, :secure=&gt;false}&gt;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>cookies</strong>(options)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value with their options.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>, <tt>TrueClass</tt>, <tt>FalseClass</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>cookies</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Cookies</span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::Cookies</span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L381" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_cookies'>cookies</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@cookies</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Cookies</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@cookies</span> <span class='op'>=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Cookies</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_request_format-instance_method">
+  
+    
+      <span class="overload">#<strong>default_request_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>default_request_format</strong>  &#x21d2; <tt>Symbol</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Set a format as default fallback for all the requests without a strict
+requirement for the mime type.</p>
+
+<p>The given format must be coercible to a symbol, and be a valid mime type
+alias. If it isn’t, at the runtime the framework will raise a
+<code>Hanami::Controller::UnknownFormatError</code>.</p>
+
+<p>By default this value is <code>:html</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_request_format'>default_request_format</span> <span class='comment'># =&gt; :html</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_default_request_format'>default_request_format</span> <span class='symbol'>:json</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_request_format'>default_request_format</span> <span class='comment'># =&gt; :json</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>default_request_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt>#to_sym</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the symbol format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>TypeError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if it cannot be coerced to a symbol</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>default_request_format</strong>  &#x21d2; <tt>Symbol</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_request_format" target="_parent" title="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_request_format">http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_request_format</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.5.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L782" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_default_request_format'>default_request_format</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_format'>format</span>
+    <span class='ivar'>@default_request_format</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Utils/Kernel.html" title="Hanami::Utils::Kernel (module)">Kernel</a></span></span><span class='period'>.</span><span class='const'>Symbol</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@default_request_format</span> <span class='op'>||</span> <span class='symbol'>:html</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_response_format-instance_method">
+  
+    
+      <span class="overload">#<strong>default_response_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>default_response_format</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Set a format to be used for all responses regardless of the request type.</p>
+
+<p>The given format must be coercible to a symbol, and be a valid mime type
+alias. If it isn’t, at the runtime the framework will raise a
+<code>Hanami::Controller::UnknownFormatError</code>.</p>
+
+<p>By default this value is <code>:html</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_response_format'>default_response_format</span> <span class='comment'># =&gt; :html</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_default_response_format'>default_response_format</span> <span class='symbol'>:json</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_response_format'>default_response_format</span> <span class='comment'># =&gt; :json</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>default_response_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt>#to_sym</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the symbol format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>TypeError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if it cannot be coerced to a symbol</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>default_response_format</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_response_format" target="_parent" title="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_response_format">http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration#default_response_format</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.5.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L837" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_default_response_format'>default_response_format</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_format'>format</span>
+    <span class='ivar'>@default_response_format</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Utils/Kernel.html" title="Hanami::Utils::Kernel (module)">Kernel</a></span></span><span class='period'>.</span><span class='const'>Symbol</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@default_response_format</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="force_ssl-instance_method">
+  
+    #<strong>force_ssl</strong>(value = nil)  &#x21d2; <tt><span class='object_link'><a href="../Boolean.html" title="Boolean (class)">Boolean</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Force ssl redirection if http scheme is set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Boolean.html" title="Boolean (class)">Boolean</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'>Routing::ForceSsl</span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.4.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L96" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_force_ssl'>force_ssl</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@force_ssl</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@force_ssl</span> <span class='op'>||</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_exceptions-instance_method">
+  
+    
+      <span class="overload">#<strong>handle_exceptions</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>handle_exceptions</strong>  &#x21d2; <tt>TrueClass</tt>, <tt>FalseClass</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Decide if handle exceptions with an HTTP status or let them uncaught</p>
+
+<p>If this value is set to <code>true</code>, the configured exceptions will return
+the specified HTTP status, the rest of them with <code>500</code>.</p>
+
+<p>If this value is set to <code>false</code>, the exceptions won’t be caught.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Enabled (default)</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/error</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_load!'>load!</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Controllers</span><span class='op'>::</span><span class='const'>Error</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Action</span>
+
+      <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># GET &#39;/error&#39; # =&gt; 500 - Internal Server Error</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Disabled</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_handle_exceptions'>handle_exceptions</span> <span class='kw'>false</span>
+
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/error</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_load!'>load!</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Controllers</span><span class='op'>::</span><span class='const'>Error</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Action</span>
+
+      <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># GET &#39;/error&#39; # =&gt; raises ArgumentError</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>handle_exceptions</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>TrueClass</tt>, <tt>FalseClass</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>true or false, default to true</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>handle_exceptions</strong>  &#x21d2; <tt>TrueClass</tt>, <tt>FalseClass</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>TrueClass</tt>, <tt>FalseClass</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration:handle_exceptions" target="_parent" title="http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration:handle_exceptions">http://rdoc.info/gems/hanami-controller/Hanami/Controller/Configuration:handle_exceptions</a></li>
+    
+      <li><a href="http://httpstatus.es/500" target="_parent" title="http://httpstatus.es/500">http://httpstatus.es/500</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1346" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_handle_exceptions'>handle_exceptions</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@handle_exceptions</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@handle_exceptions</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="host-instance_method">
+  
+    
+      <span class="overload">#<strong>host</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The URI host for this application.
+This is used by the router helpers to generate absolute URLs.</p>
+
+<p>By default this value is <code>"localhost"</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span> <span class='comment'># =&gt; &quot;localhost&quot;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_host'>host</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bookshelf.org</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span> <span class='comment'># =&gt; &quot;bookshelf.org&quot;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>host</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the URI host</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/URI_scheme" target="_parent" title="http://en.wikipedia.org/wiki/URI_scheme">http://en.wikipedia.org/wiki/URI_scheme</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L950" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_host'>host</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@host</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@host</span> <span class='op'>||=</span> <span class='ivar'>@env</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="layout-instance_method">
+  
+    
+      <span class="overload">#<strong>layout</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>layout</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>A Hanami::Layout for this application</p>
+
+<p>By default it’s <code>nil</code>.</p>
+
+<p>It accepts a Symbol as layout name. When the application is loaded, it
+will lookup for the corresponding class.</p>
+
+<p>All the views will use this layout, unless otherwise specified.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; nil
+</span>
+<span class='comment'># All the views will render without a layout</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_layout'>layout</span> <span class='symbol'>:application</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Views</span>
+    <span class='kw'>module</span> <span class='const'>Dashboard</span>
+      <span class='kw'>class</span> <span class='const'>Index</span>
+        <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Views</span>
+      <span class='kw'>end</span>
+
+      <span class='kw'>class</span> <span class='const'>JsonIndex</span> <span class='op'>&lt;</span> <span class='const'>Index</span>
+        <span class='id identifier rubyid_layout'>layout</span> <span class='kw'>nil</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_namespace'>namespace</span> <span class='id identifier rubyid_layout'>layout</span> <span class='op'>=&gt;</span> <span class='symbol'>:application</span>
+
+<span class='comment'># All the views will use Bookshelf::Views::ApplicationLayout, unless
+</span><span class='comment'># they set a different value.
+</span>
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Dashboard</span><span class='op'>::</span><span class='const'>Index</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span>
+  <span class='comment'># =&gt; Bookshelf::Views::ApplicationLayout
+</span>
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Dashboard</span><span class='op'>::</span><span class='const'>JsonIndex</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span>
+  <span class='comment'># =&gt; Hanami::View::Rendering::NullLayout</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>layout</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the layout name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>layout</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the layout name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/hanami-view/Hanami/Layout" target="_parent" title="http://rdoc.info/gems/hanami-view/Hanami/Layout">http://rdoc.info/gems/hanami-view/Hanami/Layout</a></li>
+    
+      <li><a href="http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:layout" target="_parent" title="http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:layout">http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:layout</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L229" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_layout'>layout</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@layout</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@layout</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_paths-instance_method">
+  
+    #<strong>load_paths</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::LoadPaths</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Application load paths
+The application will recursively load all the Ruby files under these paths.</p>
+
+<p>By default it’s empty in order to allow developers to decide their own
+app structure.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_load_paths'>load_paths</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::LoadPaths:0x007ff4fa212310 @paths=[]&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami&#39;
+
+module Bookshelf
+  class Application &lt; Hanami::Application
+    configure do
+      load_paths &lt;&lt; [
+        &#39;app/controllers&#39;,
+        &#39;app/views
+      ]
+    end
+  end
+end
+
+Bookshelf::Application.configuration.assets
+  # =&gt; #&lt;Hanami::Config::LoadPaths:0x007fe3a20b18e0 @paths=[[&quot;app/controllers&quot;, &quot;app/views&quot;]]&gt;</code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::LoadPaths</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a set of load paths</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#root</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L510" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_load_paths'>load_paths</span>
+  <span class='ivar'>@load_paths</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>LoadPaths</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_root'><span class='object_link'><a href="../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="middleware-instance_method">
+  
+    #<strong>middleware</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Application middleware.</p>
+
+<p>Specify middleware that your application will use. This method will return
+the application’s underlying Middleware stack which you can use to add new
+middleware for your application to use. By default, the middleware stack
+will contain only <code>Rack::Static</code> and <code>Rack::MethodOverride</code>. However, if
+<code>assets false</code> was specified # in the configuration block, the default
+<code>Rack::Static</code> will be removed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_middleware'>middleware</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>MethodOverride</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>max-age=0, private, must-revalidate</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_middleware'>middleware</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>ETag</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/rack/Rack/Static" target="_parent" title="http://rdoc.info/gems/rack/Rack/Static">http://rdoc.info/gems/rack/Rack/Static</a></li>
+    
+      <li><span class='object_link'>Middleware#use</span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L685" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_middleware'>middleware</span>
+  <span class='ivar'>@middleware</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'>Middleware</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="model-instance_method">
+  
+    #<strong>model</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>It lazily collects all the low level settings for Hanami::Model’s
+configuration and applies them when the application is loaded.</p>
+
+<p>NOTE: This forwards all the configurations to Hanami::Model, without
+checking them. Before to use this feature, please have a look at the
+current Hanami::Model version installed.</p>
+
+<p>NOTE: This may override some configurations of your application.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Define a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_adapter'>adapter</span> <span class='symbol'>:sql</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sqlite://db/bookshelf_development</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Override a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_adapter'>adapter</span>       <span class='symbol'>:sql</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>postgresql://localhost/database</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_adapter'>adapter</span> <span class='symbol'>:sql</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sqlite://db/bookshelf_development</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># The sqlite adapter will override the SQL one</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the configuration</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.rubydoc.info/gems/hanami-model/Hanami/Model/Configuration" target="_parent" title="http://www.rubydoc.info/gems/hanami-model/Hanami/Model/Configuration">http://www.rubydoc.info/gems/hanami-model/Hanami/Model/Configuration</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1395" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_model'>model</span>
+  <span class='ivar'>@model</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>FrameworkConfiguration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port-instance_method">
+  
+    
+      <span class="overload">#<strong>port</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The URI port for this application.
+This is used by the router helpers to generate absolute URLs.</p>
+
+<p>By default this value is <code>2300</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span> <span class='comment'># =&gt; 2300</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_port'>port</span> <span class='int'>8080</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span> <span class='comment'># =&gt; 8080</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>port</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>#to_int</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the URI port</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>TypeError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if the given value cannot be coerced to Integer</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/URI_scheme" target="_parent" title="http://en.wikipedia.org/wiki/URI_scheme">http://en.wikipedia.org/wiki/URI_scheme</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1002" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_port'>port</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@port</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='ivar'>@port</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@port</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='ivar'>@env</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span> <span class='kw'>unless</span> <span class='ivar'>@env</span><span class='period'>.</span><span class='id identifier rubyid_default_port?'>default_port?</span>
+    <span class='kw'>return</span> <span class='const'>DEFAULT_SSL_PORT</span> <span class='kw'>if</span> <span class='id identifier rubyid_force_ssl'>force_ssl</span>
+    <span class='ivar'>@env</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="root-instance_method">
+  
+    
+      <span class="overload">#<strong>root</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>root</strong>  &#x21d2; <tt>Pathname</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The root of the application</p>
+
+<p>By default it returns the current directory, for this reason, <strong>all the
+commands must be executed from the top level directory of the project</strong>.</p>
+
+<p>If for some reason, that constraint above cannot be satisfied, please
+configure the root directory, so that commands can be executed from
+everywhere.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='comment'># =&gt; #&lt;Pathname:/path/to/root&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_root'><span class='object_link'><a href="../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/path/to/another/root</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>root</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Pathname</tt>, <tt>#to_pathname</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The root directory of the app</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>root</strong>  &#x21d2; <tt>Pathname</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Pathname</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Errno::ENOENT</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if the path cannot be found</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.ruby-doc.org/core/Dir.html#method-c-pwd" target="_parent" title="http://www.ruby-doc.org/core/Dir.html#method-c-pwd">http://www.ruby-doc.org/core/Dir.html#method-c-pwd</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L150" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@root</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Utils/Kernel.html" title="Hanami::Utils::Kernel (module)">Kernel</a></span></span><span class='period'>.</span><span class='const'>Pathname</span><span class='lparen'>(</span><span class='ivar'>@root</span> <span class='op'>||</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_pwd'>pwd</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_realpath'>realpath</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="routes-instance_method">
+  
+    
+      <span class="overload">#<strong>routes</strong>(blk)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>routes</strong>(path)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>routes</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Routes</span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Application routes.</p>
+
+<p>Specify a set of routes for the application, by passing a block, or a
+relative path where to find the file that describes them.</p>
+
+<p>By default it’s <code>nil</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span>
+  <span class='comment'># =&gt; nil</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value, by passing a block</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_resources'>resources</span> <span class='symbol'>:books</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Routes:0x007ff50a991388 @blk=#&lt;Proc:0x007ff50a991338@(irb):4&gt;, @path=#&lt;Pathname:.&gt;&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value, by passing a relative path</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_routes'>routes</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/routes</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_routes'>routes</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Routes:0x007ff50a991388 @blk=nil, @path=#&lt;Pathname:config/routes.rb&gt;&gt;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>routes</strong>(blk)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Specify a set of routes in the given block</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the routes definitions</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>routes</strong>(path)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Specify a relative path where to find the routes file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the relative path</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>routes</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Routes</span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::Routes</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the set of routes</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://rdoc.info/gems/hanami-router/Hanami/Router" target="_parent" title="http://rdoc.info/gems/hanami-router/Hanami/Router">http://rdoc.info/gems/hanami-router/Hanami/Router</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L582" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_routes'>routes</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span> <span class='kw'>or</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='ivar'>@routes</span> <span class='op'>=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Routes</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_root'><span class='object_link'><a href="../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@routes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scheme-instance_method">
+  
+    
+      <span class="overload">#<strong>scheme</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The URI scheme for this application.
+This is used by the router helpers to generate absolute URLs.</p>
+
+<p>By default this value is <code>"http"</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='comment'># =&gt; &quot;http&quot;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_scheme'>scheme</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='comment'># =&gt; &quot;https&quot;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>scheme</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the URI scheme</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/URI_scheme" target="_parent" title="http://en.wikipedia.org/wiki/URI_scheme">http://en.wikipedia.org/wiki/URI_scheme</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L888" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_scheme'>scheme</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@scheme</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@scheme</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>http</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="security-instance_method">
+  
+    #<strong>security</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Security</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the security policy</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting values</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_x_frame_options'>x_frame_options</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ALLOW ALL</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_content_security_policy'>content_security_policy</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>script-src &#39;self&#39; https://apis.example.com</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_x_frame_options'>x_frame_options</span>         <span class='comment'># =&gt; &quot;ALLOW ALL&quot;
+</span><span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_content_security_policy'>content_security_policy</span> <span class='comment'># =&gt; &quot;script-src &#39;self&#39; https://apis.example.com&quot;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting values</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_x_frame_options'>x_frame_options</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ALLOW ALL</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_content_security_policy'>content_security_policy</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>script-src &#39;self&#39; https://apis.example.com</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::Security</span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'>Config::Security</span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.3.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L85" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_security'>security</span>
+  <span class='ivar'>@security</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Security</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sessions-instance_method">
+  
+    
+      <span class="overload">#<strong>sessions</strong>(adapter, options)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>sessions</strong>(false)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>sessions</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Sessions</span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Configure sessions
+Enable sessions (disabled by default).</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+<p>Given Class as adapter it will be used as sessions middleware.
+Given String as adapter it will be resolved as class name and used as
+sessions middleware.
+Given Symbol as adapter it is assumed it’s name of the class under
+Rack::Session namespace that will be used as sessions middleware
+(e.g. :cookie for Rack::Session::Cookie).</p>
+
+<p>By default options include domain inferred from host configuration, and
+secure flag inferred from scheme configuration.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Sessions:0x00000001ca0c28 @enabled=false&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value with symbol</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_sessions'>sessions</span> <span class='symbol'>:cookie</span><span class='comma'>,</span> <span class='label'>secret:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abc123</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Sessions:0x00000001589458 @enabled=true, @adapter=:cookie, @options={:domain=&gt;&quot;localhost&quot;, :secure=&gt;false}&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Disabling previously enabled sessions</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_sessions'>sessions</span> <span class='symbol'>:cookie</span>
+      <span class='id identifier rubyid_sessions'>sessions</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_sessions'>sessions</span>
+  <span class='comment'># =&gt; #&lt;Hanami::Config::Sessions:0x00000002460d78 @enabled=false&gt;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>sessions</strong>(adapter, options)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>adapter</span>
+      
+      
+        <span class='type'>(<tt>Class</tt>, <tt>String</tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Rack middleware for sessions management</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>options to pass to sessions middleware</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>sessions</strong>(false)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Disables sessions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>sessions</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Sessions</span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::Sessions</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>sessions configuration</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#host</li>
+    
+      <li>Configuration#scheme</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L463" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_sessions'>sessions</span><span class='lparen'>(</span><span class='id identifier rubyid_adapter'>adapter</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_adapter'>adapter</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@sessions</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Sessions</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@sessions</span> <span class='op'>=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>Sessions</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_adapter'>adapter</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ssl?-instance_method">
+  
+    #<strong>ssl?</strong>  &#x21d2; <tt>FalseClass</tt>, <tt>TrueClass</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if the application uses SSL</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>FalseClass</tt>, <tt>TrueClass</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the result of the check</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#scheme</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L903" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_ssl?'>ssl?</span>
+  <span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='const'>SSL_SCHEME</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="templates-instance_method">
+  
+    
+      <span class="overload">#<strong>templates</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>templates</strong>  &#x21d2; <tt>Pathname</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Templates root.
+The application will recursively look for templates under this path.</p>
+
+<p>By default it’s equal to the application <code>root</code>.</p>
+
+<p>Otherwise, you can specify a different relative path under <code>root</code>.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_templates'>templates</span>
+  <span class='comment'># =&gt; #&lt;Pathname:/root/path&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_templates'>templates</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>app/templates</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_templates'>templates</span>
+  <span class='comment'># =&gt; #&lt;Pathname:/root/path/app/templates&gt;</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>templates</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the relative path to the templates root.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>templates</strong>  &#x21d2; <tt>Pathname</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Pathname</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>templates root</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#root</li>
+    
+      <li><a href="http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:root" target="_parent" title="http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:root">http://rdoc.info/gems/hanami-view/Hanami/View/Configuration:root</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L285" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_templates'>templates</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@templates</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_root'><span class='object_link'><a href="../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='ivar'>@templates</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="view-instance_method">
+  
+    #<strong>view</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>It lazily collects all the low level settings for Hanami::View’s
+configuration and applies them when the application is loaded.</p>
+
+<p>NOTE: This forwards all the configurations to Hanami::View, without
+checking them. Before to use this feature, please have a look at the
+current Hanami::View version installed.</p>
+
+<p>NOTE: This may override some configurations of your application.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Define a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='symbol'>:application</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Override a setting</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_layout'>layout</span>      <span class='symbol'>:application</span>
+      <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='symbol'>:backend</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='comment'># It will use `:backend` layout</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Config::FrameworkConfiguration</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the configuration</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.rubydoc.info/gems/hanami-view/Hanami/View/Configuration" target="_parent" title="http://www.rubydoc.info/gems/hanami-view/Hanami/View/Configuration">http://www.rubydoc.info/gems/hanami-view/Hanami/View/Configuration</a></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1481" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_view'>view</span>
+  <span class='ivar'>@view</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='op'>::</span><span class='const'>FrameworkConfiguration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="view_pattern-instance_method">
+  
+    
+      <span class="overload">#<strong>view_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+    
+      <span class="overload">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a relative pattern to find views:.</p>
+
+<p>Hanami supports multiple architectures (aka application structures), this
+setting helps to understand the namespace where to find applications’
+views:.</p>
+
+<p>By default this equals to <tt>“Views::%{controller}::%{action}”</tt>
+That means views must be structured like this:
+<tt>Bookshelf::Views::Dashboard::Index</tt>, where <tt>Bookshelf</tt> is
+the application module, <tt>Views</tt> is the first value specified in the
+pattern, <tt>Dashboard</tt> a module corresponding to the controller name
+and <tt>Index</tt> the view, corresponding to the action name.</p>
+
+<p>This pattern MUST always contain <tt>”%{controller}”</tt> and <tt>%{action}</tt>.
+This pattern SHOULD be used accordingly to <tt>#controller_pattern</tt> value.</p>
+
+<p>This is part of a DSL, for this reason when this method is called with
+an argument, it will set the corresponding instance variable. When
+called without, it will return the already set value, or the default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Getting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Views</span>
+    <span class='kw'>module</span> <span class='const'>Dashboard</span>
+      <span class='kw'>class</span> <span class='const'>Index</span>
+        <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>View</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_view_pattern'>view_pattern</span>
+  <span class='comment'># =&gt; &quot;Views::%{controller}::%{action}&quot;
+</span>
+<span class='comment'># All the views MUST live under Bookshelf::Views
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Views::Dashboard::Index</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_view_pattern'>view_pattern</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%{controller}::%{action}</span><span class='tstring_end'>&quot;</span></span>
+
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Dashboard</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>View</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_view_pattern'>view_pattern</span>
+  <span class='comment'># =&gt; &quot;%{controller}::%{action}&quot;
+</span>
+<span class='comment'># All the views are directly under the Bookshelf module
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Dashboard::Index</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Setting the value for a top level name structure</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
+    <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_view_pattern'>view_pattern</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%{controller}::%{action}</span><span class='tstring_end'>&quot;</span></span>
+
+      <span class='id identifier rubyid_routes'>routes</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dashboard#index</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>Dashboard</span>
+  <span class='kw'>class</span> <span class='const'>Index</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>View</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_view_pattern'>view_pattern</span>
+  <span class='comment'># =&gt; &quot;%{controller}::%{action}&quot;
+</span>
+<span class='comment'># All the views: are at the top level namespace
+</span>
+<span class='comment'># GET &#39;/&#39; # =&gt; Dashboard::Index</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>view_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Sets the given value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the view pattern</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Gets the value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Configuration#controller_pattern</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/1.0.0/lib/hanami/application_configuration.rb/blob/v#L1259" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_view_pattern'>view_pattern</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@view_pattern</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@view_pattern</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Views::%{controller}::%{action}</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../assets/site.js"></script>
+    
+  </body>
+</html>

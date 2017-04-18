@@ -1,0 +1,370 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::Mailer::ClassMethods
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::Mailer::ClassMethods
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-mailer-1.0.0/lib/hanami/mailer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deliver-instance_method" title="#deliver (instance method)">#<strong>deliver</strong>(locals = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delivers a multipart email message.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="deliver-instance_method">
+  
+    #<strong>deliver</strong>(locals = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delivers a multipart email message.</p>
+
+<p>When a mailer defines a <tt>html</tt> and <tt>txt</tt> template, they are
+both delivered.</p>
+
+<p>In order to selectively deliver only one of the two templates, use
+<tt>Signup::Welcome.deliver(format: :txt)</tt></p>
+
+<p>All the given locals, excepted the reserved ones (<tt>:format</tt> and
+<tt>charset</tt>), are available as rendering context for the templates.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/mailer</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Mailer.html" title="Hanami::Mailer (module)">Mailer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configure'><span class='object_link'><a href="../Mailer.html#configure-class_method" title="Hanami::Mailer.configure (method)">configure</a></span></span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_delivery_method'>delivery_method</span> <span class='symbol'>:smtp</span>
+<span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_load!'>load!</span>
+
+<span class='kw'>module</span> <span class='const'>Billing</span>
+  <span class='kw'>class</span> <span class='const'>Invoice</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Mailer.html" title="Hanami::Mailer (module)">Mailer</a></span></span>
+
+    <span class='id identifier rubyid_from'>from</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>noreply@example.com</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_to'>to</span>      <span class='symbol'>:recipient</span>
+    <span class='id identifier rubyid_subject'>subject</span> <span class='symbol'>:subject_line</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_prepare'>prepare</span>
+      <span class='id identifier rubyid_mail'>mail</span><span class='period'>.</span><span class='id identifier rubyid_attachments'>attachments</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invoice.pdf</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/path/to/invoice.pdf</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_private'>private</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_recipient'>recipient</span>
+      <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_subject_line'>subject_line</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invoice - </span><span class='embexpr_beg'>#{</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_number'>number</span> <span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_invoice'>invoice</span> <span class='op'>=</span> <span class='const'>Invoice</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='id identifier rubyid_user'>user</span>    <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user@example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='const'>Billing</span><span class='op'>::</span><span class='const'>Invoice</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span><span class='lparen'>(</span><span class='label'>invoice:</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>                      <span class='comment'># Deliver both text, HTML parts and the attachment
+</span><span class='const'>Billing</span><span class='op'>::</span><span class='const'>Invoice</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span><span class='lparen'>(</span><span class='label'>invoice:</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>format:</span> <span class='symbol'>:txt</span><span class='rparen'>)</span>        <span class='comment'># Deliver only the text part and the attachment
+</span><span class='const'>Billing</span><span class='op'>::</span><span class='const'>Invoice</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span><span class='lparen'>(</span><span class='label'>invoice:</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>format:</span> <span class='symbol'>:html</span><span class='rparen'>)</span>       <span class='comment'># Deliver only the text part and the attachment
+</span><span class='const'>Billing</span><span class='op'>::</span><span class='const'>Invoice</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span><span class='lparen'>(</span><span class='label'>invoice:</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='label'>user:</span> <span class='id identifier rubyid_user'>user</span><span class='comma'>,</span> <span class='label'>charset:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>iso-8859</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># Deliver both the parts with &quot;iso-8859&quot;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>locals</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>a set of objects that acts as context for the rendering</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>:format</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>:charset</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'>Hanami::Mailer::Configuration#default_charset</span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/mailer/blob/v1.0.0/lib/hanami/mailer.rb#L188" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_deliver'>deliver</span><span class='lparen'>(</span><span class='id identifier rubyid_locals'>locals</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_locals'>locals</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/site.js"></script>
+    
+  </body>
+</html>

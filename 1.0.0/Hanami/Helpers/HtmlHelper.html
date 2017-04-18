@@ -1,0 +1,522 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::Helpers::HtmlHelper
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::Helpers::HtmlHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="LinkToHelper.html" title="Hanami::Helpers::LinkToHelper (module)">LinkToHelper</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper.rb<span class="defines">,<br />
+  gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper/html_node.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper/text_node.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper/html_builder.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper/html_fragment.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/html_helper/empty_html_node.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>HTML builder</p>
+
+<p>By including <tt>Hanami::Helpers::HtmlHelper</tt> it will inject one private method: <tt>html</tt>.
+This is a HTML5 markup builder.</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>Support for complex markup without the need of concatenation</li>
+  <li>Auto closing HTML5 tags</li>
+  <li>Custom tags</li>
+  <li>Content tag auto escape (XSS protection)</li>
+  <li>Support for view local variables</li>
+</ul>
+
+<p>Usage:</p>
+
+<ul>
+  <li>It knows how to close tags according to HTML5 spec (1)</li>
+  <li>It accepts content as first argument (2)</li>
+  <li>It accepts another builder as first argument (3)</li>
+  <li>It accepts content as block which returns a string (4)</li>
+  <li>It accepts content as a block with nested markup builders (5)</li>
+  <li>It builds attributes from given hash (6)</li>
+  <li>It combines attributes and block (7)</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'># 1
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='comment'># =&gt; &lt;div&gt;&lt;/div&gt;
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_img'>img</span> <span class='comment'># =&gt; &lt;img&gt;
+</span>
+<span class='comment'># 2
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;div&gt;hello&lt;/div&gt;
+</span>
+<span class='comment'># 3
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;div&gt;&lt;p&gt;hello&lt;/p&gt;&lt;/div&gt;
+</span>
+<span class='comment'># 4
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+<span class='comment'># =&gt;
+</span><span class='comment'>#&lt;div&gt;
+</span><span class='comment'>#  hello
+</span><span class='comment'>#&lt;/div&gt;
+</span>
+<span class='comment'># 5
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+<span class='comment'># =&gt;
+</span><span class='comment'>#&lt;div&gt;
+</span><span class='comment'>#  &lt;p&gt;hello&lt;/p&gt;
+</span><span class='comment'>#&lt;/div&gt;
+</span>
+<span class='comment'># 6
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>el</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>data-x</span><span class='label_end'>&#39;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>y</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;div id=&quot;el&quot; data-x=&quot;y&quot;&gt;hello&lt;/div&gt;
+</span>
+<span class='comment'># 7
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>yay</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+<span class='comment'># =&gt;
+</span><span class='comment'>#&lt;div id=&quot;yay&quot;&gt;
+</span><span class='comment'>#  hello
+</span><span class='comment'>#&lt;/div&gt;
+</span>
+<span class='comment'># 8
+</span><span class='id identifier rubyid_html'>html</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_li'>li</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_li'>li</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hanami</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+<span class='comment'># =&gt;
+</span><span class='comment'>#&lt;li&gt;Hello&lt;/li&gt;
+</span><span class='comment'>#&lt;li&gt;Hanami&lt;/li&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Complex markup</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'>#
+</span><span class='comment'># NOTICE THE LACK OF CONCATENATION BETWEEN div AND input BLOCKS &lt;3
+</span><span class='comment'>#
+</span>
+<span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_form'>form</span><span class='lparen'>(</span><span class='label'>action:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/users</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>method:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>POST</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_label'>label</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>First name</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>for:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user-first-name</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_input'>input</span> <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user-first-name</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user[first_name]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>value:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_input'>input</span> <span class='label'>type:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>submit</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>value:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Save changes</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+<span class='comment'># =&gt;
+</span><span class='comment'>#&lt;form action=&quot;/users&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot;&gt;
+</span><span class='comment'>#  &lt;div&gt;
+</span><span class='comment'>#    &lt;label for=&quot;user-first-name&quot;&gt;First name&lt;/label&gt;
+</span><span class='comment'>#    &lt;input type=&quot;text&quot; id=&quot;user-first-name&quot; name=&quot;user[first_name]&quot; value=&quot;L&quot;&gt;
+</span><span class='comment'>#  &lt;/div&gt;
+</span><span class='comment'>#  &lt;input type=&quot;submit&quot; value=&quot;Save changes&quot;&gt;
+</span><span class='comment'>#&lt;/form&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Custom tags</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:custom</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Foo</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>next</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;custom id=&quot;next&quot;&gt;Foo&lt;/custom&gt;
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_empty_tag'>empty_tag</span><span class='lparen'>(</span><span class='symbol'>:xr</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>next</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>      <span class='comment'># =&gt; &lt;xr id=&quot;next&quot;&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Auto escape</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>         <span class='comment'># =&gt; &lt;div&gt;hello&lt;/hello&gt;
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>      <span class='comment'># =&gt; &lt;div&gt;hello&lt;/hello&gt;
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;div&gt;&lt;p&gt;hello&lt;/p&gt;&lt;/hello&gt;
+</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span> <span class='comment'># =&gt; &lt;div&gt;&lt;p&gt;hello&lt;/p&gt;&lt;/hello&gt;
+</span>
+<span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'># =&gt;  &quot;&lt;div&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/div&gt;&quot;
+</span>
+<span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='comment'># =&gt;  &quot;&lt;div&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/div&gt;&quot;
+</span>
+<span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='comment'># =&gt; &quot;&lt;div&gt;&lt;p&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/p&gt;&lt;/div&gt;&quot;
+</span>
+<span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+  <span class='comment'># =&gt; &quot;&lt;div&gt;&lt;p&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/p&gt;&lt;/div&gt;&quot;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'>#
+</span><span class='comment'># THE VIEW CAN BE A SIMPLE RUBY OBJECT
+</span><span class='comment'>#
+</span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>MyView</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span><span class='op'>::</span><span class='const'>HtmlHelper</span>
+
+  <span class='comment'># Generates
+</span>  <span class='comment'># &lt;aside id=&quot;sidebar&quot;&gt;
+</span>  <span class='comment'>#    &lt;div&gt;hello&lt;/hello&gt;
+</span>  <span class='comment'>#  &lt;/aside&gt;
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_sidebar'>sidebar</span>
+    <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_aside'>aside</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sidebar</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_div'>div</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>View context</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'>#
+</span><span class='comment'># LOCAL VARIABLES FROM VIEWS ARE AVAILABLE INSIDE THE NESTED BLOCKS OF HTML BUILDER
+</span><span class='comment'>#
+</span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='const'>Book</span> <span class='op'>=</span> <span class='const'>Struct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:title</span><span class='rparen'>)</span>
+
+<span class='kw'>module</span> <span class='const'>Books</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span><span class='op'>::</span><span class='const'>HtmlHelper</span>
+
+    <span class='kw'>def</span> <span class='id identifier rubyid_title_widget'>title_widget</span>
+      <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_h1'>h1</span> <span class='id identifier rubyid_book'>book</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_book'>book</span>     <span class='op'>=</span> <span class='const'>Book</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The Work of Art in the Age of Mechanical Reproduction</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_rendered'>rendered</span> <span class='op'>=</span> <span class='const'>Books</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>format:</span> <span class='symbol'>:html</span><span class='comma'>,</span> <span class='label'>book:</span> <span class='id identifier rubyid_book'>book</span><span class='rparen'>)</span>
+
+<span class='id identifier rubyid_rendered'>rendered</span>
+  <span class='comment'># =&gt; &lt;div&gt;
+</span>  <span class='comment'>#      &lt;h1&gt;The Work of Art in the Age of Mechanical Reproduction&lt;/h1&gt;
+</span>  <span class='comment'>#    &lt;/div&gt;</span></code></pre>
+    
+  </div>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#html-instance_method" title="Hanami::Helpers::HtmlHelper#html (method)">#html</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlBuilder</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#html-instance_method" title="#html (instance method)">#<strong>html</strong>(&amp;blk)  &#x21d2; Hanami::Helpers::HtmlHelper::HtmlBuilder </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Instantiate an HTML builder.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="html-instance_method">
+  
+    #<strong>html</strong>(&amp;blk)  &#x21d2; <tt><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">Hanami::Helpers::HtmlHelper::HtmlBuilder</a></span></tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Instantiate an HTML builder</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>, <tt><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">Hanami::Helpers::HtmlHelper::HtmlBuilder</a></span></tt>, <tt>NilClass</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the optional content block</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">Hanami::Helpers::HtmlHelper::HtmlBuilder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the HTML builder</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="" title="Hanami::Helpers::HtmlHelper (module)">Hanami::Helpers::HtmlHelper</a></span></li>
+    
+      <li><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlBuilder</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/html_helper.rb#L200" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_html'>html</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='const'><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_fragment'>fragment</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/site.js"></script>
+    
+  </body>
+</html>

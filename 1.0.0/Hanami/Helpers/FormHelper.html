@@ -1,0 +1,859 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::Helpers::FormHelper
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::Helpers::FormHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/form_helper.rb<span class="defines">,<br />
+  gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/form_helper/values.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/form_helper/html_node.rb,<br /> gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/form_helper/form_builder.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Form builder</p>
+
+<p>By including <tt>Hanami::Helpers::FormHelper</tt> it will inject one public method: <tt>form_for</tt>.
+This is a HTML5 form builder.</p>
+
+<p>To understand the general HTML5 builder syntax of this framework, please
+consider to have a look at <tt>Hanami::Helpers::HtmlHelper</tt> documentation.</p>
+
+<p>This builder is independent from any template engine.
+This was hard to achieve without a compromise: the form helper should be
+used in one output block in a template or as a method in a view (see the examples below).</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>Support for complex markup without the need of concatenation</li>
+  <li>Auto closing HTML5 tags</li>
+  <li>Support for view local variables</li>
+  <li>Method override support (PUT/PATCH/DELETE HTTP verbs aren’t understood by browsers)</li>
+  <li>Automatic generation of HTML attributes for inputs: <tt>id</tt>, <tt>name</tt>, <tt>value</tt></li>
+  <li>Allow to override HTML attributes</li>
+  <li>Extract values from request params and fill <tt>value</tt> attributes</li>
+  <li>Automatic selection of current value for radio button and select inputs</li>
+  <li>Infinite nested fields</li>
+</ul>
+
+<p>Supported tags and inputs:</p>
+
+<ul>
+  <li><tt>check_box</tt></li>
+  <li><tt>color_field</tt></li>
+  <li><tt>date_field</tt></li>
+  <li><tt>datetime_field</tt></li>
+  <li><tt>datetime_local_field</tt></li>
+  <li><tt>email_field</tt></li>
+  <li><tt>fields_for</tt></li>
+  <li><tt>file_field</tt></li>
+  <li><tt>form_for</tt></li>
+  <li><tt>hidden_field</tt></li>
+  <li><tt>label</tt></li>
+  <li><tt>number_field</tt></li>
+  <li><tt>password_field</tt></li>
+  <li><tt>radio_button</tt></li>
+  <li><tt>select</tt></li>
+  <li><tt>submit</tt></li>
+  <li><tt>text_area</tt></li>
+  <li><tt>text_field</tt></li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>One output block (template)</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :book, routes.books_path do
+    text_field :title
+
+    submit &#39;Create&#39;
+  end
+%&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Method (view)</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami/helpers&#39;
+
+class MyView
+  include Hanami::Helpers::FormHelper
+
+  def my_form
+    form_for :book, routes.books_path do
+      text_field :title
+    end
+  end
+end
+
+&lt;!-- use this in the template --&gt;
+&lt;%= my_form %&gt;</code></pre>
+    
+  </div>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#form_for-instance_method" title="Hanami::Helpers::FormHelper#form_for (method)">#form_for</a></span></li>
+    
+      <li><span class='object_link'><a href="HtmlHelper.html" title="Hanami::Helpers::HtmlHelper (module)">HtmlHelper</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span>, <span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">FormBuilder</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#csrf_token-instance_method" title="#csrf_token (instance method)">#<strong>csrf_token</strong>  &#x21d2; String, NilClass </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns CSRF Protection Token stored in session.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#form_for-instance_method" title="#form_for (instance method)">#<strong>form_for</strong>(name, url, options = {}, &amp;blk)  &#x21d2; Hanami::Helpers::FormHelper::FormBuilder </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Instantiate a HTML5 form builder.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="csrf_token-instance_method">
+  
+    #<strong>csrf_token</strong>  &#x21d2; <tt>String</tt>, <tt>NilClass</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns CSRF Protection Token stored in session.</p>
+
+<p>It returns <tt>nil</tt> if sessions aren’t enabled or the value is missing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>NilClass</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>token, if present</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper.rb#L428" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_csrf_token'>csrf_token</span>
+  <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='const'>CSRF_TOKEN</span><span class='rbracket'>]</span>
+  <span class='kw'>elsif</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='id identifier rubyid_locals'>locals</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_locals'>locals</span><span class='lbracket'>[</span><span class='symbol'>:session</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_locals'>locals</span><span class='lbracket'>[</span><span class='symbol'>:session</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='const'>CSRF_TOKEN</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="form_for-instance_method">
+  
+    
+      <span class="overload">#<strong>form_for</strong>(name, url, options, &amp;blk)  &#x21d2; <tt><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">Hanami::Helpers::FormHelper::FormBuilder</a></span></tt> </span>
+    
+      <span class="overload">#<strong>form_for</strong>(form, attributes, &amp;blk)  &#x21d2; <tt><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">Hanami::Helpers::FormHelper::FormBuilder</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Instantiate a HTML5 form builder</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Inline Values In Template</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :book, routes.books_path, class: &#39;form-horizontal&#39; do
+    div do
+      label      :title
+      text_field :title, class: &#39;form-control&#39;
+    end
+
+    submit &#39;Create&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+
+&lt;form action=&quot;/books&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;book-form&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;book-title&quot;&gt;Title&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;book[title]&quot; id=&quot;book-title&quot; value=&quot;Test Driven Development&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Use In A View</p>
+</div></p>
+      
+      <pre class="example code"><code>
+module Web::Views::Books
+  class New
+
+  def form
+    form_for :book, routes.books_path, class: &#39;form-horizontal&#39; do
+      div do
+        label      :title
+        text_field :title, class: &#39;form-control&#39;
+      end
+
+      submit &#39;Create&#39;
+    end
+  end
+end
+
+&lt;!-- in the corresponding template use this --&gt;
+&lt;%= form %&gt;
+
+&lt;!-- output --&gt;
+
+&lt;form action=&quot;/books&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;book-form&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;book-title&quot;&gt;Title&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;book[title]&quot; id=&quot;book-title&quot; value=&quot;Test Driven Development&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Share Code Between Views</p>
+</div></p>
+      
+      <pre class="example code"><code>
+# Given the following views to create and update a resource
+module Web::Views::Books
+  class New
+    include Web::View
+
+    def form
+      Form.new(:book, routes.books_path)
+    end
+
+    def submit_label
+      &#39;Create&#39;
+    end
+  end
+
+  class Edit
+    include Web::View
+
+    def form
+      Form.new(:book, routes.book_path(id: book.id),
+        {book: book}, {method: :patch})
+    end
+
+    def submit_label
+      &#39;Update&#39;
+    end
+  end
+end
+
+# The respective templates can be identical:
+
+## books/new.html.erb
+&lt;%= render partial: &#39;books/form&#39; %&gt;
+
+## books/edit.html.erb
+&lt;%= render partial: &#39;books/form&#39; %&gt;
+
+# While the partial can have the following markup:
+
+## books/_form.html.erb
+&lt;%=
+  form_for form, class: &#39;form-horizontal&#39; do
+    div do
+      label      :title
+      text_field :title, class: &#39;form-control&#39;
+    end
+
+    submit submit_label
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+
+&lt;form action=&quot;/books&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;book-form&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;book-title&quot;&gt;Title&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;book[title]&quot; id=&quot;book-title&quot; value=&quot;Test Driven Development&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Method override</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :book, routes.book_path(id: book.id), method: :put do
+    text_field :title
+
+    submit &#39;Update&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+
+&lt;form action=&quot;/books/23&quot; accept-charset=&quot;utf-8&quot; id=&quot;book-form&quot; method=&quot;POST&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;PUT&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;book[title]&quot; id=&quot;book-title&quot; value=&quot;Test Driven Development&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Update&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Nested fields</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :delivery, routes.deliveries_path do
+    text_field :customer_name
+
+    fields_for :address do
+      text_field :city
+    end
+
+    submit &#39;Create&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+
+&lt;form action=&quot;/deliveries&quot; accept-charset=&quot;utf-8&quot; id=&quot;delivery-form&quot; method=&quot;POST&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[customer_name]&quot; id=&quot;delivery-customer-name&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[address][city]&quot; id=&quot;delivery-address-city&quot; value=&quot;&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>form_for</strong>(name, url, options, &amp;blk)  &#x21d2; <tt><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">Hanami::Helpers::FormHelper::FormBuilder</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Use inline values</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the toplevel name of the form, it’s used to generate
+input names, ids, and to lookup params to fill values.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>url</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the form action URL</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the form tag and form values</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A block that describes the contents of the form</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:values</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An optional payload of objects to pass</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>form_for</strong>(form, attributes, &amp;blk)  &#x21d2; <tt><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">Hanami::Helpers::FormHelper::FormBuilder</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Use Form</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>form</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Hanami::Helpers::FormHelper::Form</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a form object</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the form tag and form values</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A block that describes the contents of the form</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">Hanami::Helpers::FormHelper::FormBuilder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the form builder</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="" title="Hanami::Helpers::FormHelper (module)">Hanami::Helpers::FormHelper</a></span></li>
+    
+      <li><span class='object_link'><a href="FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span></li>
+    
+      <li><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">FormBuilder</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper.rb#L409" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_form_for'>form_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_form'>form</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span></span><span class='rparen'>)</span>
+           <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
+           <span class='id identifier rubyid_name'>name</span>
+         <span class='kw'>else</span>
+           <span class='const'><span class='object_link'><a href="FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FormHelper/Form.html#initialize-instance_method" title="Hanami::Helpers::FormHelper::Form#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:values</span><span class='rparen'>)</span><span class='rparen'>)</span>
+         <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>action:</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='label'>method:</span> <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_verb'>verb</span><span class='comma'>,</span> <span class='symbol'>:accept-charset</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>DEFAULT_CHARSET</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>-form</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">FormBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/site.js"></script>
+    
+  </body>
+</html>

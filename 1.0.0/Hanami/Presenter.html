@@ -1,0 +1,250 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::Presenter
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::Presenter
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/presenter.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Presenter pattern implementation</p>
+
+<p>It delegates to the wrapped object the missing method invocations.</p>
+
+<p>The output of concrete and delegated methods is escaped as XSS prevention.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>Map</span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:locations</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_locations'>locations</span><span class='rparen'>)</span>
+    <span class='ivar'>@locations</span> <span class='op'>=</span> <span class='id identifier rubyid_locations'>locations</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_location_names'>location_names</span>
+    <span class='ivar'>@locations</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='kw'>class</span> <span class='const'>MapPresenter</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'>Presenter</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span>
+    <span class='id identifier rubyid_locations'>locations</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_location_names'>location_names</span>
+    <span class='kw'>super</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_inspect_object'>inspect_object</span>
+    <span class='ivar'>@object</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_map'>map</span> <span class='op'>=</span> <span class='const'>Map</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Rome</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Boston</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_presenter'>presenter</span> <span class='op'>=</span> <span class='const'>MapPresenter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_map'>map</span><span class='rparen'>)</span>
+
+<span class='comment'># access a map method
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_presenter'>presenter</span><span class='period'>.</span><span class='id identifier rubyid_locations'>locations</span> <span class='comment'># =&gt; [&#39;Rome&#39;, &#39;Boston&#39;]
+</span>
+<span class='comment'># access presenter concrete methods
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_presenter'>presenter</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='comment'># =&gt; 1
+</span>
+<span class='comment'># uses super to access original object implementation
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_presenter'>presenter</span><span class='period'>.</span><span class='id identifier rubyid_location_names'>location_names</span> <span class='comment'># =&gt; &#39;ROME, BOSTON&#39;
+</span>
+<span class='comment'># it has private access to the original object
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_presenter'>presenter</span><span class='period'>.</span><span class='id identifier rubyid_inspect_object'>inspect_object</span> <span class='comment'># =&gt; #&lt;Map:0x007fdeada0b2f0 @locations=[&quot;Rome&quot;, &quot;Boston&quot;]&gt;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Escape</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami/view&#39;
+
+User = Struct.new(:first_name, :last_name)
+
+class UserPresenter
+  include Hanami::Presenter
+
+  def full_name
+    [first_name, last_name].join(&#39; &#39;)
+  end
+
+  def raw_first_name
+    _raw first_name
+  end
+end
+
+first_name = &#39;&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;&#39;
+
+user = User.new(first_name, nil)
+presenter = UserPresenter.new(user)
+
+presenter.full_name
+  # =&gt; &quot;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&quot;
+
+presenter.raw_full_name
+   # =&gt; &quot;&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;&quot;</code></pre>
+    
+  </div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../assets/site.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,4976 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Class: Hanami::Helpers::FormHelper::FormBuilder
+      
+        &mdash; Hanami Docs 1.0.0
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Class: Hanami::Helpers::FormHelper::FormBuilder
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlHelper::HtmlBuilder</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlHelper::HtmlBuilder</a></span></li>
+          
+            <li class="next">Hanami::Helpers::FormHelper::FormBuilder</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../EscapeHelper.html" title="Hanami::Helpers::EscapeHelper (module)">EscapeHelper</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-helpers-1.0.0/lib/hanami/helpers/form_helper/form_builder.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Form builder</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlHelper::HtmlBuilder</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#button-instance_method" title="#button (instance method)">#<strong>button</strong>(content, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Button.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_box-instance_method" title="#check_box (instance method)">#<strong>check_box</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check box.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#color_field-instance_method" title="#color_field (instance method)">#<strong>color_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Color input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#datalist-instance_method" title="#datalist (instance method)">#<strong>datalist</strong>(name, values, list, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Datalist input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#date_field-instance_method" title="#date_field (instance method)">#<strong>date_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Date input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#datetime_field-instance_method" title="#datetime_field (instance method)">#<strong>datetime_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Datetime input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#datetime_local_field-instance_method" title="#datetime_local_field (instance method)">#<strong>datetime_local_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Datetime Local input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#email_field-instance_method" title="#email_field (instance method)">#<strong>email_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Email input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fields_for-instance_method" title="#fields_for (instance method)">#<strong>fields_for</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Nested fields.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fields_for_collection-instance_method" title="#fields_for_collection (instance method)">#<strong>fields_for_collection</strong>(name, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Nested collections.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fieldset-instance_method" title="#fieldset (instance method)">#<strong>fieldset</strong>(content = nil, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Fieldset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#file_field-instance_method" title="#file_field (instance method)">#<strong>file_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>File input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hidden_field-instance_method" title="#hidden_field (instance method)">#<strong>hidden_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Hidden input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#image_button-instance_method" title="#image_button (instance method)">#<strong>image_button</strong>(source, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Image button.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#label-instance_method" title="#label (instance method)">#<strong>label</strong>(content, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Label tag.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#month_field-instance_method" title="#month_field (instance method)">#<strong>month_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Month field.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#number_field-instance_method" title="#number_field (instance method)">#<strong>number_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#password_field-instance_method" title="#password_field (instance method)">#<strong>password_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Password input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#radio_button-instance_method" title="#radio_button (instance method)">#<strong>radio_button</strong>(name, value, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Radio input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#range_field-instance_method" title="#range_field (instance method)">#<strong>range_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Range input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search_field-instance_method" title="#search_field (instance method)">#<strong>search_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Search input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select-instance_method" title="#select (instance method)">#<strong>select</strong>(name, values, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Select input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#submit-instance_method" title="#submit (instance method)">#<strong>submit</strong>(content, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Submit button.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tel_field-instance_method" title="#tel_field (instance method)">#<strong>tel_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Telephone input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_area-instance_method" title="#text_area (instance method)">#<strong>text_area</strong>(name, content = nil, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Text-area input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_field-instance_method" title="#text_field (instance method)">#<strong>text_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+      (also: #input_text)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Text input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#time_field-instance_method" title="#time_field (instance method)">#<strong>time_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Time field.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#url_field-instance_method" title="#url_field (instance method)">#<strong>url_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>URL input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#week_field-instance_method" title="#week_field (instance method)">#<strong>week_field</strong>(name, attributes = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Week field.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../EscapeHelper.html" title="Hanami::Helpers::EscapeHelper (module)">EscapeHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../EscapeHelper.html#escape_html-instance_method" title="Hanami::Helpers::EscapeHelper#escape_html (method)">#escape_html</a></span>, <span class='object_link'><a href="../EscapeHelper.html#escape_html_attribute-instance_method" title="Hanami::Helpers::EscapeHelper#escape_html_attribute (method)">#escape_html_attribute</a></span>, <span class='object_link'><a href="../EscapeHelper.html#escape_url-instance_method" title="Hanami::Helpers::EscapeHelper#escape_url (method)">#escape_url</a></span>, <span class='object_link'><a href="../EscapeHelper.html#raw-instance_method" title="Hanami::Helpers::EscapeHelper#raw (method)">#raw</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../HtmlHelper/HtmlBuilder.html" title="Hanami::Helpers::HtmlHelper::HtmlBuilder (class)">HtmlHelper::HtmlBuilder</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../HtmlHelper/HtmlBuilder.html#text-instance_method" title="Hanami::Helpers::HtmlHelper::HtmlBuilder#text (method)">#text</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice super">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+      in the class <span class='object_link'>Hanami::Helpers::HtmlHelper::HtmlBuilder</span>
+    
+  </p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="button-instance_method">
+  
+    #<strong>button</strong>(content, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Button</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  button &#39;Click me&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;button&gt;Click me&lt;/button&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  button &#39;Click me&#39;, class: &quot;btn btn-secondary&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;button class=&quot;btn btn-secondary&quot;&gt;Click me&lt;/button&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The content</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1324" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_button'>button</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='comment'># This is here only for documentation purposes
+</span>  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_box-instance_method">
+  
+    #<strong>check_box</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check box</p>
+
+<p>It renders a check box input.</p>
+
+<p>When a form is submitted, browsers don’t send the value of unchecked
+check boxes. If an user unchecks a check box, their browser won’t send
+the unchecked value. On the server side the corresponding value is
+missing, so the application will assume that the user action never
+happened.</p>
+
+<p>To solve this problem the form renders a hidden field with the
+“unchecked value”. When the user unchecks the input, the browser will
+ignore it, but it will still send the value of the hidden input. See
+the examples below.</p>
+
+<p>When editing a resource, the form automatically assigns the
+<tt>checked=”checked”</tt> attribute.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  check_box :free_shipping
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[free_shipping]&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  check_box :free_shipping, class: &quot;form-check-input&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[free_shipping]&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; class=&quot;form-check-input&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Specify (un)checked values</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  check_box :free_shipping, checked_value: &#39;true&#39;, unchecked_value: &#39;false&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[free_shipping]&quot; value=&quot;false&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;true&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Automatic “checked” attribute</p>
+</div></p>
+      
+      <pre class="example code"><code># For this example the params are:
+#
+#  { delivery: { free_shipping: &#39;1&#39; } }
+&lt;%=
+  check_box :free_shipping
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[free_shipping]&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Force “checked” attribute</p>
+</div></p>
+      
+      <pre class="example code"><code># For this example the params are:
+#
+#  { delivery: { free_shipping: &#39;0&#39; } }
+&lt;%=
+  check_box :free_shipping, checked: &#39;checked&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[free_shipping]&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Multiple check boxes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  check_box :languages, name: &#39;book[languages][]&#39;, value: &#39;italian&#39;, id: nil
+  check_box :languages, name: &#39;book[languages][]&#39;, value: &#39;english&#39;, id: nil
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;book[languages][]&quot; value=&quot;italian&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;book[languages][]&quot; value=&quot;english&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Automatic “checked” attribute for multiple check boxes</p>
+</div></p>
+      
+      <pre class="example code"><code># For this example the params are:
+#
+#  { book: { languages: [&#39;italian&#39;] } }
+&lt;%=
+  check_box :languages, name: &#39;book[languages][]&#39;, value: &#39;italian&#39;, id: nil
+  check_box :languages, name: &#39;book[languages][]&#39;, value: &#39;english&#39;, id: nil
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;book[languages][]&quot; value=&quot;italian&quot; checked=&quot;checked&quot;&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;book[languages][]&quot; value=&quot;english&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>attributes</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:checked_value</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>defaults to &quot;1&quot;</tt>
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:unchecked_value</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>defaults to &quot;0&quot;</tt>
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L453" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_check_box'>check_box</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid__hidden_field_for_check_box'>_hidden_field_for_check_box</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes_for_check_box'>_attributes_for_check_box</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="color_field-instance_method">
+  
+    #<strong>color_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Color input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  color_field :background
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;color&quot; name=&quot;user[background]&quot; id=&quot;user-background&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  color_field :background, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;color&quot; name=&quot;user[background]&quot; id=&quot;user-background&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L482" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_color_field'>color_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:color</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="datalist-instance_method">
+  
+    #<strong>datalist</strong>(name, values, list, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Datalist input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic Usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = [&#39;Italy&#39;, &#39;United States&#39;]
+  datalist :stores, values, &#39;books&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;book[store]&quot; id=&quot;book-store&quot; value=&quot;&quot; list=&quot;books&quot;&gt;
+&lt;datalist id=&quot;books&quot;&gt;
+  &lt;option value=&quot;Italy&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;United States&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Options As Hash</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;Italy&#39; =&gt; &#39;it&#39;, &#39;United States&#39; =&gt; &#39;us&#39;]
+  datalist :stores, values, &#39;books&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;book[store]&quot; id=&quot;book-store&quot; value=&quot;&quot; list=&quot;books&quot;&gt;
+&lt;datalist id=&quot;books&quot;&gt;
+  &lt;option value=&quot;Italy&quot;&gt;it&lt;/option&gt;
+  &lt;option value=&quot;United States&quot;&gt;us&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Specify Custom Attributes For Datalist Input</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = [&#39;Italy&#39;, &#39;United States&#39;]
+  datalist :stores, values, &#39;books&#39;, datalist: { class: &#39;form-control&#39; }
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;book[store]&quot; id=&quot;book-store&quot; value=&quot;&quot; list=&quot;books&quot;&gt;
+&lt;datalist id=&quot;books&quot; class=&quot;form-control&quot;&gt;
+  &lt;option value=&quot;Italy&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;United States&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Specify Custom Attributes For Options List</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = [&#39;Italy&#39;, &#39;United States&#39;]
+  datalist :stores, values, &#39;books&#39;, options: { class: &#39;form-control&#39; }
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;book[store]&quot; id=&quot;book-store&quot; value=&quot;&quot; list=&quot;books&quot;&gt;
+&lt;datalist id=&quot;books&quot;&gt;
+  &lt;option value=&quot;Italy&quot; class=&quot;form-control&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;United States&quot; class=&quot;form-control&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>values</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>, <tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a collection that is transformed into <tt><option>&lt;/tt&gt; tags.</option></tt></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>list</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the name of list for the text input, it’s also the id of datalist</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.4.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1284" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_datalist'>datalist</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='comma'>,</span> <span class='id identifier rubyid_list'>list</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='comment'># rubocop:disable Metrics/MethodLength
+</span>  <span class='id identifier rubyid_attrs'>attrs</span>    <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_options'>options</span>  <span class='op'>=</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:options</span><span class='rparen'>)</span>  <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_datalist'>datalist</span> <span class='op'>=</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:datalist</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:list</span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_list'>list</span>
+  <span class='id identifier rubyid_datalist'>datalist</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_list'>list</span>
+
+  <span class='id identifier rubyid_text_field'>text_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_datalist'>datalist</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='op'>|</span>
+      <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>value:</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="date_field-instance_method">
+  
+    #<strong>date_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Date input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  date_field :birth_date
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;date&quot; name=&quot;user[birth_date]&quot; id=&quot;user-birth-date&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  date_field :birth_date, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;date&quot; name=&quot;user[birth_date]&quot; id=&quot;user-birth-date&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L510" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_date_field'>date_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:date</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="datetime_field-instance_method">
+  
+    #<strong>datetime_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Datetime input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  datetime_field :delivered_at
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;datetime&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  datetime_field :delivered_at, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;datetime&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L538" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_datetime_field'>datetime_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:datetime</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="datetime_local_field-instance_method">
+  
+    #<strong>datetime_local_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Datetime Local input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  datetime_local_field :delivered_at
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;datetime-local&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  datetime_local_field :delivered_at, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;datetime-local&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L566" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_datetime_local_field'>datetime_local_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:datetime-local</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="email_field-instance_method">
+  
+    #<strong>email_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Email input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  email_field :email
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;email&quot; name=&quot;user[email]&quot; id=&quot;user-email&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  email_field :email, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;email&quot; name=&quot;user[email]&quot; id=&quot;user-email&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L678" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_email_field'>email_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:email</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fields_for-instance_method">
+  
+    #<strong>fields_for</strong>(name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Nested fields</p>
+
+<p>The inputs generated by the wrapped block will be prefixed with the given name
+It supports infinite levels of nesting.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :delivery, routes.deliveries_path do
+    text_field :customer_name
+
+    fields_for :address do
+      text_field :street
+    end
+
+    submit &#39;Create&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;form action=&quot;/deliveries&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;delivery-form&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[customer_name]&quot; id=&quot;delivery-customer-name&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[address][street]&quot; id=&quot;delivery-address-street&quot; value=&quot;&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Multiple levels of nesting</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :delivery, routes.deliveries_path do
+    text_field :customer_name
+
+    fields_for :address do
+      text_field :street
+
+      fields_for :location do
+        text_field :city
+        text_field :country
+      end
+    end
+
+    submit &#39;Create&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;form action=&quot;/deliveries&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;delivery-form&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[customer_name]&quot; id=&quot;delivery-customer-name&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[address][street]&quot; id=&quot;delivery-address-street&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[address][location][city]&quot; id=&quot;delivery-address-location-city&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[address][location][country]&quot; id=&quot;delivery-address-location-country&quot; value=&quot;&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the nested name, it’s used to generate input
+names, ids, and to lookup params to fill values.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L203" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_fields_for'>fields_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_current_name'>current_name</span> <span class='op'>=</span> <span class='ivar'>@name</span>
+  <span class='ivar'>@name</span>        <span class='op'>=</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>ensure</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_current_name'>current_name</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fields_for_collection-instance_method">
+  
+    #<strong>fields_for_collection</strong>(name, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Nested collections</p>
+
+<p>Supports nesting for collections, with infinite
+levels of nesting.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  form_for :delivery, routes.deliveries_path do
+    text_field :customer_name
+
+    fields_for_collection :addresses do
+      text_field :street
+    end
+
+    submit &#39;Create&#39;
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;form action=&quot;/deliveries&quot; method=&quot;POST&quot; accept-charset=&quot;utf-8&quot; id=&quot;delivery-form&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;_csrf_token&quot; value=&quot;920cd5bfaecc6e58368950e790f2f7b4e5561eeeab230aa1b7de1b1f40ea7d5d&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[customer_name]&quot; id=&quot;delivery-customer-name&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[addresses][][street]&quot; id=&quot;delivery-address-0-street&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;delivery[addresses][][street]&quot; id=&quot;delivery-address-1-street&quot; value=&quot;&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the nested name, it’s used to generate input
+names, ids, and to lookup params to fill values.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L241" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_fields_for_collection'>fields_for_collection</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_current_name'>current_name</span> <span class='op'>=</span> <span class='ivar'>@name</span>
+  <span class='id identifier rubyid_base_value'>base_value</span> <span class='op'>=</span> <span class='id identifier rubyid__value'>_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_base_value'>base_value</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+    <span class='id identifier rubyid_fields_for'>fields_for</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>ensure</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_current_name'>current_name</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fieldset-instance_method">
+  
+    #<strong>fieldset</strong>(content = nil, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Fieldset</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  fieldset do
+    legend &quot;Author&quot;
+
+    fields_for :author do
+      label :name
+      text_field :name
+    end
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Author&lt;/legend&gt;
+  &lt;label for=&quot;book-author-name&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;book[author][name]&quot; id=&quot;book-author-name&quot; value=&quot;&quot;&gt;
+&lt;/fieldset&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>String</tt>, <tt>NilClass</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>the content</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the label tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L350" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_fieldset'>fieldset</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='comment'># This is here only for documentation purposes
+</span>  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="file_field-instance_method">
+  
+    #<strong>file_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>File input</p>
+
+<p><strong>PLEASE REMEMBER TO ADD <tt>enctype: ‘multipart/form-data’</tt> ATTRIBUTE TO THE FORM</strong></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  file_field :avatar
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;file&quot; name=&quot;user[avatar]&quot; id=&quot;user-avatar&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  file_field :avatar, class: &quot;avatar-upload&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;file&quot; name=&quot;user[avatar]&quot; id=&quot;user-avatar&quot; class=&quot;avatar-upload&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Accepted MIME Types</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  file_field :resume, accept: &#39;application/pdf,application/ms-word&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;file&quot; name=&quot;user[resume]&quot; id=&quot;user-resume&quot; accept=&quot;application/pdf,application/ms-word&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Accepted MIME Types (as array)</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  file_field :resume, accept: [&#39;application/pdf&#39;, &#39;application/ms-word&#39;]
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;file&quot; name=&quot;user[resume]&quot; id=&quot;user-resume&quot; accept=&quot;application/pdf,application/ms-word&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Accepted multiple file upload (as array)</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  file_field :resume, multiple: true
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;file&quot; name=&quot;user[resume]&quot; id=&quot;user-resume&quot; multiple=&quot;multiple&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>attributes</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:accept</span>
+          <span class="type">(<tt>String</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Optional set of accepted MIME Types</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:multiple</span>
+          <span class="type">(<tt>TrueClass</tt>, <tt>FalseClass</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Optional, allow multiple file upload</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L815" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_file_field'>file_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:accept</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:accept</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>ACCEPT_SEPARATOR</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:accept</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='symbol'>:file</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid__input_id'>_input_id</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_input'>input</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hidden_field-instance_method">
+  
+    #<strong>hidden_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Hidden input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  hidden_field :customer_id
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delivery[customer_id]&quot; id=&quot;delivery-customer-id&quot; value=&quot;&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L756" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_hidden_field'>hidden_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:hidden</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="image_button-instance_method">
+  
+    #<strong>image_button</strong>(source, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Image button</p>
+
+<p>Visual submit button</p>
+
+<p><strong>Please note:</strong> for security reasons, please use the absolute URL of the image</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  image_button &quot;https://hanamirb.org/assets/button.png&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;image&quot; src=&quot;https://hanamirb.org/assets/button.png&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  image_button &quot;https://hanamirb.org/assets/button.png&quot;, name: &quot;image&quot;, width: &quot;50&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input name=&quot;image&quot; width=&quot;50&quot; type=&quot;image&quot; src=&quot;https://hanamirb.org/assets/button.png&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>source</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The <strong>absolute URL</strong> of the image</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1357" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_image_button'>image_button</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attrs'>attrs</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='symbol'>:image</span>
+  <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:src</span><span class='rbracket'>]</span>  <span class='op'>=</span> <span class='id identifier rubyid_escape_url'>escape_url</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid_attrs'>attrs</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="label-instance_method">
+  
+    #<strong>label</strong>(content, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Label tag</p>
+
+<p>The first param <tt>content</tt> can be a <tt>Symbol</tt> that represents
+the target field (Eg. <tt>:extended_title</tt>), or a <tt>String</tt>
+which is used as it is.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  label :extended_title
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;label for=&quot;book-extended-title&quot;&gt;Extended title&lt;/label&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  label :title, class: &quot;form-label&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;label for=&quot;book-title&quot; class=&quot;form-label&quot;&gt;Title&lt;/label&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Custom content</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  label &#39;Title&#39;, for: :extended_title
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;label for=&quot;book-extended-title&quot;&gt;Title&lt;/label&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Custom “for” attribute</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  label :extended_title, for: &#39;ext-title&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;label for=&quot;ext-title&quot;&gt;Extended title&lt;/label&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Nested fields usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  fields_for :address do
+    label :city
+    text_field :city
+  end
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;label for=&quot;delivery-address-city&quot;&gt;City&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;delivery[address][city] id=&quot;delivery-address-city&quot; value=&quot;&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the field name or a content string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the label tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L312" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>for:</span> <span class='id identifier rubyid__for'>_for</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:for</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_content'>content</span>    <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_content'>content</span>
+               <span class='kw'>when</span> <span class='const'>String</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Utils/String.html" title="Hanami::Utils::String (class)">String</a></span></span>
+                 <span class='id identifier rubyid_content'>content</span>
+               <span class='kw'>else</span>
+                 <span class='const'><span class='object_link'><a href="../../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Utils/String.html" title="Hanami::Utils::String (class)">String</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Utils/String.html#initialize-instance_method" title="Hanami::Utils::String#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'><span class='object_link'><a href="../../Utils/String.html#capitalize-instance_method" title="Hanami::Utils::String#capitalize (method)">capitalize</a></span></span>
+               <span class='kw'>end</span>
+
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="month_field-instance_method">
+  
+    #<strong>month_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Month field</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  month_field :release_month
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;month&quot; name=&quot;book[release_month]&quot; id=&quot;book-release-month&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  month_field :release_month, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;month&quot; name=&quot;book[release_month]&quot; id=&quot;book-release-month&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L622" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_month_field'>month_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:month</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="number_field-instance_method">
+  
+    #<strong>number_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number input</p>
+
+<p>You can also make use of the <code>max</code>, <code>min</code>, and <code>step</code> attributes for
+the HTML5 number field.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  number_field :percent_read
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;number&quot; name=&quot;book[percent_read]&quot; id=&quot;book-percent-read&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Advanced attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  number_field :priority, min: 1, max: 10, step: 1
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;number&quot; name=&quot;book[percent_read]&quot; id=&quot;book-precent-read&quot; value=&quot;&quot; min=&quot;1&quot; max=&quot;10&quot; step=&quot;1&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the number input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L847" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_number_field'>number_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:number</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="password_field-instance_method">
+  
+    #<strong>password_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Password input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  password_field :password
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;password&quot; name=&quot;signup[password]&quot; id=&quot;signup-password&quot; value=&quot;&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1073" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_password_field'>password_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>type:</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid__input_id'>_input_id</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>value:</span> <span class='kw'>nil</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="radio_button-instance_method">
+  
+    #<strong>radio_button</strong>(name, value, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Radio input</p>
+
+<p>If request params have a value that corresponds to the given value,
+it automatically sets the <tt>checked</tt> attribute.
+This Hanami::Controller integration happens without any developer intervention.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  radio_button :category, &#39;Fiction&#39;
+  radio_button :category, &#39;Non-Fiction&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Fiction&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Non-Fiction&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  radio_button :category, &#39;Fiction&#39;, class: &quot;form-check&quot;
+  radio_button :category, &#39;Non-Fiction&#39;, class: &quot;form-check&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Fiction&quot; class=&quot;form-check&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Non-Fiction&quot; class=&quot;form-check&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Automatic checked value</p>
+</div></p>
+      
+      <pre class="example code"><code># Given the following params:
+#
+# book: {
+#   category: &#39;Non-Fiction&#39;
+# }
+
+&lt;%=
+  # ...
+  radio_button :category, &#39;Fiction&#39;
+  radio_button :category, &#39;Non-Fiction&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Fiction&quot;&gt;
+&lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Non-Fiction&quot; checked=&quot;checked&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1052" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_radio_button'>radio_button</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='symbol'>:radio</span><span class='comma'>,</span> <span class='label'>name:</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>value:</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:checked</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>CHECKED</span> <span class='kw'>if</span> <span class='id identifier rubyid__value'>_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_input'>input</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="range_field-instance_method">
+  
+    #<strong>range_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Range input</p>
+
+<p>You can also make use of the <code>max</code>, <code>min</code>, and <code>step</code> attributes for
+the HTML5 number field.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  range_field :discount_percentage
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;range&quot; name=&quot;book[discount_percentage]&quot; id=&quot;book-discount-percentage&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Advanced attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  range_field :discount_percentage, min: 1, max: 10, step: 1
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;number&quot; name=&quot;book[discount_percentage]&quot; id=&quot;book-discount-percentage&quot; value=&quot;&quot; min=&quot;1&quot; max=&quot;10&quot; step=&quot;1&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the number input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L878" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_range_field'>range_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:range</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="search_field-instance_method">
+  
+    #<strong>search_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Search input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  search_field :q
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;search&quot; name=&quot;search[q]&quot; id=&quot;search-q&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  search_field :q, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;search&quot; name=&quot;search[q]&quot; id=&quot;search-q&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L997" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_search_field'>search_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:search</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select-instance_method">
+  
+    #<strong>select</strong>(name, values, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Select input</p>
+
+<p>If request params have a value that corresponds to one of the given values,
+it automatically sets the <tt>selected</tt> attribute on the <tt><option>&lt;/tt&gt; tag.
+This Hanami::Controller integration happens without any developer intervention.</option></tt></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;Italy&#39; =&gt; &#39;it&#39;, &#39;United States&#39; =&gt; &#39;us&#39;]
+  select :store, values, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot; class=&quot;form-control&quot;&gt;
+  &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;Italy&#39; =&gt; &#39;it&#39;, &#39;United States&#39; =&gt; &#39;us&#39;]
+  select :store, values
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot;&gt;
+  &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Automatic selected option</p>
+</div></p>
+      
+      <pre class="example code"><code># Given the following params:
+#
+# book: {
+#   store: &#39;it&#39;
+# }
+
+&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :store, values
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot;&gt;
+  &lt;option value=&quot;it&quot; selected=&quot;selected&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Prompt option</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :store, values, options: { prompt: &#39;Select a store&#39; }
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot;&gt;
+  &lt;option&gt;Select a store&lt;/option&gt;
+  &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Selected option</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :store, values, options: { selected: book.store }
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot;&gt;
+  &lt;option value=&quot;it&quot; selected=&quot;selected&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Prompt option and HTML attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :store, values, options: { prompt: &#39;Select a store&#39; }, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store]&quot; id=&quot;book-store&quot; class=&quot;form-control&quot;&gt;
+  &lt;option&gt;Select a store&lt;/option&gt;
+  &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Multiple select</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :stores, values, multiple: true
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store][]&quot; id=&quot;book-store&quot; multiple=&quot;multiple&quot;&gt;
+ &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Multiple select and HTML attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  values = Hash[&#39;it&#39; =&gt; &#39;Italy&#39;, &#39;us&#39; =&gt; &#39;United States&#39;]
+  select :stores, values, multiple: true, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;select name=&quot;book[store][]&quot; id=&quot;book-store&quot; multiple=&quot;multiple&quot; class=&quot;form-control&quot;&gt;
+  &lt;option value=&quot;it&quot;&gt;Italy&lt;/option&gt;
+  &lt;option value=&quot;us&quot;&gt;United States&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>values</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a Hash to generate <tt><option>&lt;/tt&gt; tags.
+Values correspond to <tt>value</tt> and keys correspond to the content.</option></tt></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1201" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='comment'># rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+</span>  <span class='id identifier rubyid_options'>options</span>    <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:options</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>name:</span> <span class='id identifier rubyid__select_input_name'>_select_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:multiple</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid__input_id'>_input_id</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_prompt'>prompt</span>     <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:prompt</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_selected'>selected</span>   <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:selected</span><span class='rparen'>)</span>
+
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_prompt'>prompt</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_prompt'>prompt</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid__select_option_selected?'>_select_option_selected?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_selected'>selected</span><span class='comma'>,</span> <span class='id identifier rubyid__value'>_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:multiple</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>value:</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='label'>selected:</span> <span class='const'>SELECTED</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>value:</span> <span class='id identifier rubyid_value'>value</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="submit-instance_method">
+  
+    #<strong>submit</strong>(content, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Submit button</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  submit &#39;Create&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  submit &#39;Create&#39;, class: &quot;btn btn-primary&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Create&lt;/button&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The content</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L1389" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>type:</span> <span class='symbol'>:submit</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_button'>button</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tel_field-instance_method">
+  
+    #<strong>tel_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Telephone input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  tel_field :telephone
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;tel&quot; name=&quot;user[telephone]&quot; id=&quot;user-telephone&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  telurl_field :telephone, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;tel&quot; name=&quot;user[telephone]&quot; id=&quot;user-telephone&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L737" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_tel_field'>tel_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:tel</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text_area-instance_method">
+  
+    #<strong>text_area</strong>(name, content = nil, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Text-area input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_area :hobby
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot;&gt;&lt;/textarea&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Set content</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_area :hobby, &#39;Football&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot;&gt;Football&lt;/textarea&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Set content and HTML attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_area :hobby, &#39;Football&#39;, class: &#39;form-control&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot; class=&quot;form-control&quot;&gt;Football&lt;/textarea&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Omit content and specify HTML attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_area :hobby, class: &#39;form-control&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Force blank value</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_area :hobby, &#39;&#39;, class: &#39;form-control&#39;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>content</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>the content of the textarea</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the textarea tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L934" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_text_area'>text_area</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_hash</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span>
+    <span class='id identifier rubyid_content'>content</span>    <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>name:</span> <span class='id identifier rubyid__input_name'>_input_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid__input_id'>_input_id</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_textarea'>textarea</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span> <span class='op'>||</span> <span class='id identifier rubyid__value'>_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text_field-instance_method">
+  
+    #<strong>text_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='input_text-instance_method'>input_text</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Text input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_field :first_name
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;user[first_name]&quot; id=&quot;user-first-name&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  text_field :first_name, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;text&quot; name=&quot;user[first_name]&quot; id=&quot;user-first-name&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>0.2.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L968" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_text_field'>text_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:text</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="time_field-instance_method">
+  
+    #<strong>time_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Time field</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  time_field :release_hour
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;time&quot; name=&quot;book[release_hour]&quot; id=&quot;book-release-hour&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  time_field :release_hour, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;time&quot; name=&quot;book[release_hour]&quot; id=&quot;book-release-hour&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L594" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_time_field'>time_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:time</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="url_field-instance_method">
+  
+    #<strong>url_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>URL input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  url_field :website
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;url&quot; name=&quot;user[website]&quot; id=&quot;user-website&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  url_field :website, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;url&quot; name=&quot;user[website]&quot; id=&quot;user-website&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L706" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_url_field'>url_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attrs'>attrs</span>         <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_attrs'>attrs</span><span class='lbracket'>[</span><span class='symbol'>:value</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_escape_url'>escape_url</span><span class='lparen'>(</span><span class='id identifier rubyid_attrs'>attrs</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:value</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid__value'>_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:url</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attrs'>attrs</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="week_field-instance_method">
+  
+    #<strong>week_field</strong>(name, attributes = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Week field</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  week_field :release_week
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;week&quot; name=&quot;book[release_week]&quot; id=&quot;book-release-week&quot; value=&quot;&quot;&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+</div></p>
+      
+      <pre class="example code"><code>&lt;%=
+  # ...
+  week_field :release_week, class: &quot;form-control&quot;
+%&gt;
+
+&lt;!-- output --&gt;
+&lt;input type=&quot;week&quot; name=&quot;book[release_week]&quot; id=&quot;book-release-week&quot; value=&quot;&quot; class=&quot;form-control&quot;&gt;</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the input name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.0.0/lib/hanami/helpers/form_helper/form_builder.rb#L650" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_week_field'>week_field</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='id identifier rubyid__attributes'>_attributes</span><span class='lparen'>(</span><span class='symbol'>:week</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../../assets/site.js"></script>
+    
+  </body>
+</html>
