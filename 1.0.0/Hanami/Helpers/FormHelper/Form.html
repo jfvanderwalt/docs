@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Helpers::FormHelper::Form
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -93,7 +95,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Form object</p>
+    
+<p>Form object</p>
 
 
   </div>
@@ -109,7 +112,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -150,7 +154,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a form.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a form.</p>
 </div></span>
   
 </li>
@@ -173,23 +178,24 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize a form</p>
+    
+<p>Initialize a form</p>
 
-<p>It accepts a set of values that are used in combination with request
-params to autofill <tt>value</tt> attributes for fields.</p>
+<p>It accepts a set of values that are used in combination with request params
+to autofill <code>value</code> attributes for fields.</p>
 
 <p>The keys of this Hash, MUST correspond to the structure of the (nested)
 fields of the form.</p>
 
-<p>For a given input where the <tt>name</tt> is <code>book[title]</code>, Hanami will
-look for <code>:book</code> key in values.</p>
+<p>For a given input where the <code>name</code> is <code>book[title]</code>,
+Hanami will look for <code>:book</code> key in values.</p>
 
 <p>If the current params have the same key, it will be PREFERRED over the
 given values.</p>
 
-<p>For instance, if <tt>params.get(‘book.title’)</tt> equals to
-<tt>“TDD”</tt> while <tt>values[:book].title</tt> returns
-<tt>“No test”</tt>, the first will win.</p>
+<p>For instance, if <code>params.get(&#39;book.title&#39;)</code> equals to
+<code>&quot;TDD&quot;</code> while <code>values[:book].title</code> returns
+<code>&quot;No test&quot;</code>, the first will win.</p>
 
 
   </div>
@@ -200,7 +206,8 @@ given values.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Pass A Value</p>
+        <p class="example_title"><div class='inline'>
+<p>Pass A Value</p>
 </div></p>
       
       <pre class="example code"><code># Given the following view
@@ -268,7 +275,8 @@ end
       
       
         &mdash;
-        <div class='inline'><p>the name of the form</p>
+        <div class='inline'>
+<p>the name of the form</p>
 </div>
       
     </li>
@@ -283,7 +291,8 @@ end
       
       
         &mdash;
-        <div class='inline'><p>the action of the form</p>
+        <div class='inline'>
+<p>the action of the form</p>
 </div>
       
     </li>
@@ -300,8 +309,9 @@ end
       
       
         &mdash;
-        <div class='inline'><p>a Hash of values to be used to autofill
-<tt>value</tt> attributes for fields</p>
+        <div class='inline'>
+<p>a Hash of values to be used to autofill <code>value</code> attributes for
+fields</p>
 </div>
       
     </li>
@@ -318,8 +328,8 @@ end
       
       
         &mdash;
-        <div class='inline'><p>a Hash of attributes to pass to the
-<tt>form</tt> tag</p>
+        <div class='inline'>
+<p>a Hash of attributes to pass to the <code>form</code> tag</p>
 </div>
       
     </li>
@@ -335,7 +345,8 @@ end
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>

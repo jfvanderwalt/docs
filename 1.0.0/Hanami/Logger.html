@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Logger
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -88,47 +90,57 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/logger.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/logger.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hanami logger</p>
+    
+<p>Hanami logger</p>
 
-<p>Implement with the same interface of Ruby std lib <code>Logger</code>.
-It uses <code>STDOUT</code>, <code>STDERR</code>, file name or open file as output stream.</p>
+<p>Implement with the same interface of Ruby std lib <code>Logger</code>. It
+uses <code>STDOUT</code>, <code>STDERR</code>, file name or open file as
+output stream.</p>
 
-<p>When a Hanami application is initialized, it creates a logger for that specific application.
-For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger</code> will be available.</p>
+<p>When a Hanami application is initialized, it creates a logger for that
+specific application. For instance for a
+<code>Bookshelf::Application</code> a <code>Bookshelf::Logger</code> will
+be available.</p>
 
 <p>This is useful for auto-tagging the output. Eg (<code>app=Booshelf</code>).</p>
 
-<p>When used stand alone (eg. <code>Hanami::Logger.info</code>), it tags lines with <code>app=Shared</code>.</p>
+<p>When used stand alone (eg. <code>Hanami::Logger.info</code>), it tags lines
+with <code>app=Shared</code>.</p>
 
 <p>The available severity levels are the same of <code>Logger</code>:</p>
-
-<ul>
-  <li>DEBUG</li>
-  <li>INFO</li>
-  <li>WARN</li>
-  <li>ERROR</li>
-  <li>FATAL</li>
-  <li>UNKNOWN</li>
-</ul>
+<ul><li>
+<p>DEBUG</p>
+</li><li>
+<p>INFO</p>
+</li><li>
+<p>WARN</p>
+</li><li>
+<p>ERROR</p>
+</li><li>
+<p>FATAL</p>
+</li><li>
+<p>UNKNOWN</p>
+</li></ul>
 
 <p>Those levels are available both as class and instance methods.</p>
 
 <p>Also Hanami::Logger support different formatters. Now available only two:</p>
+<ul><li>
+<p>Formatter (default)</p>
+</li><li>
+<p>JSONFormatter</p>
+</li></ul>
 
-<ul>
-  <li>Formatter (default)</li>
-  <li>JSONFormatter</li>
-</ul>
-
-<p>And if you want to use custom formatter you need create new class inherited from
-<code>Formatter</code> class and define <code>_format</code> private method like this:</p>
+<p>And if you want to use custom formatter you need create new class inherited
+from <code>Formatter</code> class and define <code>_format</code> private
+method like this:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>CustomFormatter</span> <span class='op'>&lt;</span> <span class='const'>Formatter</span>
   <span class='id identifier rubyid_private'>private</span>
@@ -147,7 +159,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -166,7 +179,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; app=Bookshelf severity=INFO time=1988-09-01 00:00:00 UTC message=Hello</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Standalone usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Standalone usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -175,7 +189,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; app=Hanami severity=INFO time=2016-05-27 10:14:42 UTC message=Hello</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom tagging</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom tagging</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -184,7 +199,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; app=FOO severity=INFO time=2016-05-27 10:14:42 UTC message=Hello</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Write to file</p>
+        <p class="example_title"><div class='inline'>
+<p>Write to file</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -194,7 +210,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 </span><span class='comment'># =&gt; app=FOO severity=INFO time=2016-05-27 10:14:42 UTC message=Hello</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Use JSON formatter</p>
+        <p class="example_title"><div class='inline'>
+<p>Use JSON formatter</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -222,7 +239,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -258,7 +276,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the current application name, this is used for tagging purposes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the current application name, this is used for tagging purposes.</p>
 </div></span>
   
 </li>
@@ -294,7 +313,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Close the logging stream if this stream isn’t an STDOUT.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Close the logging stream if this stream isn&#39;t an STDOUT.</p>
 </div></span>
   
 </li>
@@ -319,7 +339,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a logger.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a logger.</p>
 </div></span>
   
 </li>
@@ -343,7 +364,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize a logger</p>
+    
+<p>Initialize a logger</p>
 
 
   </div>
@@ -354,7 +376,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -365,7 +388,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; [Hanami] [DEBUG] [2017-03-30 15:41:01 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom application name</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom application name</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -376,7 +400,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; [bookshelf] [DEBUG] [2017-03-30 15:44:23 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Logger level (Integer)</p>
+        <p class="example_title"><div class='inline'>
+<p>Logger level (Integer)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -392,7 +417,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; [Hanami] [WARN] [2017-03-30 16:00:48 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Logger level (Constant)</p>
+        <p class="example_title"><div class='inline'>
+<p>Logger level (Constant)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -408,7 +434,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; [Hanami] [WARN] [2017-03-30 16:00:48 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Logger level (String)</p>
+        <p class="example_title"><div class='inline'>
+<p>Logger level (String)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -424,7 +451,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; [Hanami] [WARN] [2017-03-30 16:00:48 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Use a file</p>
+        <p class="example_title"><div class='inline'>
+<p>Use a file</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -440,7 +468,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 </span><span class='comment'>#  [Hanami] [DEBUG] [2017-03-30 15:52:54 +0200] Hello World</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Period rotation</p>
+        <p class="example_title"><div class='inline'>
+<p>Period rotation</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -449,7 +478,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 </span><span class='id identifier rubyid_logger'>logger</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bookshelf</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>daily</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>stream:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>development.log</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>File size rotation</p>
+        <p class="example_title"><div class='inline'>
+<p>File size rotation</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -458,7 +488,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 </span><span class='id identifier rubyid_logger'>logger</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bookshelf</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='int'>1024000</span><span class='comma'>,</span> <span class='label'>stream:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>development.log</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Use a StringIO</p>
+        <p class="example_title"><div class='inline'>
+<p>Use a StringIO</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -475,7 +506,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
 <span class='comment'># =&gt; &quot;[Hanami] [DEBUG] [2017-03-30 15:55:22 +0200] Hello World\n&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>JSON formatter</p>
+        <p class="example_title"><div class='inline'>
+<p>JSON formatter</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/logger</span><span class='tstring_end'>&#39;</span></span>
@@ -501,8 +533,8 @@ For instance for a <code>Bookshelf::Application</code> a <code>Bookshelf::Logger
       
       
         &mdash;
-        <div class='inline'><p>an optional application name used for
-tagging purposes</p>
+        <div class='inline'>
+<p>an optional application name used for tagging purposes</p>
 </div>
       
     </li>
@@ -517,8 +549,10 @@ tagging purposes</p>
       
       
         &mdash;
-        <div class='inline'><p>an optional set of arguments to honor Ruby’s
-<code>Logger#initialize</code> arguments. See Ruby documentation for details.</p>
+        <div class='inline'>
+<p>an optional set of arguments to honor Ruby&#39;s
+<code>Logger#initialize</code> arguments. See Ruby documentation for
+details.</p>
 </div>
       
     </li>
@@ -533,9 +567,11 @@ tagging purposes</p>
       
       
         &mdash;
-        <div class='inline'><p>an optional log stream.
-This is a filename (<code>String</code>) or <code>IO</code> object (typically <code>$stdout</code>,
-<code>$stderr</code>, or an open file). It defaults to <code>$stderr</code>.</p>
+        <div class='inline'>
+<p>an optional log stream. This is a filename (<code>String</code>) or
+<code>IO</code> object (typically <code>$stdout</code>,
+<code>$stderr</code>, or an open file). It defaults to
+<code>$stderr</code>.</p>
 </div>
       
     </li>
@@ -550,9 +586,10 @@ This is a filename (<code>String</code>) or <code>IO</code> object (typically <c
       
       
         &mdash;
-        <div class='inline'><p>logging level. It can be expressed as an
-integer, according to Ruby’s <code>Logger</code> from standard library or as a
-string with the name of the level</p>
+        <div class='inline'>
+<p>logging level. It can be expressed as an integer, according to Ruby&#39;s
+<code>Logger</code> from standard library or as a string with the name of
+the level</p>
 </div>
       
     </li>
@@ -567,8 +604,9 @@ string with the name of the level</p>
       
       
         &mdash;
-        <div class='inline'><p>a formatter - We support <code>:json</code> as
-JSON formatter or an object that respond to <code>#_format(data)</code></p>
+        <div class='inline'>
+<p>a formatter - We support <code>:json</code> as JSON formatter or an object
+that respond to <code>#_format(data)</code></p>
 </div>
       
     </li>
@@ -591,7 +629,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -602,7 +641,7 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/logger.rb#L378" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/logger.rb#L378" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -641,7 +680,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the current application name, this is used for tagging purposes</p>
+    
+<p>Returns the current application name, this is used for tagging purposes</p>
 
 
   </div>
@@ -659,7 +699,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
       
       
         &mdash;
-        <div class='inline'><p>the application name</p>
+        <div class='inline'>
+<p>the application name</p>
 </div>
       
     </li>
@@ -674,7 +715,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -685,7 +727,7 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/logger.rb#L392" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/logger.rb#L392" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -719,7 +761,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Close the logging stream if this stream isn’t an STDOUT</p>
+    
+<p>Close the logging stream if this stream isn&#39;t an STDOUT</p>
 
 
   </div>
@@ -735,7 +778,8 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -746,7 +790,7 @@ JSON formatter or an object that respond to <code>#_format(data)</code></p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/logger.rb#L405" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/logger.rb#L405" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

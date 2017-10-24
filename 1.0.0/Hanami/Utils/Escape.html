@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Utils::Escape
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,14 +72,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/escape.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/escape.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>HTML escape utilities</p>
+    
+<p>HTML escape utilities</p>
 
 <p>Based on OWASP research and OWASP ESAPI code</p>
 
@@ -110,7 +113,8 @@
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -149,7 +153,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape HTML contents.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape HTML contents.</p>
 </div></span>
   
 </li>
@@ -172,7 +177,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape HTML attributes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape HTML attributes.</p>
 </div></span>
   
 </li>
@@ -195,7 +201,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape URL for HTML attributes (href, src, etc..).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape URL for HTML attributes (href, src, etc..).</p>
 </div></span>
   
 </li>
@@ -221,10 +228,11 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape HTML contents</p>
+    
+<p>Escape HTML contents</p>
 
-<p>This MUST be used only for tag contents.
-Please use <code>html_attribute</code> for escaping HTML attributes.</p>
+<p>This MUST be used only for tag contents. Please use
+<code>html_attribute</code> for escaping HTML attributes.</p>
 
 
   </div>
@@ -235,14 +243,16 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Good practice</p>
+        <p class="example_title"><div class='inline'>
+<p>Good practice</p>
 </div></p>
       
       <pre class="example code"><code>&lt;div&gt;&lt;%= Hanami::Utils::Escape.html(&#39;&lt;script&gt;alert(1);&lt;/script&gt;&#39;) %&gt;&lt;/div&gt;
 &lt;div&gt;&amp;lt;script&amp;gt;alert(1);&amp;lt;&amp;#x2F;script&amp;gt;&lt;/div&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Bad practice</p>
+        <p class="example_title"><div class='inline'>
+<p>Bad practice</p>
 </div></p>
       
       <pre class="example code"><code># WRONG Use Escape.html_attribute instead
@@ -262,7 +272,8 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -280,7 +291,8 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -302,7 +314,8 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -313,7 +326,7 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/escape.rb#L420" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/escape.rb#L420" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -349,11 +362,12 @@ Please use <code>html_attribute</code> for escaping HTML attributes.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape HTML attributes</p>
+    
+<p>Escape HTML attributes</p>
 
-<p>This can be used both for HTML attributes and contents.
-Please note that this is more computational expensive.
-If you need to escape only HTML contents, please use <code>.html</code>.</p>
+<p>This can be used both for HTML attributes and contents. Please note that
+this is more computational expensive. If you need to escape only HTML
+contents, please use <code>.html</code>.</p>
 
 
   </div>
@@ -364,13 +378,15 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Good practice</p>
+        <p class="example_title"><div class='inline'>
+<p>Good practice</p>
 </div></p>
       
       <pre class="example code"><code>&lt;a title=&quot;&lt;%= Hanami::Utils::Escape.html_attribute(&#39;...&#39;) %&gt;&quot;&gt;link&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Good but expensive practice</p>
+        <p class="example_title"><div class='inline'>
+<p>Good but expensive practice</p>
 </div></p>
       
       <pre class="example code"><code># Alternatively you can use Escape.html
@@ -390,7 +406,8 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -408,7 +425,8 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -430,7 +448,8 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -441,7 +460,7 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/escape.rb#L453" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/escape.rb#L453" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -477,12 +496,13 @@ If you need to escape only HTML contents, please use <code>.html</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape URL for HTML attributes (href, src, etc..).</p>
+    
+<p>Escape URL for HTML attributes (href, src, etc..).</p>
 
 <p>It extracts from the given input the first valid URL that matches the
 whitelisted schemes (default: http, https and mailto).</p>
 
-<p>It’s possible to pass a second optional argument to specify different
+<p>It&#39;s possible to pass a second optional argument to specify different
 schemes.</p>
 
 
@@ -494,7 +514,8 @@ schemes.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%
@@ -509,7 +530,8 @@ schemes.</p>
 &lt;a href=&quot;&lt;%= escaped_evil_input %&gt;&quot;&gt;personal website&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom scheme</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom scheme</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%
@@ -539,7 +561,8 @@ schemes.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -556,7 +579,8 @@ schemes.</p>
       
       
         &mdash;
-        <div class='inline'><p>an array of whitelisted schemes</p>
+        <div class='inline'>
+<p>an array of whitelisted schemes</p>
 </div>
       
     </li>
@@ -574,7 +598,8 @@ schemes.</p>
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -598,7 +623,8 @@ schemes.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -609,7 +635,7 @@ schemes.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/escape.rb#L509" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/escape.rb#L509" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

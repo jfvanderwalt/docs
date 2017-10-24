@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Controller
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -75,8 +77,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-controller-1.0.0/lib/hanami/controller.rb<span class="defines">,<br />
-  gems/gems/hanami-controller-1.0.0/lib/hanami/action/exposable/guard.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/controller/error.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/controller/version.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/controller/configuration.rb</span>
+    <dd>gems/gems/hanami-controller-1.0.1/lib/hanami/controller.rb<span class="defines">,<br />
+  gems/gems/hanami-controller-1.0.1/lib/hanami/action/exposable/guard.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/controller/error.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/controller/version.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/controller/configuration.rb</span>
 </dd>
   </dl>
   
@@ -84,7 +86,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>A set of logically grouped actions</p>
+    
+<p>A set of logically grouped actions</p>
 
 
   </div>
@@ -129,7 +132,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -153,7 +157,8 @@
       <dt id="VERSION-constant" class="">VERSION =
         <div class="docstring">
   <div class="discussion">
-    <p>Defines the version</p>
+    
+<p>Defines the version</p>
 
 
   </div>
@@ -169,7 +174,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -178,7 +184,7 @@
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.0</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.1</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
     
   </dl>
 
@@ -213,7 +219,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure the framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure the framework.</p>
 </div></span>
   
 </li>
@@ -236,7 +243,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Duplicate the framework and generate modules for the target application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Duplicate the framework and generate modules for the target application.</p>
 </div></span>
   
 </li>
@@ -259,7 +267,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Framework loading entry point.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Framework loading entry point.</p>
 </div></span>
   
 </li>
@@ -291,8 +300,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure the framework.
-It yields the given block in the context of the configuration</p>
+    
+<p>Configure the framework. It yields the given block in the context of the
+configuration</p>
 
 
   </div>
@@ -323,7 +333,8 @@ It yields the given block in the context of the configuration</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration block</p>
+        <div class='inline'>
+<p>the configuration block</p>
 </div>
       
     </li>
@@ -346,7 +357,8 @@ It yields the given block in the context of the configuration</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -357,7 +369,7 @@ It yields the given block in the context of the configuration</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/controller/blob/v1.0.0/lib/hanami/controller.rb#L74" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/controller/blob/v1.0.1/lib/hanami/controller.rb#L74" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -384,17 +396,13 @@ It yields the given block in the context of the configuration</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Duplicate the framework and generate modules for the target application</p>
+    
+<p>Duplicate the framework and generate modules for the target application</p>
 
-<p>module MyApp::Controllers::Dashboard
-   include MyApp::Controller</p>
+<p>module MyApp::Controllers::Dashboard  include MyApp::Controller</p>
 
-<p>action ‘Index’ do # this will inject MyApp::Action
-     def call(params)
-       # …
-     end
-   end
- end</p>
+<p>action &#39;Index&#39; do # this will inject MyApp::Action  def
+call(params)  # …  end  end  end</p>
 
 
   </div>
@@ -405,7 +413,8 @@ It yields the given block in the context of the configuration</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/controller</span><span class='tstring_end'>&#39;</span></span>
@@ -422,7 +431,8 @@ It yields the given block in the context of the configuration</p>
 </span><span class='comment'># 4. Configure MyApp::Action as the default module for actions</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Compare code</p>
+        <p class="example_title"><div class='inline'>
+<p>Compare code</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/controller</span><span class='tstring_end'>&#39;</span></span>
@@ -452,7 +462,8 @@ It yields the given block in the context of the configuration</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom controllers module</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom controllers module</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/controller</span><span class='tstring_end'>&#39;</span></span>
@@ -470,7 +481,8 @@ It yields the given block in the context of the configuration</p>
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nil controllers module</p>
+        <p class="example_title"><div class='inline'>
+<p>Nil controllers module</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/controller</span><span class='tstring_end'>&#39;</span></span>
@@ -487,7 +499,8 @@ It yields the given block in the context of the configuration</p>
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Block usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Block usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/controller</span><span class='tstring_end'>&#39;</span></span>
@@ -515,7 +528,8 @@ It yields the given block in the context of the configuration</p>
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace of the application</p>
+        <div class='inline'>
+<p>the Ruby namespace of the application</p>
 </div>
       
     </li>
@@ -532,8 +546,8 @@ It yields the given block in the context of the configuration</p>
       
       
         &mdash;
-        <div class='inline'><p>the optional namespace where the application’s
-controllers will live</p>
+        <div class='inline'>
+<p>the optional namespace where the application&#39;s controllers will live</p>
 </div>
       
     </li>
@@ -548,7 +562,8 @@ controllers will live</p>
       
       
         &mdash;
-        <div class='inline'><p>an optional block to configure the framework</p>
+        <div class='inline'>
+<p>an optional block to configure the framework</p>
 </div>
       
     </li>
@@ -566,7 +581,8 @@ controllers will live</p>
       
       
         &mdash;
-        <div class='inline'><p>a copy of Hanami::Controller</p>
+        <div class='inline'>
+<p>a copy of Hanami::Controller</p>
 </div>
       
     </li>
@@ -592,7 +608,8 @@ controllers will live</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -603,7 +620,7 @@ controllers will live</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/controller/blob/v1.0.0/lib/hanami/controller.rb#L235" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/controller/blob/v1.0.1/lib/hanami/controller.rb#L235" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -641,7 +658,8 @@ controllers will live</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Framework loading entry point</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Framework loading entry point</p>
 
 
   </div>
@@ -657,7 +675,8 @@ controllers will live</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -668,7 +687,7 @@ controllers will live</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/controller/blob/v1.0.0/lib/hanami/controller.rb#L255" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/controller/blob/v1.0.1/lib/hanami/controller.rb#L255" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

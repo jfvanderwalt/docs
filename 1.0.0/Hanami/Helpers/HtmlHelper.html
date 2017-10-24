@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Helpers::HtmlHelper
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -84,32 +86,41 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>HTML builder</p>
+    
+<p>HTML builder</p>
 
-<p>By including <tt>Hanami::Helpers::HtmlHelper</tt> it will inject one private method: <tt>html</tt>.
-This is a HTML5 markup builder.</p>
+<p>By including <code>Hanami::Helpers::HtmlHelper</code> it will inject one
+private method: <code>html</code>. This is a HTML5 markup builder.</p>
 
 <p>Features:</p>
-
-<ul>
-  <li>Support for complex markup without the need of concatenation</li>
-  <li>Auto closing HTML5 tags</li>
-  <li>Custom tags</li>
-  <li>Content tag auto escape (XSS protection)</li>
-  <li>Support for view local variables</li>
-</ul>
+<ul><li>
+<p>Support for complex markup without the need of concatenation</p>
+</li><li>
+<p>Auto closing HTML5 tags</p>
+</li><li>
+<p>Custom tags</p>
+</li><li>
+<p>Content tag auto escape (XSS protection)</p>
+</li><li>
+<p>Support for view local variables</p>
+</li></ul>
 
 <p>Usage:</p>
-
-<ul>
-  <li>It knows how to close tags according to HTML5 spec (1)</li>
-  <li>It accepts content as first argument (2)</li>
-  <li>It accepts another builder as first argument (3)</li>
-  <li>It accepts content as block which returns a string (4)</li>
-  <li>It accepts content as a block with nested markup builders (5)</li>
-  <li>It builds attributes from given hash (6)</li>
-  <li>It combines attributes and block (7)</li>
-</ul>
+<ul><li>
+<p>It knows how to close tags according to HTML5 spec (1)</p>
+</li><li>
+<p>It accepts content as first argument (2)</p>
+</li><li>
+<p>It accepts another builder as first argument (3)</p>
+</li><li>
+<p>It accepts content as block which returns a string (4)</p>
+</li><li>
+<p>It accepts content as a block with nested markup builders (5)</p>
+</li><li>
+<p>It builds attributes from given hash (6)</p>
+</li><li>
+<p>It combines attributes and block (7)</p>
+</li></ul>
 
 
   </div>
@@ -120,7 +131,8 @@ This is a HTML5 markup builder.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># 1
@@ -169,7 +181,8 @@ This is a HTML5 markup builder.</p>
 </span><span class='comment'>#&lt;li&gt;Hanami&lt;/li&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Complex markup</p>
+        <p class="example_title"><div class='inline'>
+<p>Complex markup</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'>#
@@ -194,14 +207,16 @@ This is a HTML5 markup builder.</p>
 </span><span class='comment'>#&lt;/form&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom tags</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom tags</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='symbol'>:custom</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Foo</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>next</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &lt;custom id=&quot;next&quot;&gt;Foo&lt;/custom&gt;
 </span><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_empty_tag'>empty_tag</span><span class='lparen'>(</span><span class='symbol'>:xr</span><span class='comma'>,</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>next</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>      <span class='comment'># =&gt; &lt;xr id=&quot;next&quot;&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Auto escape</p>
+        <p class="example_title"><div class='inline'>
+<p>Auto escape</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>         <span class='comment'># =&gt; &lt;div&gt;hello&lt;/hello&gt;
@@ -226,7 +241,8 @@ This is a HTML5 markup builder.</p>
   <span class='comment'># =&gt; &quot;&lt;div&gt;&lt;p&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/p&gt;&lt;/div&gt;&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'>#
@@ -250,7 +266,8 @@ This is a HTML5 markup builder.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>View context</p>
+        <p class="example_title"><div class='inline'>
+<p>View context</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'>#
@@ -301,7 +318,8 @@ This is a HTML5 markup builder.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -350,7 +368,8 @@ This is a HTML5 markup builder.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Instantiate an HTML builder.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Instantiate an HTML builder.</p>
 </div></span>
   
 </li>
@@ -376,7 +395,8 @@ This is a HTML5 markup builder.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Instantiate an HTML builder</p>
+    
+<p>Instantiate an HTML builder</p>
 
 
   </div>
@@ -395,7 +415,8 @@ This is a HTML5 markup builder.</p>
       
       
         &mdash;
-        <div class='inline'><p>the optional content block</p>
+        <div class='inline'>
+<p>the optional content block</p>
 </div>
       
     </li>
@@ -413,7 +434,8 @@ This is a HTML5 markup builder.</p>
       
       
         &mdash;
-        <div class='inline'><p>the HTML builder</p>
+        <div class='inline'>
+<p>the HTML builder</p>
 </div>
       
     </li>
@@ -437,7 +459,8 @@ This is a HTML5 markup builder.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Utils::String
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -86,14 +88,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/string.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/string.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>String on steroids</p>
+    
+<p>String on steroids</p>
 
 
   </div>
@@ -109,7 +112,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -154,7 +158,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Equality.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Equality.</p>
 </div></span>
   
 </li>
@@ -177,7 +182,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a capitalized version of the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a capitalized version of the string.</p>
 </div></span>
   
 </li>
@@ -200,7 +206,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a CamelCase version of the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a CamelCase version of the string.</p>
 </div></span>
   
 </li>
@@ -223,7 +230,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a downcased and dash separated version of the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a downcased and dash separated version of the string.</p>
 </div></span>
   
 </li>
@@ -246,7 +254,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return the string without the Ruby namespace of the class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the string without the Ruby namespace of the class.</p>
 </div></span>
   
 </li>
@@ -269,7 +278,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Replace the given pattern with the given replacement.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Replace the given pattern with the given replacement.</p>
 </div></span>
   
 </li>
@@ -292,7 +302,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the hash of the internal string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the hash of the internal string.</p>
 </div></span>
   
 </li>
@@ -317,7 +328,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize the string.</p>
 </div></span>
   
 </li>
@@ -340,7 +352,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return the top level namespace name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the top level namespace name.</p>
 </div></span>
   
 </li>
@@ -363,7 +376,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Replace the rightmost match of <tt>pattern</tt> with <tt>replacement</tt>.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Replace the rightmost match of <code>pattern</code> with
+<code>replacement</code>.</p>
 </div></span>
   
 </li>
@@ -386,7 +401,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Both forms iterate through str, matching the pattern.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Both forms iterate through str, matching the pattern.</p>
 </div></span>
   
 </li>
@@ -409,7 +425,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Split the string with the given pattern.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Split the string with the given pattern.</p>
 </div></span>
   
 </li>
@@ -432,7 +449,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a titleized version of the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a titleized version of the string.</p>
 </div></span>
   
 </li>
@@ -457,7 +475,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a string representation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a string representation.</p>
 </div></span>
   
 </li>
@@ -480,7 +499,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It iterates through the tokens and calls the given block.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It iterates through the tokens and calls the given block.</p>
 </div></span>
   
 </li>
@@ -503,7 +523,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a downcased and underscore separated version of the string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a downcased and underscore separated version of the string.</p>
 </div></span>
   
 </li>
@@ -526,7 +547,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize the string</p>
+    
+<p>Initialize the string</p>
 
 
   </div>
@@ -545,7 +567,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the value we want to initialize</p>
+        <div class='inline'>
+<p>the value we want to initialize</p>
 </div>
       
     </li>
@@ -561,7 +584,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -572,7 +596,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L82" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L82" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -611,7 +635,8 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-<p>Override Ruby’s method_missing in order to provide ::String interface</p>
+
+<p>Override Ruby&#39;s method_missing in order to provide ::String interface</p>
 
 
   </div>
@@ -629,7 +654,8 @@
       
       
         &mdash;
-        <div class='inline'><p>If doesn’t respond to the given method</p>
+        <div class='inline'>
+<p>If doesn&#39;t respond to the given method</p>
 </div>
       
     </li>
@@ -644,7 +670,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -655,7 +682,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L401" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L401" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -697,7 +724,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Equality</p>
+    
+<p>Equality</p>
 
 
   </div>
@@ -726,7 +754,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -737,7 +766,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L318" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L318" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -764,7 +793,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a capitalized version of the string</p>
+    
+<p>Return a capitalized version of the string</p>
 
 
   </div>
@@ -805,7 +835,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -820,7 +851,8 @@
       
       
         
-        <div class='inline'><p>0.5.2</p>
+        <div class='inline'>
+<p>0.5.2</p>
 </div>
       
     </li>
@@ -831,7 +863,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L124" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L124" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -862,7 +894,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a CamelCase version of the string</p>
+    
+<p>Return a CamelCase version of the string</p>
 
 
   </div>
@@ -891,7 +924,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -906,7 +940,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -917,7 +952,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L143" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L143" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -925,7 +960,7 @@
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_classify'>classify</span>
   <span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='id identifier rubyid_underscore'>underscore</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='const'>CLASSIFY_WORD_SEPARATOR</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:capitalize</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_delimiters'>delimiters</span> <span class='op'>=</span> <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'>CLASSIFY_WORD_SEPARATOR</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delimiters'>delimiters</span> <span class='op'>=</span> <span class='id identifier rubyid_underscore'>underscore</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'>CLASSIFY_WORD_SEPARATOR</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_delimiters'>delimiters</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_delimiter'>delimiter</span><span class='op'>|</span>
     <span class='id identifier rubyid_delimiter'>delimiter</span> <span class='op'>==</span> <span class='const'>CLASSIFY_SEPARATOR</span> <span class='op'>?</span> <span class='const'>EMPTY_STRING</span> <span class='op'>:</span> <span class='const'>NAMESPACE_SEPARATOR</span>
@@ -951,7 +986,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a downcased and dash separated version of the string</p>
+    
+<p>Return a downcased and dash separated version of the string</p>
 
 
   </div>
@@ -986,7 +1022,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -1001,7 +1038,8 @@
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -1012,7 +1050,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L194" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L194" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1039,7 +1077,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return the string without the Ruby namespace of the class</p>
+    
+<p>Return the string without the Ruby namespace of the class</p>
 
 
   </div>
@@ -1071,7 +1110,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -1086,7 +1126,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1097,7 +1138,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L212" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L212" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1124,7 +1165,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Replace the given pattern with the given replacement</p>
+    
+<p>Replace the given pattern with the given replacement</p>
 
 
   </div>
@@ -1160,7 +1202,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1171,7 +1214,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L342" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L342" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1202,7 +1245,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the hash of the internal string</p>
+    
+<p>Returns the hash of the internal string</p>
 
 
   </div>
@@ -1231,7 +1275,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1242,7 +1287,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L298" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L298" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1269,7 +1314,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return the top level namespace name</p>
+    
+<p>Return the top level namespace name</p>
 
 
   </div>
@@ -1301,7 +1347,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -1316,7 +1363,8 @@
       
       
         
-        <div class='inline'><p>0.1.2</p>
+        <div class='inline'>
+<p>0.1.2</p>
 </div>
       
     </li>
@@ -1327,7 +1375,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L230" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L230" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1354,7 +1402,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Replace the rightmost match of <tt>pattern</tt> with <tt>replacement</tt></p>
+    
+<p>Replace the rightmost match of <code>pattern</code> with
+<code>replacement</code></p>
 
 <p>If the pattern cannot be matched, it returns the original string.</p>
 
@@ -1394,7 +1444,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the pattern to find</p>
+        <div class='inline'>
+<p>the pattern to find</p>
 </div>
       
     </li>
@@ -1409,7 +1460,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the string to replace</p>
+        <div class='inline'>
+<p>the string to replace</p>
 </div>
       
     </li>
@@ -1427,7 +1479,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the replaced string</p>
+        <div class='inline'>
+<p>the replaced string</p>
 </div>
       
     </li>
@@ -1442,7 +1495,8 @@
       
       
         
-        <div class='inline'><p>0.6.0</p>
+        <div class='inline'>
+<p>0.6.0</p>
 </div>
       
     </li>
@@ -1453,7 +1507,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L385" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L385" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1486,7 +1540,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Both forms iterate through str, matching the pattern</p>
+    
+<p>Both forms iterate through str, matching the pattern</p>
 
 
   </div>
@@ -1522,7 +1577,8 @@
       
       
         
-        <div class='inline'><p>0.6.0</p>
+        <div class='inline'>
+<p>0.6.0</p>
 </div>
       
     </li>
@@ -1533,7 +1589,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L357" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L357" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1560,7 +1616,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Split the string with the given pattern</p>
+    
+<p>Split the string with the given pattern</p>
 
 
   </div>
@@ -1596,7 +1653,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1607,7 +1665,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L331" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L331" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1634,7 +1692,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a titleized version of the string</p>
+    
+<p>Return a titleized version of the string</p>
 
 
   </div>
@@ -1663,7 +1722,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -1678,7 +1738,8 @@
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -1689,7 +1750,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L97" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L97" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1720,7 +1781,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a string representation</p>
+    
+<p>Returns a string representation</p>
 
 
   </div>
@@ -1749,7 +1811,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1760,7 +1823,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L307" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L307" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1787,8 +1850,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>It iterates through the tokens and calls the given block.
-A token is a substring wrapped by <code>()</code> and separated by <code>|</code>.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>It iterates through the tokens and calls the given block. A token is a
+substring wrapped by <code>()</code> and separated by <code>|</code>.</p>
 
 
   </div>
@@ -1823,7 +1887,8 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
       
       
         
-        <div class='inline'><p>the block that is called for each token.</p>
+        <div class='inline'>
+<p>the block that is called for each token.</p>
 </div>
       
     </li>
@@ -1838,7 +1903,8 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1849,7 +1915,7 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L254" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L254" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1887,9 +1953,11 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a downcased and underscore separated version of the string</p>
+    
+<p>Return a downcased and underscore separated version of the string</p>
 
-<p>Revised version of <code>ActiveSupport::Inflector.underscore</code> implementation</p>
+<p>Revised version of <code>ActiveSupport::Inflector.underscore</code>
+implementation</p>
 
 
   </div>
@@ -1918,7 +1986,8 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
       
       
         &mdash;
-        <div class='inline'><p>the transformed string</p>
+        <div class='inline'>
+<p>the transformed string</p>
 </div>
       
     </li>
@@ -1940,7 +2009,8 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1951,7 +2021,7 @@ A token is a substring wrapped by <code>()</code> and separated by <code>|</code
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/string.rb#L168" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/string.rb#L168" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::View::Dsl
+      
+        &mdash; Hanami API docs | v1.1.0.rc1
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+    <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::View::Dsl
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-view-1.1.0.rc1/lib/hanami/view/dsl.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class level DSL</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format-instance_method" title="#format (instance method)">#<strong>format</strong>(value = nil)  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify the handled format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#layout-instance_method" title="#layout (instance method)">#<strong>layout</strong>(value = nil)  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, it specifies the layout.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#root-instance_method" title="#root (instance method)">#<strong>root</strong>(value = nil)  &#x21d2; Pathname </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify a templates root path for the view.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#template-instance_method" title="#template (instance method)">#<strong>template</strong>(value = nil)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify the relative path to the template.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="format-instance_method">
+  
+    #<strong>format</strong>(value = nil)  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>When a value is given, specify the handled format. Otherwise, it returns
+the previously specified format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>class</span> <span class='const'>JsonShow</span> <span class='op'>&lt;</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_format'>format</span> <span class='symbol'>:json</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span>     <span class='comment'># =&gt; nil
+</span><span class='const'>Articles</span><span class='op'>::</span><span class='const'>JsonShow</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span> <span class='comment'># =&gt; :json</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the specified format for this view, if set</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/view/blob/v1.1.0.rc1/lib/hanami/view/dsl.rb#L77" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@format</span> <span class='op'>||=</span> <span class='kw'>nil</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@format</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="layout-instance_method">
+  
+    #<strong>layout</strong>(value = nil)  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>When a value is given, it specifies the layout. When false is given,
+Hanami::View::Rendering::NullLayout is returned. Otherwise, it returns the
+previously specified layout.</p>
+
+<p>When the global configuration is set (<code>Hanami::View.layout=</code>),
+after the loading process, it will return that layout if not otherwise
+specified.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; nil</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Custom layout</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>ArticlesLayout</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='symbol'>:articles</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :articles</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Global configuration</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>ApplicationLayout</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='op'>=</span> <span class='symbol'>:application</span>
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; nil
+</span>
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load!'>load!</span>
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :application</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Global configuration with custom layout</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>ApplicationLayout</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>class</span> <span class='const'>ArticlesLayout</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='symbol'>:articles</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='op'>=</span> <span class='symbol'>:application</span>
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :articles
+</span>
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load!'>load!</span>
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :articles</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Disable layout for the view</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>ApplicationLayout</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></span>
+<span class='kw'>end</span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+    <span class='id identifier rubyid_layout'>layout</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load!'>load!</span>
+<span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; Hanami::View::Rendering::NullLayout</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>FalseClass</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the layout name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the specified layout for this view, if set</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../Layout.html" title="Hanami::Layout (module)">Layout</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/view/blob/v1.1.0.rc1/lib/hanami/view/dsl.rb#L315" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_layout'>layout</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@layout</span>  <span class='op'>||=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@_layout</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Rendering.html" title="Hanami::View::Rendering (module)">Rendering</a></span></span><span class='op'>::</span><span class='const'>LayoutFinder</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='ivar'>@layout</span> <span class='op'>||</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@layout</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rendering.html" title="Hanami::View::Rendering (module)">Rendering</a></span></span><span class='op'>::</span><span class='const'>NullLayout</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@layout</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="root-instance_method">
+  
+    #<strong>root</strong>(value = nil)  &#x21d2; <tt>Pathname</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>When a value is given, specify a templates root path for the view.
+Otherwise, it returns templates root path.</p>
+
+<p>When not initialized, it will return the global value from
+<code>Hanami::View.root</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='comment'># =&gt; &#39;app/templates&#39;
+</span><span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span>            <span class='comment'># =&gt; &#39;app/templates&#39;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Custom root</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Articles</span>
+  <span class='kw'>class</span> <span class='const'>Show</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span>
+    <span class='id identifier rubyid_root'><span class='object_link'><a href="../../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>path/to/articles/templates</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='comment'># =&gt; &#39;app/templates&#39;
+</span><span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span>            <span class='comment'># =&gt; &#39;path/to/articles/templates&#39;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the templates root for this view</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Pathname</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the specified root for this view or the global value</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/view/blob/v1.1.0.rc1/lib/hanami/view/dsl.rb#L45" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="../../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="template-instance_method">
+  
+    #<strong>template</strong>(value = nil)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>When a value is given, specify the relative path to the template.
+Otherwise, it returns the name that follows Hanami::View conventions.</p>
+
+<p>@example Default usage  require &#39;hanami/view&#39;</p>
+
+<p>module Articles  class Show  include Hanami::View  end</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>JsonShow</span> <span class='op'>&lt;</span> <span class='const'>Show</span>
+  <span class='id identifier rubyid_format'>format</span> <span class='symbol'>:json</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>end</p>
+
+<p>Articles::Show.template # =&gt; &#39;articles/show&#39; 
+Articles::JsonShow.template # =&gt; &#39;articles/show&#39;</p>
+
+<p>@example Custom template  require &#39;hanami/view&#39;</p>
+
+<p>module Articles  class Show  include Hanami::View  template
+&#39;articles/single_article&#39;  end</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>JsonShow</span> <span class='op'>&lt;</span> <span class='const'>Show</span>
+  <span class='id identifier rubyid_format'>format</span> <span class='symbol'>:json</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>end</p>
+
+<p>Articles::Show.template # =&gt; &#39;articles/single_article&#39; 
+Articles::JsonShow.template # =&gt; &#39;articles/single_article&#39;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>With namespace</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Furnitures</span>
+  <span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+  <span class='kw'>class</span> <span class='const'>Standalone</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'>Furnitures</span><span class='op'>::</span><span class='const'>View</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Catalog</span>
+    <span class='kw'>class</span> <span class='const'>Index</span>
+      <span class='const'>Furnitures</span><span class='op'>::</span><span class='const'>View</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Furnitures</span><span class='op'>::</span><span class='const'>Standalone</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span>     <span class='comment'># =&gt; &#39;standalone&#39;
+</span><span class='const'>Furnitures</span><span class='op'>::</span><span class='const'>Catalog</span><span class='op'>::</span><span class='const'>Index</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;catalog/index&#39;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>With nested namespace</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Frontend</span>
+  <span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+  <span class='kw'>class</span> <span class='const'>StandaloneView</span>
+    <span class='id identifier rubyid_include'>include</span> <span class='const'>Frontend</span><span class='op'>::</span><span class='const'>View</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Views</span>
+    <span class='kw'>class</span> <span class='const'>Standalone</span>
+      <span class='id identifier rubyid_include'>include</span> <span class='const'>Frontend</span><span class='op'>::</span><span class='const'>View</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>module</span> <span class='const'>Sessions</span>
+      <span class='kw'>class</span> <span class='const'>New</span>
+        <span class='id identifier rubyid_include'>include</span> <span class='const'>Frontend</span><span class='op'>::</span><span class='const'>View</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Frontend</span><span class='op'>::</span><span class='const'>StandaloneView</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span>       <span class='comment'># =&gt; &#39;standalone_view&#39;
+</span><span class='const'>Frontend</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Standalone</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span>    <span class='comment'># =&gt; &#39;standalone&#39;
+</span><span class='const'>Frontend</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Sessions</span><span class='op'>::</span><span class='const'>New</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;sessions/new&#39;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>With deeply nested namespace</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>module</span> <span class='const'>Bookshelf</span>
+  <span class='kw'>module</span> <span class='const'>Web</span>
+    <span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+    <span class='kw'>module</span> <span class='const'>Views</span>
+      <span class='kw'>module</span> <span class='const'>Books</span>
+        <span class='kw'>class</span> <span class='const'>Show</span>
+          <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Web</span><span class='op'>::</span><span class='const'>View</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>module</span> <span class='const'>Api</span>
+    <span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+
+    <span class='kw'>module</span> <span class='const'>Views</span>
+      <span class='kw'>module</span> <span class='const'>Books</span>
+        <span class='kw'>class</span> <span class='const'>Show</span>
+          <span class='id identifier rubyid_include'>include</span> <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Api</span><span class='op'>::</span><span class='const'>View</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Web</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Books</span><span class='op'>::</span><span class='const'>Index</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;books/index&#39;
+</span><span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Api</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Books</span><span class='op'>::</span><span class='const'>Index</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;books/index&#39;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>relative template path</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the specified template for this view or the name that follows the
+convention</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/view/blob/v1.1.0.rc1/lib/hanami/view/dsl.rb#L206" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_template'>template</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@template</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Rendering.html" title="Hanami::View::Rendering (module)">Rendering</a></span></span><span class='op'>::</span><span class='const'>TemplateName</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@template</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/site.js"></script>
+    
+  </body>
+</html>

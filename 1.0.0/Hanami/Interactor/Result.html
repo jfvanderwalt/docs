@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Interactor::Result
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -78,14 +80,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/interactor.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/interactor.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Result of an operation</p>
+    
+<p>Result of an operation</p>
 
 
   </div>
@@ -101,7 +104,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -140,7 +144,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the first errors collected during an operation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the first errors collected during an operation.</p>
 </div></span>
   
 </li>
@@ -163,7 +168,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns all the errors collected during an operation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns all the errors collected during an operation.</p>
 </div></span>
   
 </li>
@@ -186,7 +192,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Force the status to be a failure.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Force the status to be a failure.</p>
 </div></span>
   
 </li>
@@ -209,7 +216,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if the current status is not successful.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the current status is not successful.</p>
 </div></span>
   
 </li>
@@ -234,7 +242,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if the current status is successful.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the current status is successful.</p>
 </div></span>
   
 </li>
@@ -278,7 +287,6 @@
 </p>
 
 
-
   </div>
 </div>
 <div class="tags">
@@ -292,7 +300,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -303,7 +312,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L122" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L122" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -337,7 +346,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the first errors collected during an operation</p>
+    
+<p>Returns the first errors collected during an operation</p>
 
 
   </div>
@@ -355,7 +365,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the error, if present</p>
+        <div class='inline'>
+<p>the error, if present</p>
 </div>
       
     </li>
@@ -383,7 +394,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -394,7 +406,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L103" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L103" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -421,7 +433,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns all the errors collected during an operation</p>
+    
+<p>Returns all the errors collected during an operation</p>
 
 
   </div>
@@ -439,7 +452,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the errors</p>
+        <div class='inline'>
+<p>the errors</p>
 </div>
       
     </li>
@@ -467,7 +481,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -478,7 +493,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L81" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L81" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -505,7 +520,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Force the status to be a failure</p>
+    
+<p>Force the status to be a failure</p>
 
 
   </div>
@@ -521,7 +537,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -532,7 +549,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L67" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L67" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -559,7 +576,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Check if the current status is not successful</p>
+    
+<p>Check if the current status is not successful</p>
 
 
   </div>
@@ -577,7 +595,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the result of the check</p>
+        <div class='inline'>
+<p>the result of the check</p>
 </div>
       
     </li>
@@ -592,7 +611,8 @@
       
       
         
-        <div class='inline'><p>0.9.2</p>
+        <div class='inline'>
+<p>0.9.2</p>
 </div>
       
     </li>
@@ -603,7 +623,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L60" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L60" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -634,7 +654,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Check if the current status is successful</p>
+    
+<p>Check if the current status is successful</p>
 
 
   </div>
@@ -652,7 +673,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the result of the check</p>
+        <div class='inline'>
+<p>the result of the check</p>
 </div>
       
     </li>
@@ -667,7 +689,8 @@
       
       
         
-        <div class='inline'><p>0.8.1</p>
+        <div class='inline'>
+<p>0.8.1</p>
 </div>
       
     </li>
@@ -678,7 +701,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L48" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L48" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

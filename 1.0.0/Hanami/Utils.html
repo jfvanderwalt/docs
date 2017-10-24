@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Utils
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,8 +72,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils.rb<span class="defines">,<br />
-  gems/gems/hanami-utils-1.0.0/lib/hanami/utils/io.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/hash.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/json.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/blank.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/class.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/escape.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/kernel.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/string.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/version.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/callbacks.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/file_list.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/inflector.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/duplicable.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/load_paths.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/deprecation.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/path_prefix.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/basic_object.rb,<br /> gems/gems/hanami-utils-1.0.0/lib/hanami/utils/class_attribute.rb</span>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils.rb<span class="defines">,<br />
+  gems/gems/hanami-utils-1.0.4/lib/hanami/utils/io.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/hash.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/json.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/blank.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/class.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/escape.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/kernel.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/string.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/version.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/callbacks.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/file_list.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/inflector.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/duplicable.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/load_paths.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/deprecation.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/path_prefix.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/basic_object.rb,<br /> gems/gems/hanami-utils-1.0.4/lib/hanami/utils/class_attribute.rb</span>
 </dd>
   </dl>
   
@@ -79,7 +81,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Ruby core extentions and Hanami utilities</p>
+    
+<p>Ruby core extentions and Hanami utilities</p>
 
 
   </div>
@@ -95,7 +98,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -121,7 +125,8 @@
       <dt id="VERSION-constant" class="">VERSION =
         <div class="docstring">
   <div class="discussion">
-    <p>Defines the version</p>
+    
+<p>Defines the version</p>
 
 
   </div>
@@ -137,7 +142,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -146,7 +152,7 @@
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.0</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.4</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
     
   </dl>
 
@@ -181,7 +187,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Recursively require Ruby files under the given directory.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Recursively require Ruby files under the given directory.</p>
 </div></span>
   
 </li>
@@ -207,13 +214,15 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Recursively require Ruby files under the given directory.</p>
+    
+<p>Recursively require Ruby files under the given directory.</p>
 
-<p>If the directory is relative, it implies it’s the path from current directory.
-If the directory is absolute, it uses as it is.</p>
+<p>If the directory is relative, it implies it&#39;s the path from current
+directory. If the directory is absolute, it uses as it is.</p>
 
-<p>It respects file separator of the current operating system.
-A pattern like <tt>“path/to/files”</tt> will work both on *NIX and Windows machines.</p>
+<p>It respects file separator of the current operating system. A pattern like
+<code>&quot;path/to/files&quot;</code> will work both on *NIX and Windows
+machines.</p>
 
 
   </div>
@@ -232,7 +241,8 @@ A pattern like <tt>“path/to/files”</tt> will work both on *NIX and Windows m
       
       
         &mdash;
-        <div class='inline'><p>the directory</p>
+        <div class='inline'>
+<p>the directory</p>
 </div>
       
     </li>
@@ -248,7 +258,8 @@ A pattern like <tt>“path/to/files”</tt> will work both on *NIX and Windows m
       
       
         
-        <div class='inline'><p>0.9.0</p>
+        <div class='inline'>
+<p>0.9.0</p>
 </div>
       
     </li>
@@ -259,7 +270,7 @@ A pattern like <tt>“path/to/files”</tt> will work both on *NIX and Windows m
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils.rb#L51" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils.rb#L51" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

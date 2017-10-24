@@ -10,7 +10,7 @@
     <title>
       Exception: Hanami::Router::NotRoutableEndpointError
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -90,14 +92,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-router-1.0.0/lib/hanami/router.rb</dd>
+    <dd>gems/gems/hanami-router-1.0.1/lib/hanami/router.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>This error is raised when <tt>#call</tt> is invoked on a non-routable
+    
+<p>This error is raised when <code>#call</code> is invoked on a non-routable
 recognized route.</p>
 
 
@@ -127,7 +130,8 @@ recognized route.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -168,7 +172,8 @@ recognized route.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of NotRoutableEndpointError.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of NotRoutableEndpointError.</p>
 </div></span>
   
 </li>
@@ -198,7 +203,8 @@ recognized route.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of NotRoutableEndpointError</p>
+    
+<p>Returns a new instance of NotRoutableEndpointError</p>
 
 
   </div>
@@ -214,7 +220,8 @@ recognized route.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -225,7 +232,7 @@ recognized route.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L98" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L98" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

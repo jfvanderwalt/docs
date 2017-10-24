@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Helpers::EscapeHelper
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -82,13 +84,14 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Escape helpers</p>
+    
+<p>Escape helpers</p>
 
-<p>You can include this module inside your view and
-the view will have access all methods.</p>
+<p>You can include this module inside your view and the view will have access
+all methods.</p>
 
-<p>By including <tt>Hanami::Helpers::EscapeHelper</tt> it will inject private
-methods as markup escape utilities.</p>
+<p>By including <code>Hanami::Helpers::EscapeHelper</code> it will inject
+private methods as markup escape utilities.</p>
 
 
   </div>
@@ -104,7 +107,8 @@ methods as markup escape utilities.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -145,7 +149,8 @@ methods as markup escape utilities.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape the given HTML tag content.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape the given HTML tag content.</p>
 </div></span>
   
 </li>
@@ -170,7 +175,8 @@ methods as markup escape utilities.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape the given HTML tag attribute.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape the given HTML tag attribute.</p>
 </div></span>
   
 </li>
@@ -195,7 +201,8 @@ methods as markup escape utilities.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Escape an URL to be used in HTML attributes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Escape an URL to be used in HTML attributes.</p>
 </div></span>
   
 </li>
@@ -218,7 +225,8 @@ methods as markup escape utilities.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Bypass escape.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Bypass escape.</p>
 </div></span>
   
 </li>
@@ -248,12 +256,13 @@ methods as markup escape utilities.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape the given HTML tag content.</p>
+    
+<p>Escape the given HTML tag content.</p>
 
 <p>This should be used only for untrusted contents: user input.</p>
 
-<p>This should be used only for tag contents.
-To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_html_attribute</tt>.</p>
+<p>This should be used only for tag contents. To escape tag attributes please
+use <code>Hanami::Helpers::EscapeHelper#escape_html_attribute</code>.</p>
 
 
   </div>
@@ -264,7 +273,8 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers/escape_helper</span><span class='tstring_end'>&#39;</span></span>
@@ -290,7 +300,8 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
   <span class='comment'># =&gt; &quot;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With HTML builder</p>
+        <p class="example_title"><div class='inline'>
+<p>With HTML builder</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'>#
@@ -326,7 +337,8 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -344,7 +356,8 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -366,7 +379,8 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -408,14 +422,15 @@ To escape tag attributes please use <tt>Hanami::Helpers::EscapeHelper#escape_htm
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape the given HTML tag attribute.</p>
+    
+<p>Escape the given HTML tag attribute.</p>
 
 <p>This MUST be used for escaping HTML tag attributes.</p>
 
 <p>This should be used only for untrusted contents: user input.</p>
 
-<p>This can also be used to escape tag contents, but it’s slower.
-For this purpose use <tt>Hanami::Helpers::EscapeHelper#escape_html</tt>.</p>
+<p>This can also be used to escape tag contents, but it&#39;s slower. For this
+purpose use <code>Hanami::Helpers::EscapeHelper#escape_html</code>.</p>
 
 
   </div>
@@ -426,7 +441,8 @@ For this purpose use <tt>Hanami::Helpers::EscapeHelper#escape_html</tt>.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
@@ -456,7 +472,8 @@ view.evil_attribute
   # =&gt; %(&lt;span class=&quot;&amp;quot;&amp;#x20;onclick&amp;#x3d;&amp;quot;javascript&amp;#x3a;alert&amp;#x28;&amp;#x27;xss&amp;#x27;&amp;#x29;&amp;quot;&amp;#x20;id&amp;#x3d;&amp;quot;&quot;&gt;hello&lt;/span&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With HTML builder</p>
+        <p class="example_title"><div class='inline'>
+<p>With HTML builder</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'>#
@@ -494,7 +511,8 @@ view.evil_attribute
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -512,7 +530,8 @@ view.evil_attribute
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -534,7 +553,8 @@ view.evil_attribute
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -576,18 +596,20 @@ view.evil_attribute
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Escape an URL to be used in HTML attributes</p>
+    
+<p>Escape an URL to be used in HTML attributes</p>
 
 <p>This allows only URLs with whitelisted schemes to pass the filter.
 Everything else is stripped.</p>
 
 <p>Default schemes are:</p>
-
-<ul>
-  <li>http</li>
-  <li>https</li>
-  <li>mailto</li>
-</ul>
+<ul><li>
+<p>http</p>
+</li><li>
+<p>https</p>
+</li><li>
+<p>mailto</p>
+</li></ul>
 
 <p>If you want to allow a different set of schemes, you should pass it as
 second argument.</p>
@@ -603,7 +625,8 @@ second argument.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
@@ -633,7 +656,8 @@ view.evil_url
   # =&gt; %(&lt;a href=&quot;&quot;&gt;Evil&lt;/a&gt;)</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom schemes</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom schemes</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
@@ -668,7 +692,8 @@ view.ftp_link
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -685,7 +710,8 @@ view.ftp_link
       
       
         &mdash;
-        <div class='inline'><p>an optional array of whitelisted schemes</p>
+        <div class='inline'>
+<p>an optional array of whitelisted schemes</p>
 </div>
       
     </li>
@@ -703,7 +729,8 @@ view.ftp_link
       
       
         &mdash;
-        <div class='inline'><p>the escaped string</p>
+        <div class='inline'>
+<p>the escaped string</p>
 </div>
       
     </li>
@@ -727,7 +754,8 @@ view.ftp_link
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -765,10 +793,10 @@ view.ftp_link
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Bypass escape.</p>
+    
+<p>Bypass escape.</p>
 
-<p>Please notice that this can be really dangerous.
-Use at your own peril.</p>
+<p>Please notice that this can be really dangerous. Use at your own peril.</p>
 
 
   </div>
@@ -818,7 +846,8 @@ Use at your own peril.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input</p>
+        <div class='inline'>
+<p>the input</p>
 </div>
       
     </li>
@@ -836,7 +865,8 @@ Use at your own peril.</p>
       
       
         &mdash;
-        <div class='inline'><p>the string marked as safe string</p>
+        <div class='inline'>
+<p>the string marked as safe string</p>
 </div>
       
     </li>
@@ -851,7 +881,8 @@ Use at your own peril.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

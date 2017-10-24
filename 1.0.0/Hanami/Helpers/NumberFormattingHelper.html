@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Helpers::NumberFormattingHelper
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -77,13 +79,14 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Number formatter</p>
+    
+<p>Number formatter</p>
 
-<p>You can include this module inside your view and
-the view will have access all methods.</p>
+<p>You can include this module inside your view and the view will have access
+all methods.</p>
 
-<p>By including <tt>Hanami::Helpers::NumberFormattingHelper</tt> it will
-inject private method: <tt>format_number</tt>.</p>
+<p>By including <code>Hanami::Helpers::NumberFormattingHelper</code> it will
+inject private method: <code>format_number</code>.</p>
 
 
   </div>
@@ -99,7 +102,8 @@ inject private method: <tt>format_number</tt>.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -138,7 +142,8 @@ inject private method: <tt>format_number</tt>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Format the given number, according to the options.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Format the given number, according to the options.</p>
 </div></span>
   
 </li>
@@ -164,17 +169,18 @@ inject private method: <tt>format_number</tt>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Format the given number, according to the options</p>
+    
+<p>Format the given number, according to the options</p>
 
-<p>It accepts a number (<tt>Numeric</tt>) or a string representation.</p>
+<p>It accepts a number (<code>Numeric</code>) or a string representation.</p>
 
-<p>If an integer is given, no precision is applied.
-For the rest of the numbers, it will format as a float representation.
-This is the case of: <tt>Float</tt>, <tt>BigDecimal</tt>,
-<tt>Complex</tt>, <tt>Rational</tt>.</p>
+<p>If an integer is given, no precision is applied. For the rest of the
+numbers, it will format as a float representation. This is the case of:
+<code>Float</code>, <code>BigDecimal</code>, <code>Complex</code>,
+<code>Rational</code>.</p>
 
 <p>If the argument cannot be coerced into a number, it will raise a
-<tt>TypeError</tt>.</p>
+<code>TypeError</code>.</p>
 
 
   </div>
@@ -228,7 +234,8 @@ This is the case of: <tt>Float</tt>, <tt>BigDecimal</tt>,
       
       
         &mdash;
-        <div class='inline'><p>the number to be formatted</p>
+        <div class='inline'>
+<p>the number to be formatted</p>
 </div>
       
     </li>
@@ -246,7 +253,8 @@ This is the case of: <tt>Float</tt>, <tt>BigDecimal</tt>,
       
       
         &mdash;
-        <div class='inline'><p>formatted number</p>
+        <div class='inline'>
+<p>formatted number</p>
 </div>
       
     </li>
@@ -263,7 +271,8 @@ This is the case of: <tt>Float</tt>, <tt>BigDecimal</tt>,
       
       
         &mdash;
-        <div class='inline'><p>if number can’t be formatted</p>
+        <div class='inline'>
+<p>if number can&#39;t be formatted</p>
 </div>
       
     </li>
@@ -278,7 +287,8 @@ This is the case of: <tt>Float</tt>, <tt>BigDecimal</tt>,
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>

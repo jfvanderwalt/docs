@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Utils::Json
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,17 +72,18 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/json.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/json.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>JSON wrapper</p>
+    
+<p>JSON wrapper</p>
 
-<p>If you use MultiJson gem this wrapper will use it.
-Otherwise - JSON std lib.</p>
+<p>If you use MultiJson gem this wrapper will use it. Otherwise - JSON std
+lib.</p>
 
 
   </div>
@@ -96,7 +99,8 @@ Otherwise - JSON std lib.</p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -112,7 +116,6 @@ Otherwise - JSON std lib.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -126,7 +129,8 @@ Otherwise - JSON std lib.</p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -142,7 +146,6 @@ Otherwise - JSON std lib.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -156,7 +159,8 @@ Otherwise - JSON std lib.</p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -200,7 +204,8 @@ Otherwise - JSON std lib.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generate a JSON document from the given object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Generate a JSON document from the given object.</p>
 </div></span>
   
 </li>
@@ -223,7 +228,8 @@ Otherwise - JSON std lib.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parse the given JSON paylod.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parse the given JSON paylod.</p>
 </div></span>
   
 </li>
@@ -249,7 +255,8 @@ Otherwise - JSON std lib.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Generate a JSON document from the given object</p>
+    
+<p>Generate a JSON document from the given object</p>
 
 
   </div>
@@ -268,7 +275,8 @@ Otherwise - JSON std lib.</p>
       
       
         &mdash;
-        <div class='inline'><p>any object</p>
+        <div class='inline'>
+<p>any object</p>
 </div>
       
     </li>
@@ -286,7 +294,8 @@ Otherwise - JSON std lib.</p>
       
       
         &mdash;
-        <div class='inline'><p>the result of the dumping process</p>
+        <div class='inline'>
+<p>the result of the dumping process</p>
 </div>
       
     </li>
@@ -301,7 +310,8 @@ Otherwise - JSON std lib.</p>
       
       
         
-        <div class='inline'><p>0.9.1</p>
+        <div class='inline'>
+<p>0.9.1</p>
 </div>
       
     </li>
@@ -312,7 +322,7 @@ Otherwise - JSON std lib.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/json.rb#L64" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/json.rb#L64" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -339,7 +349,8 @@ Otherwise - JSON std lib.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parse the given JSON paylod</p>
+    
+<p>Parse the given JSON paylod</p>
 
 
   </div>
@@ -358,7 +369,8 @@ Otherwise - JSON std lib.</p>
       
       
         &mdash;
-        <div class='inline'><p>a JSON payload</p>
+        <div class='inline'>
+<p>a JSON payload</p>
 </div>
       
     </li>
@@ -376,7 +388,8 @@ Otherwise - JSON std lib.</p>
       
       
         &mdash;
-        <div class='inline'><p>the result of the loading process</p>
+        <div class='inline'>
+<p>the result of the loading process</p>
 </div>
       
     </li>
@@ -393,7 +406,8 @@ Otherwise - JSON std lib.</p>
       
       
         &mdash;
-        <div class='inline'><p>if the paylod is invalid</p>
+        <div class='inline'>
+<p>if the paylod is invalid</p>
 </div>
       
     </li>
@@ -408,7 +422,8 @@ Otherwise - JSON std lib.</p>
       
       
         
-        <div class='inline'><p>0.9.1</p>
+        <div class='inline'>
+<p>0.9.1</p>
 </div>
       
     </li>
@@ -419,7 +434,7 @@ Otherwise - JSON std lib.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/json.rb#L53" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/json.rb#L53" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

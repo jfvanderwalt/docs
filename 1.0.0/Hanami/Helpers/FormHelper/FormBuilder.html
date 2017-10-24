@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Helpers::FormHelper::FormBuilder
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -100,7 +102,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Form builder</p>
+    
+<p>Form builder</p>
 
 
   </div>
@@ -123,7 +126,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -162,7 +166,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Button.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Button.</p>
 </div></span>
   
 </li>
@@ -185,7 +190,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check box.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check box.</p>
 </div></span>
   
 </li>
@@ -208,7 +214,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Color input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Color input.</p>
 </div></span>
   
 </li>
@@ -231,7 +238,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Datalist input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Datalist input.</p>
 </div></span>
   
 </li>
@@ -254,7 +262,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Date input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Date input.</p>
 </div></span>
   
 </li>
@@ -277,7 +286,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Datetime input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Datetime input.</p>
 </div></span>
   
 </li>
@@ -300,7 +310,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Datetime Local input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Datetime Local input.</p>
 </div></span>
   
 </li>
@@ -323,7 +334,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Email input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Email input.</p>
 </div></span>
   
 </li>
@@ -346,7 +358,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Nested fields.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Nested fields.</p>
 </div></span>
   
 </li>
@@ -369,7 +382,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Nested collections.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Nested collections.</p>
 </div></span>
   
 </li>
@@ -392,7 +406,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Fieldset.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Fieldset.</p>
 </div></span>
   
 </li>
@@ -415,7 +430,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>File input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>File input.</p>
 </div></span>
   
 </li>
@@ -438,7 +454,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Hidden input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Hidden input.</p>
 </div></span>
   
 </li>
@@ -461,7 +478,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Image button.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Image button.</p>
 </div></span>
   
 </li>
@@ -484,7 +502,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Label tag.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Label tag.</p>
 </div></span>
   
 </li>
@@ -507,7 +526,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Month field.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Month field.</p>
 </div></span>
   
 </li>
@@ -530,7 +550,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Number input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Number input.</p>
 </div></span>
   
 </li>
@@ -553,7 +574,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Password input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Password input.</p>
 </div></span>
   
 </li>
@@ -576,7 +598,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Radio input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Radio input.</p>
 </div></span>
   
 </li>
@@ -599,7 +622,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Range input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Range input.</p>
 </div></span>
   
 </li>
@@ -622,7 +646,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Search input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Search input.</p>
 </div></span>
   
 </li>
@@ -645,7 +670,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Select input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Select input.</p>
 </div></span>
   
 </li>
@@ -668,7 +694,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Submit button.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Submit button.</p>
 </div></span>
   
 </li>
@@ -691,7 +718,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Telephone input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Telephone input.</p>
 </div></span>
   
 </li>
@@ -714,7 +742,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Text-area input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Text-area input.</p>
 </div></span>
   
 </li>
@@ -739,7 +768,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Text input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Text input.</p>
 </div></span>
   
 </li>
@@ -762,7 +792,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Time field.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Time field.</p>
 </div></span>
   
 </li>
@@ -785,7 +816,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>URL input.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>URL input.</p>
 </div></span>
   
 </li>
@@ -808,7 +840,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Week field.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Week field.</p>
 </div></span>
   
 </li>
@@ -872,7 +905,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Button</p>
+    
+<p>Button</p>
 
 
   </div>
@@ -883,7 +917,8 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -895,7 +930,8 @@
 &lt;button&gt;Click me&lt;/button&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -920,7 +956,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The content</p>
+        <div class='inline'>
+<p>The content</p>
 </div>
       
     </li>
@@ -937,7 +974,8 @@
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the button tag</p>
 </div>
       
     </li>
@@ -953,7 +991,8 @@
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -992,23 +1031,22 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Check box</p>
+    
+<p>Check box</p>
 
 <p>It renders a check box input.</p>
 
-<p>When a form is submitted, browsers don’t send the value of unchecked
-check boxes. If an user unchecks a check box, their browser won’t send
-the unchecked value. On the server side the corresponding value is
-missing, so the application will assume that the user action never
-happened.</p>
+<p>When a form is submitted, browsers don&#39;t send the value of unchecked
+check boxes. If an user unchecks a check box, their browser won&#39;t send
+the unchecked value. On the server side the corresponding value is missing,
+so the application will assume that the user action never happened.</p>
 
-<p>To solve this problem the form renders a hidden field with the
-“unchecked value”. When the user unchecks the input, the browser will
-ignore it, but it will still send the value of the hidden input. See
-the examples below.</p>
+<p>To solve this problem the form renders a hidden field with the “unchecked
+value”. When the user unchecks the input, the browser will ignore it, but
+it will still send the value of the hidden input. See the examples below.</p>
 
 <p>When editing a resource, the form automatically assigns the
-<tt>checked=”checked”</tt> attribute.</p>
+<code>checked=&quot;checked&quot;</code> attribute.</p>
 
 
   </div>
@@ -1019,7 +1057,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1031,7 +1070,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1043,7 +1083,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; class=&quot;form-check-input&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify (un)checked values</p>
+        <p class="example_title"><div class='inline'>
+<p>Specify (un)checked values</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1055,7 +1096,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;true&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic “checked” attribute</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic “checked” attribute</p>
 </div></p>
       
       <pre class="example code"><code># For this example the params are:
@@ -1070,7 +1112,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Force “checked” attribute</p>
+        <p class="example_title"><div class='inline'>
+<p>Force “checked” attribute</p>
 </div></p>
       
       <pre class="example code"><code># For this example the params are:
@@ -1085,7 +1128,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;delivery[free_shipping]&quot; id=&quot;delivery-free-shipping&quot; value=&quot;1&quot; checked=&quot;checked&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Multiple check boxes</p>
+        <p class="example_title"><div class='inline'>
+<p>Multiple check boxes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1098,7 +1142,8 @@ the examples below.</p>
 &lt;input type=&quot;checkbox&quot; name=&quot;book[languages][]&quot; value=&quot;english&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic “checked” attribute for multiple check boxes</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic “checked” attribute for multiple check boxes</p>
 </div></p>
       
       <pre class="example code"><code># For this example the params are:
@@ -1127,7 +1172,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1144,7 +1190,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1195,7 +1242,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1234,7 +1282,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Color input</p>
+    
+<p>Color input</p>
 
 
   </div>
@@ -1245,7 +1294,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1257,7 +1307,8 @@ the examples below.</p>
 &lt;input type=&quot;color&quot; name=&quot;user[background]&quot; id=&quot;user-background&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1282,7 +1333,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1299,7 +1351,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1315,7 +1368,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1353,7 +1407,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Datalist input</p>
+    
+<p>Datalist input</p>
 
 
   </div>
@@ -1364,7 +1419,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic Usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic Usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1381,7 +1437,8 @@ the examples below.</p>
 &lt;/datalist&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Options As Hash</p>
+        <p class="example_title"><div class='inline'>
+<p>Options As Hash</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1398,7 +1455,8 @@ the examples below.</p>
 &lt;/datalist&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify Custom Attributes For Datalist Input</p>
+        <p class="example_title"><div class='inline'>
+<p>Specify Custom Attributes For Datalist Input</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1415,7 +1473,8 @@ the examples below.</p>
 &lt;/datalist&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify Custom Attributes For Options List</p>
+        <p class="example_title"><div class='inline'>
+<p>Specify Custom Attributes For Options List</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1445,7 +1504,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1460,7 +1520,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>a collection that is transformed into <tt><option>&lt;/tt&gt; tags.</option></tt></p>
+        <div class='inline'>
+<p>a collection that is transformed into <code>&lt;option&gt;</code> tags.</p>
 </div>
       
     </li>
@@ -1475,7 +1536,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the name of list for the text input, it’s also the id of datalist</p>
+        <div class='inline'>
+<p>the name of list for the text input, it&#39;s also the id of datalist</p>
 </div>
       
     </li>
@@ -1492,7 +1554,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1508,7 +1571,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -1558,7 +1622,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Date input</p>
+    
+<p>Date input</p>
 
 
   </div>
@@ -1569,7 +1634,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1581,7 +1647,8 @@ the examples below.</p>
 &lt;input type=&quot;date&quot; name=&quot;user[birth_date]&quot; id=&quot;user-birth-date&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1606,7 +1673,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1623,7 +1691,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1639,7 +1708,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1677,7 +1747,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Datetime input</p>
+    
+<p>Datetime input</p>
 
 
   </div>
@@ -1688,7 +1759,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1700,7 +1772,8 @@ the examples below.</p>
 &lt;input type=&quot;datetime&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1725,7 +1798,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1742,7 +1816,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1758,7 +1833,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1796,7 +1872,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Datetime Local input</p>
+    
+<p>Datetime Local input</p>
 
 
   </div>
@@ -1807,7 +1884,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1819,7 +1897,8 @@ the examples below.</p>
 &lt;input type=&quot;datetime-local&quot; name=&quot;delivery[delivered_at]&quot; id=&quot;delivery-delivered-at&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1844,7 +1923,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1861,7 +1941,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1877,7 +1958,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1915,7 +1997,8 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Email input</p>
+    
+<p>Email input</p>
 
 
   </div>
@@ -1926,7 +2009,8 @@ the examples below.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1938,7 +2022,8 @@ the examples below.</p>
 &lt;input type=&quot;email&quot; name=&quot;user[email]&quot; id=&quot;user-email&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -1963,7 +2048,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -1980,7 +2066,8 @@ the examples below.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -1996,7 +2083,8 @@ the examples below.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2034,10 +2122,11 @@ the examples below.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Nested fields</p>
+    
+<p>Nested fields</p>
 
-<p>The inputs generated by the wrapped block will be prefixed with the given name
-It supports infinite levels of nesting.</p>
+<p>The inputs generated by the wrapped block will be prefixed with the given
+name It supports infinite levels of nesting.</p>
 
 
   </div>
@@ -2048,7 +2137,8 @@ It supports infinite levels of nesting.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2073,7 +2163,8 @@ It supports infinite levels of nesting.</p>
 &lt;/form&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Multiple levels of nesting</p>
+        <p class="example_title"><div class='inline'>
+<p>Multiple levels of nesting</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2118,8 +2209,9 @@ It supports infinite levels of nesting.</p>
       
       
         &mdash;
-        <div class='inline'><p>the nested name, it’s used to generate input
-names, ids, and to lookup params to fill values.</p>
+        <div class='inline'>
+<p>the nested name, it&#39;s used to generate input names, ids, and to lookup
+params to fill values.</p>
 </div>
       
     </li>
@@ -2135,7 +2227,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2177,10 +2270,10 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Nested collections</p>
+    
+<p>Nested collections</p>
 
-<p>Supports nesting for collections, with infinite
-levels of nesting.</p>
+<p>Supports nesting for collections, with infinite levels of nesting.</p>
 
 
   </div>
@@ -2191,7 +2284,8 @@ levels of nesting.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2230,8 +2324,9 @@ levels of nesting.</p>
       
       
         &mdash;
-        <div class='inline'><p>the nested name, it’s used to generate input
-names, ids, and to lookup params to fill values.</p>
+        <div class='inline'>
+<p>the nested name, it&#39;s used to generate input names, ids, and to lookup
+params to fill values.</p>
 </div>
       
     </li>
@@ -2247,7 +2342,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2293,7 +2389,8 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Fieldset</p>
+    
+<p>Fieldset</p>
 
 
   </div>
@@ -2304,7 +2401,8 @@ names, ids, and to lookup params to fill values.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2342,7 +2440,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>the content</p>
+        <div class='inline'>
+<p>the content</p>
 </div>
       
     </li>
@@ -2359,7 +2458,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the label tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the label tag</p>
 </div>
       
     </li>
@@ -2375,7 +2475,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -2414,9 +2515,11 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>File input</p>
+    
+<p>File input</p>
 
-<p><strong>PLEASE REMEMBER TO ADD <tt>enctype: ‘multipart/form-data’</tt> ATTRIBUTE TO THE FORM</strong></p>
+<p><strong>PLEASE REMEMBER TO ADD <code>enctype:
+&#39;multipart/form-data&#39;</code> ATTRIBUTE TO THE FORM</strong></p>
 
 
   </div>
@@ -2427,7 +2530,8 @@ names, ids, and to lookup params to fill values.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2439,7 +2543,8 @@ names, ids, and to lookup params to fill values.</p>
 &lt;input type=&quot;file&quot; name=&quot;user[avatar]&quot; id=&quot;user-avatar&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2451,7 +2556,8 @@ names, ids, and to lookup params to fill values.</p>
 &lt;input type=&quot;file&quot; name=&quot;user[avatar]&quot; id=&quot;user-avatar&quot; class=&quot;avatar-upload&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Accepted MIME Types</p>
+        <p class="example_title"><div class='inline'>
+<p>Accepted MIME Types</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2463,7 +2569,8 @@ names, ids, and to lookup params to fill values.</p>
 &lt;input type=&quot;file&quot; name=&quot;user[resume]&quot; id=&quot;user-resume&quot; accept=&quot;application/pdf,application/ms-word&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Accepted MIME Types (as array)</p>
+        <p class="example_title"><div class='inline'>
+<p>Accepted MIME Types (as array)</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2475,7 +2582,8 @@ names, ids, and to lookup params to fill values.</p>
 &lt;input type=&quot;file&quot; name=&quot;user[resume]&quot; id=&quot;user-resume&quot; accept=&quot;application/pdf,application/ms-word&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Accepted multiple file upload (as array)</p>
+        <p class="example_title"><div class='inline'>
+<p>Accepted multiple file upload (as array)</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2500,7 +2608,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -2517,7 +2626,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -2539,7 +2649,8 @@ names, ids, and to lookup params to fill values.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Optional set of accepted MIME Types</p>
+            &mdash; <div class='inline'>
+<p>Optional set of accepted MIME Types</p>
 </div>
           
         </li>
@@ -2551,7 +2662,8 @@ names, ids, and to lookup params to fill values.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Optional, allow multiple file upload</p>
+            &mdash; <div class='inline'>
+<p>Optional, allow multiple file upload</p>
 </div>
           
         </li>
@@ -2568,7 +2680,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2609,7 +2722,8 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Hidden input</p>
+    
+<p>Hidden input</p>
 
 
   </div>
@@ -2620,7 +2734,8 @@ names, ids, and to lookup params to fill values.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2645,7 +2760,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -2662,7 +2778,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -2678,7 +2795,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2716,11 +2834,13 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Image button</p>
+    
+<p>Image button</p>
 
 <p>Visual submit button</p>
 
-<p><strong>Please note:</strong> for security reasons, please use the absolute URL of the image</p>
+<p><strong>Please note:</strong> for security reasons, please use the absolute
+URL of the image</p>
 
 
   </div>
@@ -2731,7 +2851,8 @@ names, ids, and to lookup params to fill values.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2743,7 +2864,8 @@ names, ids, and to lookup params to fill values.</p>
 &lt;input type=&quot;image&quot; src=&quot;https://hanamirb.org/assets/button.png&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2768,7 +2890,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>The <strong>absolute URL</strong> of the image</p>
+        <div class='inline'>
+<p>The <strong>absolute URL</strong> of the image</p>
 </div>
       
     </li>
@@ -2785,7 +2908,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the button tag</p>
 </div>
       
     </li>
@@ -2801,7 +2925,8 @@ names, ids, and to lookup params to fill values.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -2843,11 +2968,12 @@ names, ids, and to lookup params to fill values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Label tag</p>
+    
+<p>Label tag</p>
 
-<p>The first param <tt>content</tt> can be a <tt>Symbol</tt> that represents
-the target field (Eg. <tt>:extended_title</tt>), or a <tt>String</tt>
-which is used as it is.</p>
+<p>The first param <code>content</code> can be a <code>Symbol</code> that
+represents the target field (Eg. <code>:extended_title</code>), or a
+<code>String</code> which is used as it is.</p>
 
 
   </div>
@@ -2858,7 +2984,8 @@ which is used as it is.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2870,7 +2997,8 @@ which is used as it is.</p>
 &lt;label for=&quot;book-extended-title&quot;&gt;Extended title&lt;/label&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2882,7 +3010,8 @@ which is used as it is.</p>
 &lt;label for=&quot;book-title&quot; class=&quot;form-label&quot;&gt;Title&lt;/label&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom content</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom content</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2894,7 +3023,8 @@ which is used as it is.</p>
 &lt;label for=&quot;book-extended-title&quot;&gt;Title&lt;/label&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom “for” attribute</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom “for” attribute</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2906,7 +3036,8 @@ which is used as it is.</p>
 &lt;label for=&quot;ext-title&quot;&gt;Extended title&lt;/label&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nested fields usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Nested fields usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -2935,7 +3066,8 @@ which is used as it is.</p>
       
       
         &mdash;
-        <div class='inline'><p>the field name or a content string</p>
+        <div class='inline'>
+<p>the field name or a content string</p>
 </div>
       
     </li>
@@ -2952,7 +3084,8 @@ which is used as it is.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the label tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the label tag</p>
 </div>
       
     </li>
@@ -2968,7 +3101,8 @@ which is used as it is.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3014,7 +3148,8 @@ which is used as it is.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Month field</p>
+    
+<p>Month field</p>
 
 
   </div>
@@ -3025,7 +3160,8 @@ which is used as it is.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3037,7 +3173,8 @@ which is used as it is.</p>
 &lt;input type=&quot;month&quot; name=&quot;book[release_month]&quot; id=&quot;book-release-month&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3062,7 +3199,8 @@ which is used as it is.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3079,7 +3217,8 @@ which is used as it is.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -3095,7 +3234,8 @@ which is used as it is.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -3133,10 +3273,11 @@ which is used as it is.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Number input</p>
+    
+<p>Number input</p>
 
-<p>You can also make use of the <code>max</code>, <code>min</code>, and <code>step</code> attributes for
-the HTML5 number field.</p>
+<p>You can also make use of the <code>max</code>, <code>min</code>, and
+<code>step</code> attributes for the HTML5 number field.</p>
 
 
   </div>
@@ -3147,7 +3288,8 @@ the HTML5 number field.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3159,7 +3301,8 @@ the HTML5 number field.</p>
 &lt;input type=&quot;number&quot; name=&quot;book[percent_read]&quot; id=&quot;book-percent-read&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Advanced attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Advanced attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3184,7 +3327,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3201,7 +3345,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the number input</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the number input</p>
 </div>
       
     </li>
@@ -3217,7 +3362,8 @@ the HTML5 number field.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3255,7 +3401,8 @@ the HTML5 number field.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Password input</p>
+    
+<p>Password input</p>
 
 
   </div>
@@ -3266,7 +3413,8 @@ the HTML5 number field.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3291,7 +3439,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3308,7 +3457,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -3324,7 +3474,8 @@ the HTML5 number field.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3362,11 +3513,12 @@ the HTML5 number field.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Radio input</p>
+    
+<p>Radio input</p>
 
-<p>If request params have a value that corresponds to the given value,
-it automatically sets the <tt>checked</tt> attribute.
-This Hanami::Controller integration happens without any developer intervention.</p>
+<p>If request params have a value that corresponds to the given value, it
+automatically sets the <code>checked</code> attribute. This
+Hanami::Controller integration happens without any developer intervention.</p>
 
 
   </div>
@@ -3377,7 +3529,8 @@ This Hanami::Controller integration happens without any developer intervention.<
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3391,7 +3544,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Non-Fiction&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3405,7 +3559,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;input type=&quot;radio&quot; name=&quot;book[category]&quot; value=&quot;Non-Fiction&quot; class=&quot;form-check&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic checked value</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic checked value</p>
 </div></p>
       
       <pre class="example code"><code># Given the following params:
@@ -3438,7 +3593,8 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3453,7 +3609,8 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         &mdash;
-        <div class='inline'><p>the input value</p>
+        <div class='inline'>
+<p>the input value</p>
 </div>
       
     </li>
@@ -3470,7 +3627,8 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -3486,7 +3644,8 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3526,10 +3685,11 @@ This Hanami::Controller integration happens without any developer intervention.<
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Range input</p>
+    
+<p>Range input</p>
 
-<p>You can also make use of the <code>max</code>, <code>min</code>, and <code>step</code> attributes for
-the HTML5 number field.</p>
+<p>You can also make use of the <code>max</code>, <code>min</code>, and
+<code>step</code> attributes for the HTML5 number field.</p>
 
 
   </div>
@@ -3540,7 +3700,8 @@ the HTML5 number field.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3552,7 +3713,8 @@ the HTML5 number field.</p>
 &lt;input type=&quot;range&quot; name=&quot;book[discount_percentage]&quot; id=&quot;book-discount-percentage&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Advanced attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Advanced attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3577,7 +3739,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3594,7 +3757,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the number input</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the number input</p>
 </div>
       
     </li>
@@ -3610,7 +3774,8 @@ the HTML5 number field.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -3648,7 +3813,8 @@ the HTML5 number field.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Search input</p>
+    
+<p>Search input</p>
 
 
   </div>
@@ -3659,7 +3825,8 @@ the HTML5 number field.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3671,7 +3838,8 @@ the HTML5 number field.</p>
 &lt;input type=&quot;search&quot; name=&quot;search[q]&quot; id=&quot;search-q&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3696,7 +3864,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3713,7 +3882,8 @@ the HTML5 number field.</p>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -3729,7 +3899,8 @@ the HTML5 number field.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -3767,11 +3938,13 @@ the HTML5 number field.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Select input</p>
+    
+<p>Select input</p>
 
 <p>If request params have a value that corresponds to one of the given values,
-it automatically sets the <tt>selected</tt> attribute on the <tt><option>&lt;/tt&gt; tag.
-This Hanami::Controller integration happens without any developer intervention.</option></tt></p>
+it automatically sets the <code>selected</code> attribute on the
+<code>&lt;option&gt;</code> tag. This Hanami::Controller integration
+happens without any developer intervention.</p>
 
 
   </div>
@@ -3782,7 +3955,8 @@ This Hanami::Controller integration happens without any developer intervention.<
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3798,7 +3972,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3814,7 +3989,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic selected option</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic selected option</p>
 </div></p>
       
       <pre class="example code"><code># Given the following params:
@@ -3836,7 +4012,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Prompt option</p>
+        <p class="example_title"><div class='inline'>
+<p>Prompt option</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3853,7 +4030,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Selected option</p>
+        <p class="example_title"><div class='inline'>
+<p>Selected option</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3869,7 +4047,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Prompt option and HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Prompt option and HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3886,7 +4065,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Multiple select</p>
+        <p class="example_title"><div class='inline'>
+<p>Multiple select</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3902,7 +4082,8 @@ This Hanami::Controller integration happens without any developer intervention.<
 &lt;/select&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Multiple select and HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Multiple select and HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -3931,7 +4112,8 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -3946,8 +4128,9 @@ This Hanami::Controller integration happens without any developer intervention.<
       
       
         &mdash;
-        <div class='inline'><p>a Hash to generate <tt><option>&lt;/tt&gt; tags.
-Values correspond to <tt>value</tt> and keys correspond to the content.</option></tt></p>
+        <div class='inline'>
+<p>a Hash to generate <code>&lt;option&gt;</code> tags. Values correspond to
+<code>value</code> and keys correspond to the content.</p>
 </div>
       
     </li>
@@ -3964,7 +4147,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -3980,7 +4164,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4033,7 +4218,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Submit button</p>
+    
+<p>Submit button</p>
 
 
   </div>
@@ -4044,7 +4230,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4056,7 +4243,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;button type=&quot;submit&quot;&gt;Create&lt;/button&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4081,7 +4269,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>The content</p>
+        <div class='inline'>
+<p>The content</p>
 </div>
       
     </li>
@@ -4098,7 +4287,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the button tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the button tag</p>
 </div>
       
     </li>
@@ -4114,7 +4304,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4153,7 +4344,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Telephone input</p>
+    
+<p>Telephone input</p>
 
 
   </div>
@@ -4164,7 +4356,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4176,7 +4369,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;input type=&quot;tel&quot; name=&quot;user[telephone]&quot; id=&quot;user-telephone&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4201,7 +4395,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4218,7 +4413,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -4234,7 +4430,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -4272,7 +4469,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Text-area input</p>
+    
+<p>Text-area input</p>
 
 
   </div>
@@ -4283,7 +4481,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4295,7 +4494,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot;&gt;&lt;/textarea&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Set content</p>
+        <p class="example_title"><div class='inline'>
+<p>Set content</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4307,7 +4507,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot;&gt;Football&lt;/textarea&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Set content and HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Set content and HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4319,7 +4520,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot; class=&quot;form-control&quot;&gt;Football&lt;/textarea&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Omit content and specify HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Omit content and specify HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4331,7 +4533,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;textarea name=&quot;user[hobby]&quot; id=&quot;user-hobby&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Force blank value</p>
+        <p class="example_title"><div class='inline'>
+<p>Force blank value</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4356,7 +4559,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4373,7 +4577,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the content of the textarea</p>
+        <div class='inline'>
+<p>the content of the textarea</p>
 </div>
       
     </li>
@@ -4390,7 +4595,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the textarea tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the textarea tag</p>
 </div>
       
     </li>
@@ -4406,7 +4612,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>0.2.5</p>
+        <div class='inline'>
+<p>0.2.5</p>
 </div>
       
     </li>
@@ -4454,7 +4661,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Text input</p>
+    
+<p>Text input</p>
 
 
   </div>
@@ -4465,7 +4673,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4477,7 +4686,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;input type=&quot;text&quot; name=&quot;user[first_name]&quot; id=&quot;user-first-name&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4502,7 +4712,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4519,7 +4730,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -4535,7 +4747,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4573,7 +4786,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Time field</p>
+    
+<p>Time field</p>
 
 
   </div>
@@ -4584,7 +4798,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4596,7 +4811,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;input type=&quot;time&quot; name=&quot;book[release_hour]&quot; id=&quot;book-release-hour&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4621,7 +4837,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4638,7 +4855,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -4654,7 +4872,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -4692,7 +4911,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>URL input</p>
+    
+<p>URL input</p>
 
 
   </div>
@@ -4703,7 +4923,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4715,7 +4936,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;input type=&quot;url&quot; name=&quot;user[website]&quot; id=&quot;user-website&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4740,7 +4962,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4757,7 +4980,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -4773,7 +4997,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -4814,7 +5039,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Week field</p>
+    
+<p>Week field</p>
 
 
   </div>
@@ -4825,7 +5051,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4837,7 +5064,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
 &lt;input type=&quot;week&quot; name=&quot;book[release_week]&quot; id=&quot;book-release-week&quot; value=&quot;&quot;&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML Attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML Attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -4862,7 +5090,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>the input name</p>
+        <div class='inline'>
+<p>the input name</p>
 </div>
       
     </li>
@@ -4879,7 +5108,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the input tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the input tag</p>
 </div>
       
     </li>
@@ -4895,7 +5125,8 @@ Values correspond to <tt>value</tt> and keys correspond to the content.</option>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>

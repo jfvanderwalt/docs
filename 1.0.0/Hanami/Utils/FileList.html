@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Utils::FileList
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,14 +72,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/file_list.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/file_list.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Ordered file list, consistent across operating systems</p>
+    
+<p>Ordered file list, consistent across operating systems</p>
 
 
   </div>
@@ -93,7 +96,8 @@
       
       
         
-        <div class='inline'><p>0.9.0</p>
+        <div class='inline'>
+<p>0.9.0</p>
 </div>
       
     </li>
@@ -132,7 +136,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return an ordered list of files, consistent across operating systems.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return an ordered list of files, consistent across operating systems.</p>
 </div></span>
   
 </li>
@@ -158,9 +163,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return an ordered list of files, consistent across operating systems</p>
+    
+<p>Return an ordered list of files, consistent across operating systems</p>
 
-<p>It has the same signature of <tt>Dir.glob</tt>, it just guarantees to
+<p>It has the same signature of <code>Dir.glob</code>, it just guarantees to
 order the results before to return them.</p>
 
 
@@ -184,7 +190,8 @@ order the results before to return them.</p>
       
       
         
-        <div class='inline'><p>0.9.0</p>
+        <div class='inline'>
+<p>0.9.0</p>
 </div>
       
     </li>
@@ -195,7 +202,7 @@ order the results before to return them.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/file_list.rb#L15" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/file_list.rb#L15" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

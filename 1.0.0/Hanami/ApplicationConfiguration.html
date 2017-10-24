@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::ApplicationConfiguration
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -93,7 +95,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Configuration for a Hanami application</p>
+    
+<p>Configuration for a Hanami application</p>
 
 
   </div>
@@ -109,7 +112,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -148,7 +152,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adapter configuration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Adapter configuration.</p>
 </div></span>
   
 </li>
@@ -171,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The application will serve the static assets under these directories.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The application will serve the static assets under these directories.</p>
 </div></span>
   
 </li>
@@ -194,7 +200,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Body parsing configuration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Body parsing configuration.</p>
 </div></span>
   
 </li>
@@ -217,7 +224,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::Controller’s configuration and applies them when the application is loaded.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It lazily collects all the low level settings for Hanami::Controller&#39;s
+configuration and applies them when the application is loaded.</p>
 </div></span>
   
 </li>
@@ -240,7 +249,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a relative pattern to find controllers.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a relative pattern to find controllers.</p>
 </div></span>
   
 </li>
@@ -263,7 +273,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure cookies Enable cookies (disabled by default).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure cookies Enable cookies (disabled by default).</p>
 </div></span>
   
 </li>
@@ -286,7 +297,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Set a format as default fallback for all the requests without a strict requirement for the mime type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set a format as default fallback for all the requests without a strict
+requirement for the mime type.</p>
 </div></span>
   
 </li>
@@ -309,7 +322,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Set a format to be used for all responses regardless of the request type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set a format to be used for all responses regardless of the request type.</p>
 </div></span>
   
 </li>
@@ -332,7 +346,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Force ssl redirection if http scheme is set.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Force ssl redirection if http scheme is set.</p>
 </div></span>
   
 </li>
@@ -355,7 +370,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Decide if handle exceptions with an HTTP status or let them uncaught.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Decide if handle exceptions with an HTTP status or let them uncaught.</p>
 </div></span>
   
 </li>
@@ -378,7 +394,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The URI host for this application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The URI host for this application.</p>
 </div></span>
   
 </li>
@@ -401,7 +418,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A Hanami::Layout for this application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A Hanami::Layout for this application.</p>
 </div></span>
   
 </li>
@@ -424,7 +442,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Application load paths The application will recursively load all the Ruby files under these paths.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Application load paths The application will recursively load all the Ruby
+files under these paths.</p>
 </div></span>
   
 </li>
@@ -447,7 +467,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Application middleware.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Application middleware.</p>
 </div></span>
   
 </li>
@@ -470,7 +491,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::Model’s configuration and applies them when the application is loaded.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It lazily collects all the low level settings for Hanami::Model&#39;s
+configuration and applies them when the application is loaded.</p>
 </div></span>
   
 </li>
@@ -493,7 +516,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The URI port for this application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The URI port for this application.</p>
 </div></span>
   
 </li>
@@ -516,7 +540,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The root of the application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The root of the application.</p>
 </div></span>
   
 </li>
@@ -539,7 +564,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Application routes.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Application routes.</p>
 </div></span>
   
 </li>
@@ -562,7 +588,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The URI scheme for this application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The URI scheme for this application.</p>
 </div></span>
   
 </li>
@@ -585,7 +612,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the security policy.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the security policy.</p>
 </div></span>
   
 </li>
@@ -608,7 +636,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure sessions Enable sessions (disabled by default).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure sessions Enable sessions (disabled by default).</p>
 </div></span>
   
 </li>
@@ -631,7 +660,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if the application uses SSL.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if the application uses SSL.</p>
 </div></span>
   
 </li>
@@ -654,7 +684,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Templates root.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Templates root.</p>
 </div></span>
   
 </li>
@@ -677,7 +708,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It lazily collects all the low level settings for Hanami::View’s configuration and applies them when the application is loaded.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It lazily collects all the low level settings for Hanami::View&#39;s
+configuration and applies them when the application is loaded.</p>
 </div></span>
   
 </li>
@@ -700,7 +733,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a relative pattern to find views:.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a relative pattern to find views:.</p>
 </div></span>
   
 </li>
@@ -730,16 +764,16 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Adapter configuration.
-The application will instantiate adapter instance based on this configuration.</p>
+    
+<p>Adapter configuration. The application will instantiate adapter instance
+based on this configuration.</p>
 
-<p>The given options must have key pairs :type and :uri
-If it isn’t, at the runtime the framework will raise a
-<code>ArgumentError</code>.</p>
+<p>The given options must have key pairs :type and :uri If it isn&#39;t, at
+the runtime the framework will raise a <code>ArgumentError</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -773,7 +807,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>adapter</strong>(options)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given type and uri</p>
+    
+<p>Sets the given type and uri</p>
 
 
   </div>
@@ -792,7 +827,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of options for adapter</p>
+        <div class='inline'>
+<p>a set of options for adapter</p>
 </div>
       
     </li>
@@ -808,7 +844,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>adapter</strong>  &#x21d2; <tt>Hash</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -826,7 +863,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>adapter options</p>
+        <div class='inline'>
+<p>adapter options</p>
 </div>
       
     </li>
@@ -856,7 +894,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -898,10 +937,11 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The application will serve the static assets under these directories.</p>
+    
+<p>The application will serve the static assets under these directories.</p>
 
-<p>By default it’s equal to the <code>public/</code> directory under the application
-<code>root</code>.</p>
+<p>By default it&#39;s equal to the <code>public/</code> directory under the
+application <code>root</code>.</p>
 
 <p>Otherwise, you can add different relatives paths under <code>root</code>.</p>
 
@@ -914,7 +954,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -928,7 +969,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; #&lt;Pathname:/root/path/public&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Adding new assets paths</p>
+        <p class="example_title"><div class='inline'>
+<p>Adding new assets paths</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -952,7 +994,8 @@ called without, it will return the already set value, or the default.</p>
 
   <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -970,7 +1013,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>assets root</p>
+        <div class='inline'>
+<p>assets root</p>
 </div>
       
     </li>
@@ -988,7 +1032,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1034,17 +1079,18 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Body parsing configuration.</p>
+    
+<p>Body parsing configuration.</p>
 
-<p>Specify a set of parsers for specific mime types that your application will use. This method will
-return the application’s parsers which you can use to add existing and new custom parsers for your
-application to use.</p>
+<p>Specify a set of parsers for specific mime types that your application will
+use. This method will return the application&#39;s parsers which you can
+use to add existing and new custom parsers for your application to use.</p>
 
-<p>By default it’s an empty <code>Array</code></p>
+<p>By default it&#39;s an empty <code>Array</code></p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1055,7 +1101,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1069,7 +1116,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; []</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1086,7 +1134,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; [:json, XmlParser.new]</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting a new value after one is set.</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting a new value after one is set.</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1113,7 +1162,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>body_parsers</strong>(parsers)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Specify a set of body parsers.</p>
+    
+<p>Specify a set of body parsers.</p>
 
 
   </div>
@@ -1132,7 +1182,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the body parser definitions</p>
+        <div class='inline'>
+<p>the body parser definitions</p>
 </div>
       
     </li>
@@ -1148,7 +1199,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>body_parsers</strong>  &#x21d2; <tt>Array</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -1166,7 +1218,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the set of parsers</p>
+        <div class='inline'>
+<p>the set of parsers</p>
 </div>
       
     </li>
@@ -1187,7 +1240,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1229,7 +1283,8 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It lazily collects all the low level settings for Hanami::Controller’s
+    
+<p>It lazily collects all the low level settings for Hanami::Controller&#39;s
 configuration and applies them when the application is loaded.</p>
 
 <p>NOTE: This forwards all the configurations to Hanami::Controller, without
@@ -1247,7 +1302,8 @@ current Hanami::Controller version installed.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Define a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Define a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1261,7 +1317,8 @@ current Hanami::Controller version installed.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Override a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Override a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1290,7 +1347,8 @@ current Hanami::Controller version installed.</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration</p>
+        <div class='inline'>
+<p>the configuration</p>
 </div>
       
     </li>
@@ -1312,7 +1370,8 @@ current Hanami::Controller version installed.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1354,25 +1413,28 @@ current Hanami::Controller version installed.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a relative pattern to find controllers.</p>
+    
+<p>Defines a relative pattern to find controllers.</p>
 
 <p>Hanami supports multiple architectures (aka application structures), this
-setting helps to understand the namespace where to find applications’
+setting helps to understand the namespace where to find applications&#39;
 controllers and actions.</p>
 
-<p>By default this equals to <tt>“Controllers::%{controller}::%{action}”</tt>
-That means controllers must be structured like this:
-<tt>Bookshelf::Controllers::Dashboard::Index</tt>, where <tt>Bookshelf</tt>
-is the application module, <tt>Controllers</tt> is the first value
-specified in the pattern, <tt>Dashboard</tt> the controller and
-<tt>Index</tt> the action.</p>
+<p>By default this equals to
+<code>&quot;Controllers::%{controller}::%{action}&quot;</code> That means
+controllers must be structured like this:
+<code>Bookshelf::Controllers::Dashboard::Index</code>, where
+<code>Bookshelf</code> is the application module, <code>Controllers</code>
+is the first value specified in the pattern, <code>Dashboard</code> the
+controller and <code>Index</code> the action.</p>
 
-<p>This pattern MUST always contain <tt>”%{controller}”</tt> and <tt>%{action}</tt>.
-This pattern SHOULD be used accordingly to <tt>#view_pattern</tt> value.</p>
+<p>This pattern MUST always contain <code>&quot;%{controller}&quot;</code> and
+<code>%{action}</code>. This pattern SHOULD be used accordingly to
+<code>#view_pattern</code> value.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1383,7 +1445,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1416,7 +1479,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Controllers::Dashboard::Index</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1450,7 +1514,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::DashboardController::Index</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value for a top level name structure</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value for a top level name structure</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1493,7 +1558,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>controller_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -1512,7 +1578,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the controller pattern</p>
+        <div class='inline'>
+<p>the controller pattern</p>
 </div>
       
     </li>
@@ -1528,7 +1595,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -1570,7 +1638,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1616,12 +1685,12 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure cookies
-Enable cookies (disabled by default).</p>
+    
+<p>Configure cookies Enable cookies (disabled by default).</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1632,7 +1701,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1646,7 +1716,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; #&lt;Hanami::Config::Cookies:0x0000000329f880 @options={}, @default_options={:httponly=&gt;true, :secure=&gt;false}&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1672,7 +1743,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>cookies</strong>(options)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value with their options.</p>
+    
+<p>Sets the given value with their options.</p>
 
 
   </div>
@@ -1703,7 +1775,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>cookies</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Cookies</span></tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value.</p>
+    
+<p>Gets the value.</p>
 
 
   </div>
@@ -1738,7 +1811,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1784,18 +1858,19 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Set a format as default fallback for all the requests without a strict
+    
+<p>Set a format as default fallback for all the requests without a strict
 requirement for the mime type.</p>
 
 <p>The given format must be coercible to a symbol, and be a valid mime type
-alias. If it isn’t, at the runtime the framework will raise a
+alias. If it isn&#39;t, at the runtime the framework will raise a
 <code>Hanami::Controller::UnknownFormatError</code>.</p>
 
 <p>By default this value is <code>:html</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1806,7 +1881,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1819,7 +1895,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_request_format'>default_request_format</span> <span class='comment'># =&gt; :html</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -1844,7 +1921,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>default_request_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -1863,7 +1941,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the symbol format</p>
+        <div class='inline'>
+<p>the symbol format</p>
 </div>
       
     </li>
@@ -1881,7 +1960,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>if it cannot be coerced to a symbol</p>
+        <div class='inline'>
+<p>if it cannot be coerced to a symbol</p>
 </div>
       
     </li>
@@ -1896,7 +1976,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>default_request_format</strong>  &#x21d2; <tt>Symbol</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -1938,7 +2019,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -1984,17 +2066,18 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Set a format to be used for all responses regardless of the request type.</p>
+    
+<p>Set a format to be used for all responses regardless of the request type.</p>
 
 <p>The given format must be coercible to a symbol, and be a valid mime type
-alias. If it isn’t, at the runtime the framework will raise a
+alias. If it isn&#39;t, at the runtime the framework will raise a
 <code>Hanami::Controller::UnknownFormatError</code>.</p>
 
 <p>By default this value is <code>:html</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -2005,7 +2088,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2018,7 +2102,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_default_response_format'>default_response_format</span> <span class='comment'># =&gt; :html</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2043,7 +2128,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>default_response_format</strong>(format)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -2062,7 +2148,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the symbol format</p>
+        <div class='inline'>
+<p>the symbol format</p>
 </div>
       
     </li>
@@ -2080,7 +2167,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>if it cannot be coerced to a symbol</p>
+        <div class='inline'>
+<p>if it cannot be coerced to a symbol</p>
 </div>
       
     </li>
@@ -2095,7 +2183,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>default_response_format</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -2137,7 +2226,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -2179,7 +2269,8 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Force ssl redirection if http scheme is set</p>
+    
+<p>Force ssl redirection if http scheme is set</p>
 
 
   </div>
@@ -2215,7 +2306,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -2261,16 +2353,18 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Decide if handle exceptions with an HTTP status or let them uncaught</p>
+    
+<p>Decide if handle exceptions with an HTTP status or let them uncaught</p>
 
-<p>If this value is set to <code>true</code>, the configured exceptions will return
-the specified HTTP status, the rest of them with <code>500</code>.</p>
+<p>If this value is set to <code>true</code>, the configured exceptions will
+return the specified HTTP status, the rest of them with <code>500</code>.</p>
 
-<p>If this value is set to <code>false</code>, the exceptions won’t be caught.</p>
+<p>If this value is set to <code>false</code>, the exceptions won&#39;t be
+caught.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -2281,7 +2375,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Enabled (default)</p>
+        <p class="example_title"><div class='inline'>
+<p>Enabled (default)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2311,7 +2406,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># GET &#39;/error&#39; # =&gt; 500 - Internal Server Error</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Disabled</p>
+        <p class="example_title"><div class='inline'>
+<p>Disabled</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2352,7 +2448,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>handle_exceptions</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -2371,7 +2468,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>true or false, default to true</p>
+        <div class='inline'>
+<p>true or false, default to true</p>
 </div>
       
     </li>
@@ -2387,7 +2485,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>handle_exceptions</strong>  &#x21d2; <tt>TrueClass</tt>, <tt>FalseClass</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -2431,7 +2530,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -2477,14 +2577,15 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The URI host for this application.
-This is used by the router helpers to generate absolute URLs.</p>
+    
+<p>The URI host for this application. This is used by the router helpers to
+generate absolute URLs.</p>
 
-<p>By default this value is <code>"localhost"</code>.</p>
+<p>By default this value is <code>&quot;localhost&quot;</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -2495,7 +2596,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2508,7 +2610,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span> <span class='comment'># =&gt; &quot;localhost&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2533,7 +2636,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>host</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -2552,7 +2656,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the URI host</p>
+        <div class='inline'>
+<p>the URI host</p>
 </div>
       
     </li>
@@ -2568,7 +2673,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -2610,7 +2716,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2656,18 +2763,19 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>A Hanami::Layout for this application</p>
+    
+<p>A Hanami::Layout for this application</p>
 
-<p>By default it’s <code>nil</code>.</p>
+<p>By default it&#39;s <code>nil</code>.</p>
 
-<p>It accepts a Symbol as layout name. When the application is loaded, it
-will lookup for the corresponding class.</p>
+<p>It accepts a Symbol as layout name. When the application is loaded, it will
+lookup for the corresponding class.</p>
 
 <p>All the views will use this layout, unless otherwise specified.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -2678,7 +2786,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2693,7 +2802,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># All the views will render without a layout</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2739,7 +2849,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>layout</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -2758,7 +2869,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the layout name</p>
+        <div class='inline'>
+<p>the layout name</p>
 </div>
       
     </li>
@@ -2774,7 +2886,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>layout</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -2792,7 +2905,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the layout name</p>
+        <div class='inline'>
+<p>the layout name</p>
 </div>
       
     </li>
@@ -2822,7 +2936,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2864,10 +2979,11 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Application load paths
-The application will recursively load all the Ruby files under these paths.</p>
+    
+<p>Application load paths The application will recursively load all the Ruby
+files under these paths.</p>
 
-<p>By default it’s empty in order to allow developers to decide their own
+<p>By default it&#39;s empty in order to allow developers to decide their own
 app structure.</p>
 
 
@@ -2879,7 +2995,8 @@ app structure.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -2893,7 +3010,8 @@ app structure.</p>
   <span class='comment'># =&gt; #&lt;Hanami::Config::LoadPaths:0x007ff4fa212310 @paths=[]&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami&#39;
@@ -2925,7 +3043,8 @@ Bookshelf::Application.configuration.assets
       
       
         &mdash;
-        <div class='inline'><p>a set of load paths</p>
+        <div class='inline'>
+<p>a set of load paths</p>
 </div>
       
     </li>
@@ -2947,7 +3066,8 @@ Bookshelf::Application.configuration.assets
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2985,13 +3105,15 @@ Bookshelf::Application.configuration.assets
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Application middleware.</p>
+    
+<p>Application middleware.</p>
 
 <p>Specify middleware that your application will use. This method will return
-the application’s underlying Middleware stack which you can use to add new
-middleware for your application to use. By default, the middleware stack
-will contain only <code>Rack::Static</code> and <code>Rack::MethodOverride</code>. However, if
-<code>assets false</code> was specified # in the configuration block, the default
+the application&#39;s underlying Middleware stack which you can use to add
+new middleware for your application to use. By default, the middleware
+stack will contain only <code>Rack::Static</code> and
+<code>Rack::MethodOverride</code>. However, if <code>assets false</code>
+was specified # in the configuration block, the default
 <code>Rack::Static</code> will be removed.</p>
 
 
@@ -3034,7 +3156,8 @@ will contain only <code>Rack::Static</code> and <code>Rack::MethodOverride</code
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3072,7 +3195,8 @@ will contain only <code>Rack::Static</code> and <code>Rack::MethodOverride</code
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It lazily collects all the low level settings for Hanami::Model’s
+    
+<p>It lazily collects all the low level settings for Hanami::Model&#39;s
 configuration and applies them when the application is loaded.</p>
 
 <p>NOTE: This forwards all the configurations to Hanami::Model, without
@@ -3090,7 +3214,8 @@ current Hanami::Model version installed.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Define a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Define a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3105,7 +3230,8 @@ current Hanami::Model version installed.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Override a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Override a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3135,7 +3261,8 @@ current Hanami::Model version installed.</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration</p>
+        <div class='inline'>
+<p>the configuration</p>
 </div>
       
     </li>
@@ -3157,7 +3284,8 @@ current Hanami::Model version installed.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -3199,14 +3327,15 @@ current Hanami::Model version installed.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The URI port for this application.
-This is used by the router helpers to generate absolute URLs.</p>
+    
+<p>The URI port for this application. This is used by the router helpers to
+generate absolute URLs.</p>
 
 <p>By default this value is <code>2300</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -3217,7 +3346,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3230,7 +3360,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span> <span class='comment'># =&gt; 2300</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3255,7 +3386,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>port</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -3274,7 +3406,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the URI port</p>
+        <div class='inline'>
+<p>the URI port</p>
 </div>
       
     </li>
@@ -3292,7 +3425,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>if the given value cannot be coerced to Integer</p>
+        <div class='inline'>
+<p>if the given value cannot be coerced to Integer</p>
 </div>
       
     </li>
@@ -3307,7 +3441,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -3349,7 +3484,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3398,18 +3534,20 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The root of the application</p>
+    
+<p>The root of the application</p>
 
-<p>By default it returns the current directory, for this reason, <strong>all the
-commands must be executed from the top level directory of the project</strong>.</p>
+<p>By default it returns the current directory, for this reason, <strong>all
+the commands must be executed from the top level directory of the
+project</strong>.</p>
 
 <p>If for some reason, that constraint above cannot be satisfied, please
 configure the root directory, so that commands can be executed from
 everywhere.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -3420,7 +3558,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3433,7 +3572,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='comment'># =&gt; #&lt;Pathname:/path/to/root&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3456,7 +3596,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>root</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -3475,7 +3616,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>The root directory of the app</p>
+        <div class='inline'>
+<p>The root directory of the app</p>
 </div>
       
     </li>
@@ -3491,7 +3633,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>root</strong>  &#x21d2; <tt>Pathname</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -3522,7 +3665,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>if the path cannot be found</p>
+        <div class='inline'>
+<p>if the path cannot be found</p>
 </div>
       
     </li>
@@ -3550,7 +3694,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3598,16 +3743,17 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Application routes.</p>
+    
+<p>Application routes.</p>
 
 <p>Specify a set of routes for the application, by passing a block, or a
 relative path where to find the file that describes them.</p>
 
-<p>By default it’s <code>nil</code>.</p>
+<p>By default it&#39;s <code>nil</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -3618,7 +3764,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3632,7 +3779,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; nil</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value, by passing a block</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value, by passing a block</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3652,7 +3800,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; #&lt;Hanami::Config::Routes:0x007ff50a991388 @blk=#&lt;Proc:0x007ff50a991338@(irb):4&gt;, @path=#&lt;Pathname:.&gt;&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value, by passing a relative path</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value, by passing a relative path</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3678,7 +3827,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>routes</strong>(blk)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Specify a set of routes in the given block</p>
+    
+<p>Specify a set of routes in the given block</p>
 
 
   </div>
@@ -3697,7 +3847,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the routes definitions</p>
+        <div class='inline'>
+<p>the routes definitions</p>
 </div>
       
     </li>
@@ -3713,7 +3864,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>routes</strong>(path)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Specify a relative path where to find the routes file</p>
+    
+<p>Specify a relative path where to find the routes file</p>
 
 
   </div>
@@ -3732,7 +3884,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative path</p>
+        <div class='inline'>
+<p>the relative path</p>
 </div>
       
     </li>
@@ -3748,7 +3901,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>routes</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Routes</span></tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -3766,7 +3920,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the set of routes</p>
+        <div class='inline'>
+<p>the set of routes</p>
 </div>
       
     </li>
@@ -3794,7 +3949,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3840,14 +3996,15 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The URI scheme for this application.
-This is used by the router helpers to generate absolute URLs.</p>
+    
+<p>The URI scheme for this application. This is used by the router helpers to
+generate absolute URLs.</p>
 
-<p>By default this value is <code>"http"</code>.</p>
+<p>By default this value is <code>&quot;http&quot;</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -3858,7 +4015,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3871,7 +4029,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='comment'># =&gt; &quot;http&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -3896,7 +4055,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>scheme</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -3915,7 +4075,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the URI scheme</p>
+        <div class='inline'>
+<p>the URI scheme</p>
 </div>
       
     </li>
@@ -3931,7 +4092,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>scheme</strong>  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -3973,7 +4135,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -4015,7 +4178,8 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the security policy</p>
+    
+<p>Returns the security policy</p>
 
 
   </div>
@@ -4026,7 +4190,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting values</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting values</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4044,7 +4209,8 @@ called without, it will return the already set value, or the default.</p>
 </span><span class='const'>Bookshelf</span><span class='op'>::</span><span class='const'>Application</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_security'>security</span><span class='period'>.</span><span class='id identifier rubyid_content_security_policy'>content_security_policy</span> <span class='comment'># =&gt; &quot;script-src &#39;self&#39; https://apis.example.com&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting values</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting values</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4089,7 +4255,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -4133,19 +4300,18 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure sessions
-Enable sessions (disabled by default).</p>
+    
+<p>Configure sessions Enable sessions (disabled by default).</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
-<p>Given Class as adapter it will be used as sessions middleware.
-Given String as adapter it will be resolved as class name and used as
-sessions middleware.
-Given Symbol as adapter it is assumed it’s name of the class under
-Rack::Session namespace that will be used as sessions middleware
-(e.g. :cookie for Rack::Session::Cookie).</p>
+<p>Given Class as adapter it will be used as sessions middleware. Given String
+as adapter it will be resolved as class name and used as sessions
+middleware. Given Symbol as adapter it is assumed it&#39;s name of the
+class under Rack::Session namespace that will be used as sessions
+middleware (e.g. :cookie for Rack::Session::Cookie).</p>
 
 <p>By default options include domain inferred from host configuration, and
 secure flag inferred from scheme configuration.</p>
@@ -4159,7 +4325,8 @@ secure flag inferred from scheme configuration.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4173,7 +4340,8 @@ secure flag inferred from scheme configuration.</p>
   <span class='comment'># =&gt; #&lt;Hanami::Config::Sessions:0x00000001ca0c28 @enabled=false&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value with symbol</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value with symbol</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4190,7 +4358,8 @@ secure flag inferred from scheme configuration.</p>
   <span class='comment'># =&gt; #&lt;Hanami::Config::Sessions:0x00000001589458 @enabled=true, @adapter=:cookie, @options={:domain=&gt;&quot;localhost&quot;, :secure=&gt;false}&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Disabling previously enabled sessions</p>
+        <p class="example_title"><div class='inline'>
+<p>Disabling previously enabled sessions</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4217,7 +4386,8 @@ secure flag inferred from scheme configuration.</p>
         <span class="signature">#<strong>sessions</strong>(adapter, options)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value.</p>
+    
+<p>Sets the given value.</p>
 
 
   </div>
@@ -4236,7 +4406,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         &mdash;
-        <div class='inline'><p>Rack middleware for sessions management</p>
+        <div class='inline'>
+<p>Rack middleware for sessions management</p>
 </div>
       
     </li>
@@ -4251,7 +4422,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         &mdash;
-        <div class='inline'><p>options to pass to sessions middleware</p>
+        <div class='inline'>
+<p>options to pass to sessions middleware</p>
 </div>
       
     </li>
@@ -4267,7 +4439,8 @@ secure flag inferred from scheme configuration.</p>
         <span class="signature">#<strong>sessions</strong>(false)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Disables sessions</p>
+    
+<p>Disables sessions</p>
 
 
   </div>
@@ -4283,7 +4456,8 @@ secure flag inferred from scheme configuration.</p>
         <span class="signature">#<strong>sessions</strong>  &#x21d2; <tt><span class='object_link'>Hanami::Config::Sessions</span></tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value.</p>
+    
+<p>Gets the value.</p>
 
 
   </div>
@@ -4301,7 +4475,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         &mdash;
-        <div class='inline'><p>sessions configuration</p>
+        <div class='inline'>
+<p>sessions configuration</p>
 </div>
       
     </li>
@@ -4331,7 +4506,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4373,7 +4549,8 @@ secure flag inferred from scheme configuration.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Check if the application uses SSL</p>
+    
+<p>Check if the application uses SSL</p>
 
 
   </div>
@@ -4391,7 +4568,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         &mdash;
-        <div class='inline'><p>the result of the check</p>
+        <div class='inline'>
+<p>the result of the check</p>
 </div>
       
     </li>
@@ -4413,7 +4591,8 @@ secure flag inferred from scheme configuration.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4455,16 +4634,18 @@ secure flag inferred from scheme configuration.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Templates root.
-The application will recursively look for templates under this path.</p>
+    
+<p>Templates root. The application will recursively look for templates under
+this path.</p>
 
-<p>By default it’s equal to the application <code>root</code>.</p>
+<p>By default it&#39;s equal to the application <code>root</code>.</p>
 
-<p>Otherwise, you can specify a different relative path under <code>root</code>.</p>
+<p>Otherwise, you can specify a different relative path under
+<code>root</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -4475,7 +4656,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4489,7 +4671,8 @@ called without, it will return the already set value, or the default.</p>
   <span class='comment'># =&gt; #&lt;Pathname:/root/path&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4515,7 +4698,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>templates</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -4534,7 +4718,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative path to the templates root.</p>
+        <div class='inline'>
+<p>the relative path to the templates root.</p>
 </div>
       
     </li>
@@ -4550,7 +4735,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>templates</strong>  &#x21d2; <tt>Pathname</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -4568,7 +4754,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>templates root</p>
+        <div class='inline'>
+<p>templates root</p>
 </div>
       
     </li>
@@ -4598,7 +4785,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -4640,7 +4828,8 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It lazily collects all the low level settings for Hanami::View’s
+    
+<p>It lazily collects all the low level settings for Hanami::View&#39;s
 configuration and applies them when the application is loaded.</p>
 
 <p>NOTE: This forwards all the configurations to Hanami::View, without
@@ -4658,7 +4847,8 @@ current Hanami::View version installed.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Define a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Define a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4672,7 +4862,8 @@ current Hanami::View version installed.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Override a setting</p>
+        <p class="example_title"><div class='inline'>
+<p>Override a setting</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4701,7 +4892,8 @@ current Hanami::View version installed.</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration</p>
+        <div class='inline'>
+<p>the configuration</p>
 </div>
       
     </li>
@@ -4723,7 +4915,8 @@ current Hanami::View version installed.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -4765,25 +4958,29 @@ current Hanami::View version installed.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a relative pattern to find views:.</p>
+    
+<p>Defines a relative pattern to find views:.</p>
 
 <p>Hanami supports multiple architectures (aka application structures), this
-setting helps to understand the namespace where to find applications’
+setting helps to understand the namespace where to find applications&#39;
 views:.</p>
 
-<p>By default this equals to <tt>“Views::%{controller}::%{action}”</tt>
-That means views must be structured like this:
-<tt>Bookshelf::Views::Dashboard::Index</tt>, where <tt>Bookshelf</tt> is
-the application module, <tt>Views</tt> is the first value specified in the
-pattern, <tt>Dashboard</tt> a module corresponding to the controller name
-and <tt>Index</tt> the view, corresponding to the action name.</p>
+<p>By default this equals to
+<code>&quot;Views::%{controller}::%{action}&quot;</code> That means views
+must be structured like this:
+<code>Bookshelf::Views::Dashboard::Index</code>, where
+<code>Bookshelf</code> is the application module, <code>Views</code> is the
+first value specified in the pattern, <code>Dashboard</code> a module
+corresponding to the controller name and <code>Index</code> the view,
+corresponding to the action name.</p>
 
-<p>This pattern MUST always contain <tt>”%{controller}”</tt> and <tt>%{action}</tt>.
-This pattern SHOULD be used accordingly to <tt>#controller_pattern</tt> value.</p>
+<p>This pattern MUST always contain <code>&quot;%{controller}&quot;</code> and
+<code>%{action}</code>. This pattern SHOULD be used accordingly to
+<code>#controller_pattern</code> value.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -4794,7 +4991,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4825,7 +5023,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Views::Dashboard::Index</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4856,7 +5055,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='comment'># GET &#39;/&#39; # =&gt; Bookshelf::Dashboard::Index</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value for a top level name structure</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value for a top level name structure</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami</span><span class='tstring_end'>&#39;</span></span>
@@ -4896,7 +5096,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>view_pattern</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -4915,7 +5116,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the view pattern</p>
+        <div class='inline'>
+<p>the view pattern</p>
 </div>
       
     </li>
@@ -4931,7 +5133,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>controller_pattern</strong>  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -4973,7 +5176,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

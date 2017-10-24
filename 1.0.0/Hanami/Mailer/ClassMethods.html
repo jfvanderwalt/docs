@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Mailer::ClassMethods
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -79,7 +81,6 @@
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -93,7 +94,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -132,7 +134,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Delivers a multipart email message.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Delivers a multipart email message.</p>
 </div></span>
   
 </li>
@@ -158,16 +161,18 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Delivers a multipart email message.</p>
+    
+<p>Delivers a multipart email message.</p>
 
-<p>When a mailer defines a <tt>html</tt> and <tt>txt</tt> template, they are
-both delivered.</p>
+<p>When a mailer defines a <code>html</code> and <code>txt</code> template,
+they are both delivered.</p>
 
 <p>In order to selectively deliver only one of the two templates, use
-<tt>Signup::Welcome.deliver(format: :txt)</tt></p>
+<code>Signup::Welcome.deliver(format: :txt)</code></p>
 
-<p>All the given locals, excepted the reserved ones (<tt>:format</tt> and
-<tt>charset</tt>), are available as rendering context for the templates.</p>
+<p>All the given locals, excepted the reserved ones (<code>:format</code> and
+<code>charset</code>), are available as rendering context for the
+templates.</p>
 
 
   </div>
@@ -232,7 +237,8 @@ both delivered.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of objects that acts as context for the rendering</p>
+        <div class='inline'>
+<p>a set of objects that acts as context for the rendering</p>
 </div>
       
     </li>
@@ -247,7 +253,8 @@ both delivered.</p>
       
       
         &mdash;
-        <div class='inline'><p>a customizable set of options</p>
+        <div class='inline'>
+<p>a customizable set of options</p>
 </div>
       
     </li>
@@ -262,7 +269,8 @@ both delivered.</p>
       
       
         &mdash;
-        <div class='inline'><p>a customizable set of options</p>
+        <div class='inline'>
+<p>a customizable set of options</p>
 </div>
       
     </li>
@@ -289,7 +297,8 @@ both delivered.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Mailer
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -84,7 +86,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hanami::Mailer</p>
+    
+<p>Hanami::Mailer</p>
 
 
   </div>
@@ -100,7 +103,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -148,8 +152,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -184,7 +187,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure the framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure the framework.</p>
 </div></span>
   
 </li>
@@ -207,7 +211,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Test deliveries.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Test deliveries.</p>
 </div></span>
   
 </li>
@@ -239,7 +244,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>rubocop:disable Metrics/MethodLength rubocop:disable Metrics/AbcSize.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>rubocop:disable Metrics/MethodLength rubocop:disable Metrics/AbcSize.</p>
 </div></span>
   
 </li>
@@ -262,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a mailer.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a mailer.</p>
 </div></span>
   
 </li>
@@ -285,7 +292,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepare the email message when a new mailer is initialized.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepare the email message when a new mailer is initialized.</p>
 </div></span>
   
 </li>
@@ -324,7 +332,6 @@
 </p>
 
 
-
   </div>
 </div>
 <div class="tags">
@@ -338,7 +345,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -385,7 +393,6 @@
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -399,7 +406,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -444,8 +452,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure the framework.
-It yields the given block in the context of the configuration</p>
+    
+<p>Configure the framework. It yields the given block in the context of the
+configuration</p>
 
 
   </div>
@@ -476,7 +485,8 @@ It yields the given block in the context of the configuration</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration block</p>
+        <div class='inline'>
+<p>the configuration block</p>
 </div>
       
     </li>
@@ -499,7 +509,8 @@ It yields the given block in the context of the configuration</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -538,10 +549,11 @@ It yields the given block in the context of the configuration</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Test deliveries</p>
+    
+<p>Test deliveries</p>
 
-<p>This is a collection of delivered messages, used when <tt>delivery_method</tt>
-is set on <tt>:test</tt></p>
+<p>This is a collection of delivered messages, used when
+<code>delivery_method</code> is set on <code>:test</code></p>
 
 
   </div>
@@ -575,7 +587,8 @@ is set on <tt>:test</tt></p>
       
       
         &mdash;
-        <div class='inline'><p>a collection of delivered messages</p>
+        <div class='inline'>
+<p>a collection of delivered messages</p>
 </div>
       
     </li>
@@ -597,7 +610,8 @@ is set on <tt>:test</tt></p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -641,8 +655,8 @@ is set on <tt>:test</tt></p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>rubocop:disable Metrics/MethodLength
-rubocop:disable Metrics/AbcSize</p>
+    
+<p>rubocop:disable Metrics/MethodLength rubocop:disable Metrics/AbcSize</p>
 
 
   </div>
@@ -658,7 +672,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -708,7 +723,8 @@ rubocop:disable Metrics/AbcSize</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize a mailer</p>
+    
+<p>Initialize a mailer</p>
 
 
   </div>
@@ -729,7 +745,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of objects that acts as context for the rendering</p>
+        <div class='inline'>
+<p>a set of objects that acts as context for the rendering</p>
 </div>
       
     </li>
@@ -744,7 +761,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         &mdash;
-        <div class='inline'><p>a customizable set of options</p>
+        <div class='inline'>
+<p>a customizable set of options</p>
 </div>
       
     </li>
@@ -759,7 +777,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         &mdash;
-        <div class='inline'><p>a customizable set of options</p>
+        <div class='inline'>
+<p>a customizable set of options</p>
 </div>
       
     </li>
@@ -779,7 +798,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -821,7 +841,8 @@ rubocop:disable Metrics/AbcSize</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Prepare the email message when a new mailer is initialized.</p>
+    
+<p>Prepare the email message when a new mailer is initialized.</p>
 
 <p>This is a hook that can be overwritten by mailers.</p>
 
@@ -870,7 +891,8 @@ rubocop:disable Metrics/AbcSize</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

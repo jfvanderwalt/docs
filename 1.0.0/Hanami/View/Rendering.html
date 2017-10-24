@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::View::Rendering
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,8 +72,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering.rb<span class="defines">,<br />
-  gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/scope.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/registry.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_local.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_layout.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/view_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_scope.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_file.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_template.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template_name.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_registry.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/templates_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_templates_finder.rb</span>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering.rb<span class="defines">,<br />
+  gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/scope.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/registry.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_local.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_layout.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/view_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_scope.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_file.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_template.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template_name.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_registry.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/templates_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_templates_finder.rb</span>
 </dd>
   </dl>
   
@@ -79,7 +81,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Rendering methods</p>
+    
+<p>Rendering methods</p>
 
 
   </div>
@@ -102,7 +105,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -121,6 +125,46 @@
     
   
 </p>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="KNOWN_RENDER_TYPES-constant" class="">KNOWN_RENDER_TYPES =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>List of render types that exactly one of must be included when calling
+<code>#render</code>. For example, when calling <code>&lt;%= render
+something: &#39;my_thing&#39;, locals: {} %&gt;</code>, &#39;something&#39;
+must be one of the values listed here.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>X.X.X</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:partial</span><span class='comma'>,</span> <span class='symbol'>:template</span><span class='rbracket'>]</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -153,7 +197,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Render the given context and locals with the appropriate template.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Render the given context and locals with the appropriate template.</p>
 </div></span>
   
 </li>
@@ -179,9 +224,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Render the given context and locals with the appropriate template.
-If there are registered subclasses, it choose the right class, according
-  to the requested format.</p>
+    
+<p>Render the given context and locals with the appropriate template. If there
+are registered subclasses, it choose the right class, according  to the
+requested format.</p>
 
 
   </div>
@@ -240,7 +286,8 @@ If there are registered subclasses, it choose the right class, according
       
       
         &mdash;
-        <div class='inline'><p>the context for the rendering process</p>
+        <div class='inline'>
+<p>the context for the rendering process</p>
 </div>
       
     </li>
@@ -260,7 +307,8 @@ If there are registered subclasses, it choose the right class, according
             
           </span>
           
-            &mdash; <div class='inline'><p>the requested format</p>
+            &mdash; <div class='inline'>
+<p>the requested format</p>
 </div>
           
         </li>
@@ -279,7 +327,8 @@ If there are registered subclasses, it choose the right class, according
       
       
         &mdash;
-        <div class='inline'><p>the output of the rendering process</p>
+        <div class='inline'>
+<p>the output of the rendering process</p>
 </div>
       
     </li>
@@ -296,8 +345,8 @@ If there are registered subclasses, it choose the right class, according
       
       
         &mdash;
-        <div class='inline'><p>if it can’t find a template
-for the given context</p>
+        <div class='inline'>
+<p>if it can&#39;t find a template for the given context</p>
 </div>
       
     </li>
@@ -310,8 +359,8 @@ for the given context</p>
       
       
         &mdash;
-        <div class='inline'><p>if the given context doesn’t
-have the :format key</p>
+        <div class='inline'>
+<p>if the given context doesn&#39;t have the :format key</p>
 </div>
       
     </li>
@@ -335,7 +384,8 @@ have the :format key</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -346,7 +396,7 @@ have the :format key</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering.rb#L257" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering.rb#L257" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

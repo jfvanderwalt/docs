@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>
+      Module: Hanami::Helpers::EscapeHelper
+      
+        &mdash; Hanami API docs | v1.1.0.rc1
+    
+    </title>
+
+    <!-- Include the CSS -->
+    
+      <link rel="stylesheet" href="../../assets/toolkit-minimal.min.css" type="text/css" charset="utf-8" />
+    
+      <link rel="stylesheet" href="../../assets/site.css" type="text/css" charset="utf-8" />
+    
+
+    <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <iframe id="sidebar" src="../../method_list.html?1"></iframe>
+        </nav>
+
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+          <h1>Module: Hanami::Helpers::EscapeHelper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="FormHelper/FormBuilder.html" title="Hanami::Helpers::FormHelper::FormBuilder (class)">FormHelper::FormBuilder</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/gems/hanami-helpers-1.1.0.rc1/lib/hanami/helpers/escape_helper.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Escape helpers</p>
+
+<p>You can include this module inside your view and the view will have access
+all methods.</p>
+
+<p>By including <code>Hanami::Helpers::EscapeHelper</code> it will inject
+private methods as markup escape utilities.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#escape_html-instance_method" title="#escape_html (instance method)">#<strong>escape_html</strong>(input)  &#x21d2; String </a>
+    
+
+    
+      (also: #h)
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Escape the given HTML tag content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#escape_html_attribute-instance_method" title="#escape_html_attribute (instance method)">#<strong>escape_html_attribute</strong>(input)  &#x21d2; String </a>
+    
+
+    
+      (also: #ha)
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Escape the given HTML tag attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#escape_url-instance_method" title="#escape_url (instance method)">#<strong>escape_url</strong>(input, schemes = Utils::Escape::DEFAULT_URL_SCHEMES)  &#x21d2; String </a>
+    
+
+    
+      (also: #hu)
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Escape an URL to be used in HTML attributes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#raw-instance_method" title="#raw (instance method)">#<strong>raw</strong>(input)  &#x21d2; Hanami::Utils::Escape::SafeString </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Bypass escape.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="escape_html-instance_method">
+  
+    #<strong>escape_html</strong>(input)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='h-instance_method'>h</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Escape the given HTML tag content.</p>
+
+<p>This should be used only for untrusted contents: user input.</p>
+
+<p>This should be used only for tag contents. To escape tag attributes please
+use <code>Hanami::Helpers::EscapeHelper#escape_html_attribute</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers/escape_helper</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>MyView</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Helpers::EscapeHelper (module)">EscapeHelper</a></span></span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_good_content'>good_content</span>
+    <span class='id identifier rubyid_h'>h</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_evil_content'>evil_content</span>
+    <span class='id identifier rubyid_h'>h</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>MyView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_good_content'>good_content</span>
+  <span class='comment'># =&gt; &quot;hello&quot;
+</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_evil_content'>evil_content</span>
+  <span class='comment'># =&gt; &quot;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&quot;</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>With HTML builder</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'>#
+</span><span class='comment'># CONTENTS ARE AUTOMATICALLY ESCAPED
+</span><span class='comment'>#
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>MyView</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_evil_content'>evil_content</span>
+    <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span> <span class='kw'>do</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>MyView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_evil_content'>evil_content</span>
+  <span class='comment'># =&gt; &quot;&lt;div&gt;\n&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/div&gt;&quot;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the escaped string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#escape_html_attribute-instance_method" title="Hanami::Helpers::EscapeHelper#escape_html_attribute (method)">#escape_html_attribute</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.1.0.rc1/lib/hanami/helpers/escape_helper.rb#L74" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_escape_html'>escape_html</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span></span><span class='period'>.</span><span class='id identifier rubyid_html'><span class='object_link'><a href="../Utils/Escape.html#html-class_method" title="Hanami::Utils::Escape.html (method)">html</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="escape_html_attribute-instance_method">
+  
+    #<strong>escape_html_attribute</strong>(input)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='ha-instance_method'>ha</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Escape the given HTML tag attribute.</p>
+
+<p>This MUST be used for escaping HTML tag attributes.</p>
+
+<p>This should be used only for untrusted contents: user input.</p>
+
+<p>This can also be used to escape tag contents, but it&#39;s slower. For this
+purpose use <code>Hanami::Helpers::EscapeHelper#escape_html</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
+
+class MyView
+  include Hanami::Helpers::EscapeHelper
+
+  def good_attribute
+    attribute = &quot;small&quot;
+
+    %(&lt;span class=&quot;#{ ha(attribute) }&quot;&gt;hello&lt;/span&gt;
+  end
+
+  def evil_attribute
+    attribute = %(&quot; onclick=&quot;javascript:alert(&#39;xss&#39;)&quot; id=&quot;)
+
+    %(&lt;span class=&quot;#{ ha(attribute) }&quot;&gt;hello&lt;/span&gt;
+  end
+end
+
+view = MyView.new
+
+view.good_attribute
+  # =&gt; %(&lt;span class=&quot;small&quot;&gt;hello&lt;/span&gt;)
+
+view.evil_attribute
+  # =&gt; %(&lt;span class=&quot;&amp;quot;&amp;#x20;onclick&amp;#x3d;&amp;quot;javascript&amp;#x3a;alert&amp;#x28;&amp;#x27;xss&amp;#x27;&amp;#x29;&amp;quot;&amp;#x20;id&amp;#x3d;&amp;quot;&quot;&gt;hello&lt;/span&gt;</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>With HTML builder</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='comment'>#
+</span><span class='comment'># ATTRIBUTES AREN&#39;T AUTOMATICALLY ESCAPED
+</span><span class='comment'>#
+</span><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>MyView</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_evil_attribute'>evil_attribute</span>
+    <span class='id identifier rubyid_user_input_attribute'>user_input_attribute</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&quot; onclick=&quot;javascript:alert(&#39;xss&#39;)&quot; id=&quot;</span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_html'>html</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span> <span class='label'>id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>greet</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>class:</span> <span class='id identifier rubyid_ha'>ha</span><span class='lparen'>(</span><span class='id identifier rubyid_user_input_attribute'>user_input_attribute</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>MyView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_evil_attribute'>evil_attribute</span>
+  <span class='comment'># =&gt; %(&lt;span class=&quot;&amp;quot;&amp;#x20;onclick&amp;#x3d;&amp;quot;javascript&amp;#x3a;alert&amp;#x28;&amp;#x27;xss&amp;#x27;&amp;#x29;&amp;quot;&amp;#x20;id&amp;#x3d;&amp;quot;&quot;&gt;hello&lt;/span&gt;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the escaped string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#escape_html-instance_method" title="Hanami::Helpers::EscapeHelper#escape_html (method)">#escape_html</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.1.0.rc1/lib/hanami/helpers/escape_helper.rb#L146" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_escape_html_attribute'>escape_html_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span></span><span class='period'>.</span><span class='id identifier rubyid_html_attribute'><span class='object_link'><a href="../Utils/Escape.html#html_attribute-class_method" title="Hanami::Utils::Escape.html_attribute (method)">html_attribute</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="escape_url-instance_method">
+  
+    #<strong>escape_url</strong>(input, schemes = Utils::Escape::DEFAULT_URL_SCHEMES)  &#x21d2; <tt>String</tt>  <span class="extras">(private)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='hu-instance_method'>hu</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Escape an URL to be used in HTML attributes</p>
+
+<p>This allows only URLs with whitelisted schemes to pass the filter.
+Everything else is stripped.</p>
+
+<p>Default schemes are:</p>
+<ul><li>
+<p>http</p>
+</li><li>
+<p>https</p>
+</li><li>
+<p>mailto</p>
+</li></ul>
+
+<p>If you want to allow a different set of schemes, you should pass it as
+second argument.</p>
+
+<p>This should be used only for untrusted contents: user input.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
+
+class MyView
+  include Hanami::Helpers::EscapeHelper
+
+  def good_url
+    url = &quot;http://hanamirb.org&quot;
+
+    %(&lt;a href=&quot;#{ hu(url) }&quot;&gt;Hanami&lt;/a&gt;
+  end
+
+  def evil_url
+    url = &quot;javascript:alert(&#39;xss&#39;)&quot;
+
+    %(&lt;a href=&quot;#{ hu(url) }&quot;&gt;Evil&lt;/a&gt;
+  end
+end
+
+view = MyView.new
+
+view.good_url
+  # =&gt; %(&lt;a href=&quot;http://hanamirb.org&quot;&gt;Hanami&lt;/a&gt;)
+
+view.evil_url
+  # =&gt; %(&lt;a href=&quot;&quot;&gt;Evil&lt;/a&gt;)</code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Custom schemes</p>
+</div></p>
+      
+      <pre class="example code"><code>require &#39;hanami/helpers/escape_helper&#39;
+
+class MyView
+  include Hanami::Helpers::EscapeHelper
+
+  def ftp_link
+    schemes = [&#39;ftp&#39;, &#39;ftps&#39;]
+    url     = &#39;ftps://ftp.example.org&#39;
+
+    %(&lt;a href=&quot;#{ hu(url, schemes) }&quot;&gt;FTP&lt;/a&gt;
+  end
+end
+
+view = MyView.new
+
+view.ftp_link
+  # =&gt; %(&lt;a href=&quot;ftps://ftp.example.org&quot;&gt;FTP&lt;/a&gt;)</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>schemes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Utils::Escape::DEFAULT_URL_SCHEMES</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>an optional array of whitelisted schemes</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the escaped string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../Utils/Escape.html#url-class_method" title="Hanami::Utils::Escape.url (method)">Utils::Escape.url</a></span></li>
+    
+      <li><span class='object_link'>Utils::Escape::DEFAULT_URL_SCHEMES</span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.1.0.rc1/lib/hanami/helpers/escape_helper.rb#L224" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_escape_url'>escape_url</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='id identifier rubyid_schemes'>schemes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span></span><span class='op'>::</span><span class='const'>DEFAULT_URL_SCHEMES</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="../Utils/Escape.html#url-class_method" title="Hanami::Utils::Escape.url (method)">url</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='id identifier rubyid_schemes'>schemes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="raw-instance_method">
+  
+    #<strong>raw</strong>(input)  &#x21d2; <tt><span class='object_link'>Hanami::Utils::Escape::SafeString</span></tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Bypass escape.</p>
+
+<p>Please notice that this can be really dangerous. Use at your own peril.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/helpers/escape_helper</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='kw'>class</span> <span class='const'>MyView</span>
+  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Helpers.html" title="Hanami::Helpers (module)">Helpers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Helpers::EscapeHelper (module)">EscapeHelper</a></span></span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_good_content'>good_content</span>
+    <span class='id identifier rubyid_raw'>raw</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;p&gt;hello&lt;/p&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_evil_content'>evil_content</span>
+    <span class='id identifier rubyid_raw'>raw</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>MyView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_good_content'>good_content</span>
+  <span class='comment'># =&gt; &quot;&lt;p&gt;hello&lt;/p&gt;&quot;
+</span>
+<span class='comment'>#
+</span><span class='comment'># !!! WE HAVE OPENED OUR APPLICATION TO AN XSS ATTACK !!!
+</span><span class='comment'>#
+</span><span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_evil_content'>evil_content</span>
+  <span class='comment'># =&gt; &quot;&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;&quot;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Hanami::Utils::Escape::SafeString</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the string marked as safe string</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.1.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/helpers/blob/v1.1.0.rc1/lib/hanami/helpers/escape_helper.rb#L267" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_raw'>raw</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span></span><span class='op'>::</span><span class='const'>SafeString</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <!-- Include jQuery (required) and the JS -->
+    
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/toolkit.min.js"></script>
+    
+      <script type="text/javascript" charset="utf-8" src="../../assets/site.js"></script>
+    
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <title>
       File: README
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -51,33 +53,62 @@
         </nav>
 
         <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-          <div id='filecontents'><h1 id="hanami-docs">Hanami Docs</h1>
+          <div id='filecontents'>
+<h1 id="label-Hanami+-F0-9F-8C-B8">Hanami 🌸</h1>
 
-<p>API documentation for <a href="http://hanamirb.org">Hanami</a> project</p>
+<p>The web, with simplicity.</p>
+<hr>
 
-<h2 id="contact">Contact</h2>
+<p>API documentation for <a href="http://hanamirb.org">Hanami</a>.</p>
 
-<ul>
-  <li>Home page: <a href="http://hanamirb.org">http://hanamirb.org</a></li>
-  <li>Mailing List: <a href="http://hanamirb.org/mailing-list">http://hanamirb.org/mailing-list</a></li>
-  <li>API Doc: <a href="https://docs.hanamirb.org">http://hanamirb.org</a></li>
-  <li>Bugs/Issues: <a href="https://github.com/hanami/docs/issues">http://hanamirb.org/hanami/docs/issues</a></li>
-  <li>Chat: <a href="https://gitter.im/hanami/chat">http://hanamirb.org/hanami/chat</a></li>
-</ul>
+<h2 id="label-Installation">Installation</h2>
 
-<h2 id="contributing">Contributing</h2>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_hanami'>hanami</span>
+</code></pre>
 
-<ol>
-  <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
-  <li>Create new Pull Request</li>
-</ol>
+<h2 id="label-Usage">Usage</h2>
 
-<h2 id="copyright">Copyright</h2>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_hanami'>hanami</span> <span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_bookshelf'>bookshelf</span>
+<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_bookshelf'>bookshelf</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_bundle'>bundle</span>
+<span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_hanami'>hanami</span> <span class='id identifier rubyid_server'>server</span> <span class='comment'># visit http://localhost:2300
+</span></code></pre>
 
-<p>Copyright © 2014-2017 Luca Guidi – Released under MIT License</p>
+<p>Please follow along with the <a
+href="http://hanamirb.org/guides/getting-started">Getting Started
+guide</a>.</p>
+
+<h2 id="label-Contact">Contact</h2>
+<ul><li>
+<p>Home page: <a href="http://hanamirb.org">hanamirb.org</a></p>
+</li><li>
+<p>Community: <a
+href="http://hanamirb.org/community">hanamirb.org/community</a></p>
+</li><li>
+<p>Guides: <a href="http://hanamirb.org/guides">hanamirb.org/guides</a></p>
+</li><li>
+<p>Mailing List: <a
+href="http://hanamirb.org/mailing-list">hanamirb.org/mailing-list</a></p>
+</li><li>
+<p>API Doc: <a href="http://rdoc.info/gems/hanami">rdoc.info/gems/hanami</a></p>
+</li><li>
+<p>Bugs/Issues: <a
+href="https://github.com/hanami/hanami/issues">github.com/hanami/hanami/issues</a></p>
+</li><li>
+<p>Stack Overflow: <a
+href="http://stackoverflow.com/questions/tagged/hanami">stackoverflow.com/questions/tagged/hanami</a></p>
+</li><li>
+<p>Forum: <a href="https://discourse.hanamirb.org">discourse.hanamirb.org</a></p>
+</li><li>
+<p>Chat: <a href="http://chat.hanamirb.org">chat.hanamirb.org</a></p>
+</li></ul>
+
+<h2 id="label-Copyright">Copyright</h2>
+
+<p>Released under MIT License.</p>
+
+<p>This project was formerly known as Lotus (<code>lotusrb</code>).</p>
+
+<p>Copyright © 2014-2017 Luca Guidi.</p>
 </div>
         </main>
       </div>

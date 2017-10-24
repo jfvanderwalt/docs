@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Model
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -79,7 +81,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hanami persistence</p>
+    
+<p>Hanami persistence</p>
 
 
   </div>
@@ -95,7 +98,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -121,7 +125,8 @@
       <dt id="VERSION-constant" class="">VERSION =
         <div class="docstring">
   <div class="discussion">
-    <p>Defines the version</p>
+    
+<p>Defines the version</p>
 
 
   </div>
@@ -137,7 +142,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -181,7 +187,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Current configuration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Current configuration.</p>
 </div></span>
   
 </li>
@@ -204,7 +211,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure the framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure the framework.</p>
 </div></span>
   
 </li>
@@ -227,7 +235,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Disconnect from the database.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Disconnect from the database.</p>
 </div></span>
   
 </li>
@@ -250,8 +259,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -273,7 +281,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Define a migration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Define a migration.</p>
 </div></span>
   
 </li>
@@ -299,7 +308,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Current configuration</p>
+    
+<p>Current configuration</p>
 
 
   </div>
@@ -315,7 +325,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -353,7 +364,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure the framework</p>
+    
+<p>Configure the framework</p>
 
 
   </div>
@@ -384,7 +396,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -423,10 +436,11 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Disconnect from the database</p>
+    
+<p>Disconnect from the database</p>
 
-<p>This is useful for reboot applications in production and to ensure that
-the framework prunes stale connections.</p>
+<p>This is useful for reboot applications in production and to ensure that the
+framework prunes stale connections.</p>
 
 
   </div>
@@ -437,7 +451,8 @@ the framework prunes stale connections.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>With Full Stack Hanami Project</p>
+        <p class="example_title"><div class='inline'>
+<p>With Full Stack Hanami Project</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># config/puma.rb
@@ -447,7 +462,8 @@ the framework prunes stale connections.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With Standalone Hanami::Model</p>
+        <p class="example_title"><div class='inline'>
+<p>With Standalone Hanami::Model</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># config/puma.rb
@@ -468,7 +484,8 @@ the framework prunes stale connections.</p>
       
       
         
-        <div class='inline'><p>x.x.x</p>
+        <div class='inline'>
+<p>x.x.x</p>
 </div>
       
     </li>
@@ -508,7 +525,6 @@ the framework prunes stale connections.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -522,7 +538,8 @@ the framework prunes stale connections.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -561,13 +578,15 @@ the framework prunes stale connections.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Define a migration</p>
+    
+<p>Define a migration</p>
 
 <p>It must define an up/down strategy to write schema changes (up) and to
 rollback them (down).</p>
 
-<p>We can use <tt>up</tt> and <tt>down</tt> blocks for custom strategies, or
-only one <tt>change</tt> block that automatically implements “down” strategy.</p>
+<p>We can use <code>up</code> and <code>down</code> blocks for custom
+strategies, or only one <code>change</code> block that automatically
+implements “down” strategy.</p>
 
 
   </div>
@@ -578,7 +597,8 @@ only one <tt>change</tt> block that automatically implements “down” strategy
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Use up/down blocks</p>
+        <p class="example_title"><div class='inline'>
+<p>Use up/down blocks</p>
 </div></p>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Model (module)">Model</a></span></span><span class='period'>.</span><span class='id identifier rubyid_migration'>migration</span> <span class='kw'>do</span>
@@ -595,7 +615,8 @@ only one <tt>change</tt> block that automatically implements “down” strategy
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Use change block</p>
+        <p class="example_title"><div class='inline'>
+<p>Use change block</p>
 </div></p>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Model (module)">Model</a></span></span><span class='period'>.</span><span class='id identifier rubyid_migration'>migration</span> <span class='kw'>do</span>
@@ -623,7 +644,8 @@ only one <tt>change</tt> block that automatically implements “down” strategy
       
       
         &mdash;
-        <div class='inline'><p>a block that defines up/down or change database migration</p>
+        <div class='inline'>
+<p>a block that defines up/down or change database migration</p>
 </div>
       
     </li>
@@ -639,7 +661,8 @@ only one <tt>change</tt> block that automatically implements “down” strategy
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>

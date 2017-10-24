@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Model::Migrator
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -95,7 +97,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Database schema migrator</p>
+    
+<p>Database schema migrator</p>
 
 
   </div>
@@ -111,7 +114,8 @@
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -150,7 +154,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Migrate, dump schema, delete migrations.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Migrate, dump schema, delete migrations.</p>
 </div></span>
   
 </li>
@@ -173,7 +178,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Create database defined by current configuration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create database defined by current configuration.</p>
 </div></span>
   
 </li>
@@ -196,7 +202,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Drop database defined by current configuration.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Drop database defined by current configuration.</p>
 </div></span>
   
 </li>
@@ -219,7 +226,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Migrate database schema.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Migrate database schema.</p>
 </div></span>
   
 </li>
@@ -242,7 +250,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepare database: drop, create, load schema (if any), migrate.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepare database: drop, create, load schema (if any), migrate.</p>
 </div></span>
   
 </li>
@@ -265,7 +274,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return current database version timestamp.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return current database version timestamp.</p>
 </div></span>
   
 </li>
@@ -291,19 +301,19 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Migrate, dump schema, delete migrations.</p>
+    
+<p>Migrate, dump schema, delete migrations.</p>
 
-<p>This is an experimental feature.
-It may change or be removed in the future.</p>
+<p>This is an experimental feature. It may change or be removed in the future.</p>
 
-<p>Actively developed applications accumulate tons of migrations.
-In the long term they are hard to maintain and slow to execute.</p>
+<p>Actively developed applications accumulate tons of migrations. In the long
+term they are hard to maintain and slow to execute.</p>
 
 <p>“Apply” feature solves this problem.</p>
 
-<p>It keeps an updated SQL file with the structure of the database.
-This file can be used to create fresh databases for developer machines
-or during testing. This is faster than to run dozen or hundred migrations.</p>
+<p>It keeps an updated SQL file with the structure of the database. This file
+can be used to create fresh databases for developer machines or during
+testing. This is faster than to run dozen or hundred migrations.</p>
 
 <p>When we use “apply”, it eliminates all the migrations that are no longer
 necessary.</p>
@@ -319,7 +329,8 @@ necessary.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Apply Migrations</p>
+        <p class="example_title"><div class='inline'>
+<p>Apply Migrations</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
@@ -349,7 +360,8 @@ necessary.</p>
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs</p>
+        <div class='inline'>
+<p>if an error occurs</p>
 </div>
       
     </li>
@@ -373,7 +385,8 @@ necessary.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -411,15 +424,17 @@ necessary.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Create database defined by current configuration.</p>
+    
+<p>Create database defined by current configuration.</p>
 
-<p>It’s only implemented for the following databases:</p>
-
-<ul>
-  <li>SQLite3</li>
-  <li>PostgreSQL</li>
-  <li>MySQL</li>
-</ul>
+<p>It&#39;s only implemented for the following databases:</p>
+<ul><li>
+<p>SQLite3</p>
+</li><li>
+<p>PostgreSQL</p>
+</li><li>
+<p>MySQL</p>
+</li></ul>
 
 <p>NOTE: Class level interface SHOULD be removed in Hanami 2.0</p>
 
@@ -455,7 +470,8 @@ necessary.</p>
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs</p>
+        <div class='inline'>
+<p>if an error occurs</p>
 </div>
       
     </li>
@@ -477,7 +493,8 @@ necessary.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -515,15 +532,17 @@ necessary.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Drop database defined by current configuration.</p>
+    
+<p>Drop database defined by current configuration.</p>
 
-<p>It’s only implemented for the following databases:</p>
-
-<ul>
-  <li>SQLite3</li>
-  <li>PostgreSQL</li>
-  <li>MySQL</li>
-</ul>
+<p>It&#39;s only implemented for the following databases:</p>
+<ul><li>
+<p>SQLite3</p>
+</li><li>
+<p>PostgreSQL</p>
+</li><li>
+<p>MySQL</p>
+</li></ul>
 
 <p>NOTE: Class level interface SHOULD be removed in Hanami 2.0</p>
 
@@ -559,7 +578,8 @@ necessary.</p>
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs</p>
+        <div class='inline'>
+<p>if an error occurs</p>
 </div>
       
     </li>
@@ -581,7 +601,8 @@ necessary.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -619,10 +640,11 @@ necessary.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Migrate database schema</p>
+    
+<p>Migrate database schema</p>
 
-<p>It’s possible to migrate “down” by specifying a version
-(eg. <tt>“20150610133853”</tt>)</p>
+<p>It&#39;s possible to migrate “down” by specifying a version (eg.
+<code>&quot;20150610133853&quot;</code>)</p>
 
 <p>NOTE: Class level interface SHOULD be removed in Hanami 2.0</p>
 
@@ -635,7 +657,8 @@ necessary.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Migrate Up</p>
+        <p class="example_title"><div class='inline'>
+<p>Migrate Up</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
@@ -651,7 +674,8 @@ necessary.</p>
 </span><span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Model.html" title="Hanami::Model (module)">Model</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Model::Migrator (class)">Migrator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_migrate'>migrate</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Migrate Down</p>
+        <p class="example_title"><div class='inline'>
+<p>Migrate Down</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
@@ -683,7 +707,8 @@ necessary.</p>
       
       
         &mdash;
-        <div class='inline'><p>target version</p>
+        <div class='inline'>
+<p>target version</p>
 </div>
       
     </li>
@@ -701,7 +726,8 @@ necessary.</p>
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs</p>
+        <div class='inline'>
+<p>if an error occurs</p>
 </div>
       
     </li>
@@ -725,7 +751,8 @@ necessary.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -763,10 +790,11 @@ necessary.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Prepare database: drop, create, load schema (if any), migrate.</p>
+    
+<p>Prepare database: drop, create, load schema (if any), migrate.</p>
 
-<p>This is designed for development machines and testing mode.
-It works faster if used with <tt>apply</tt>.</p>
+<p>This is designed for development machines and testing mode. It works faster
+if used with <code>apply</code>.</p>
 
 <p>NOTE: Class level interface SHOULD be removed in Hanami 2.0</p>
 
@@ -779,7 +807,8 @@ It works faster if used with <tt>apply</tt>.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Prepare Database</p>
+        <p class="example_title"><div class='inline'>
+<p>Prepare Database</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
@@ -794,7 +823,8 @@ It works faster if used with <tt>apply</tt>.</p>
 <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Model.html" title="Hanami::Model (module)">Model</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Model::Migrator (class)">Migrator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prepare'>prepare</span> <span class='comment'># =&gt; creates `foo&#39; and run migrations</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Prepare Database (with schema dump)</p>
+        <p class="example_title"><div class='inline'>
+<p>Prepare Database (with schema dump)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/model</span><span class='tstring_end'>&#39;</span></span>
@@ -823,7 +853,8 @@ It works faster if used with <tt>apply</tt>.</p>
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs</p>
+        <div class='inline'>
+<p>if an error occurs</p>
 </div>
       
     </li>
@@ -845,7 +876,8 @@ It works faster if used with <tt>apply</tt>.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -883,9 +915,10 @@ It works faster if used with <tt>apply</tt>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return current database version timestamp</p>
+    
+<p>Return current database version timestamp</p>
 
-<p>If no migrations were ran, it returns <tt>nil</tt>.</p>
+<p>If no migrations were ran, it returns <code>nil</code>.</p>
 
 <p>NOTE: Class level interface SHOULD be removed in Hanami 2.0</p>
 
@@ -916,7 +949,8 @@ It works faster if used with <tt>apply</tt>.</p>
       
       
         &mdash;
-        <div class='inline'><p>current version, if previously migrated</p>
+        <div class='inline'>
+<p>current version, if previously migrated</p>
 </div>
       
     </li>
@@ -931,7 +965,8 @@ It works faster if used with <tt>apply</tt>.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>

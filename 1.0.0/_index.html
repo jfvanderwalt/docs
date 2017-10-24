@@ -8,7 +8,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>
-      Hanami Docs 1.0.0
+      Hanami API docs | v1.0.0
       
     </title>
 
@@ -20,7 +20,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -28,7 +28,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -36,7 +36,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -49,7 +51,7 @@
         </nav>
 
         <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-          <h1 class="noborder title">Hanami Docs 1.0.0</h1>
+          <h1 class="noborder title">Hanami API docs | v1.0.0</h1>
 <div id="listing">
   <h1 class="alphaindex">Alphabetic Index</h1>
   
@@ -211,13 +213,6 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/View/Configuration.html" title="Hanami::View::Configuration (class)">Configuration</a></span>
-                
-                  <small>(Hanami::View)</small>
-                
-              </li>
-            
-              <li>
                 <span class='object_link'><a href="Hanami/Controller/Configuration.html" title="Hanami::Controller::Configuration (class)">Configuration</a></span>
                 
                   <small>(Hanami::Controller)</small>
@@ -228,6 +223,13 @@
                 <span class='object_link'><a href="Hanami/Model/Configuration.html" title="Hanami::Model::Configuration (class)">Configuration</a></span>
                 
                   <small>(Hanami::Model)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Hanami/View/Configuration.html" title="Hanami::View::Configuration (class)">Configuration</a></span>
+                
+                  <small>(Hanami::View)</small>
                 
               </li>
             
@@ -311,9 +313,9 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/View/Error.html" title="Hanami::View::Error (class)">Error</a></span>
+                <span class='object_link'><a href="Hanami/Assets/Error.html" title="Hanami::Assets::Error (class)">Error</a></span>
                 
-                  <small>(Hanami::View)</small>
+                  <small>(Hanami::Assets)</small>
                 
               </li>
             
@@ -339,14 +341,7 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Assets/Error.html" title="Hanami::Assets::Error (class)">Error</a></span>
-                
-                  <small>(Hanami::Assets)</small>
-                
-              </li>
-            
-              <li>
-                <span class='object_link'><a href="Hanami/View/Escape.html" title="Hanami::View::Escape (module)">Escape</a></span>
+                <span class='object_link'><a href="Hanami/View/Error.html" title="Hanami::View::Error (class)">Error</a></span>
                 
                   <small>(Hanami::View)</small>
                 
@@ -356,6 +351,13 @@
                 <span class='object_link'><a href="Hanami/Utils/Escape.html" title="Hanami::Utils::Escape (module)">Escape</a></span>
                 
                   <small>(Hanami::Utils)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Hanami/View/Escape.html" title="Hanami::View::Escape (module)">Escape</a></span>
+                
+                  <small>(Hanami::View)</small>
                 
               </li>
             
@@ -389,16 +391,16 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Validations/Form.html" title="Hanami::Validations::Form (module)">Form</a></span>
+                <span class='object_link'><a href="Hanami/Helpers/FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span>
                 
-                  <small>(Hanami::Validations)</small>
+                  <small>(Hanami::Helpers::FormHelper)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Helpers/FormHelper/Form.html" title="Hanami::Helpers::FormHelper::Form (class)">Form</a></span>
+                <span class='object_link'><a href="Hanami/Validations/Form.html" title="Hanami::Validations::Form (module)">Form</a></span>
                 
-                  <small>(Hanami::Helpers::FormHelper)</small>
+                  <small>(Hanami::Validations)</small>
                 
               </li>
             
@@ -504,16 +506,16 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/View/Rendering/InstanceMethods.html" title="Hanami::View::Rendering::InstanceMethods (module)">InstanceMethods</a></span>
+                <span class='object_link'><a href="Hanami/View/Escape/InstanceMethods.html" title="Hanami::View::Escape::InstanceMethods (module)">InstanceMethods</a></span>
                 
-                  <small>(Hanami::View::Rendering)</small>
+                  <small>(Hanami::View::Escape)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/View/Escape/InstanceMethods.html" title="Hanami::View::Escape::InstanceMethods (module)">InstanceMethods</a></span>
+                <span class='object_link'><a href="Hanami/View/Rendering/InstanceMethods.html" title="Hanami::View::Rendering::InstanceMethods (module)">InstanceMethods</a></span>
                 
-                  <small>(Hanami::View::Escape)</small>
+                  <small>(Hanami::View::Rendering)</small>
                 
               </li>
             
@@ -809,16 +811,16 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="Hanami/Model/Sql/Types/Schema.html" title="Hanami::Model::Sql::Types::Schema (module)">Schema</a></span>
+                <span class='object_link'><a href="Hanami/Model/Types/Schema.html" title="Hanami::Model::Types::Schema (module)">Schema</a></span>
                 
-                  <small>(Hanami::Model::Sql::Types)</small>
+                  <small>(Hanami::Model::Types)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Model/Types/Schema.html" title="Hanami::Model::Types::Schema (module)">Schema</a></span>
+                <span class='object_link'><a href="Hanami/Model/Sql/Types/Schema.html" title="Hanami::Model::Sql::Types::Schema (module)">Schema</a></span>
                 
-                  <small>(Hanami::Model::Types)</small>
+                  <small>(Hanami::Model::Sql::Types)</small>
                 
               </li>
             
@@ -859,9 +861,9 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Model/Sql/Types.html" title="Hanami::Model::Sql::Types (module)">Types</a></span>
+                <span class='object_link'><a href="Hanami/Entity/Types.html" title="Hanami::Entity::Types (module)">Types</a></span>
                 
-                  <small>(Hanami::Model::Sql)</small>
+                  <small>(Hanami::Entity)</small>
                 
               </li>
             
@@ -873,9 +875,9 @@
               </li>
             
               <li>
-                <span class='object_link'><a href="Hanami/Entity/Types.html" title="Hanami::Entity::Types (module)">Types</a></span>
+                <span class='object_link'><a href="Hanami/Model/Sql/Types.html" title="Hanami::Model::Sql::Types (module)">Types</a></span>
                 
-                  <small>(Hanami::Entity)</small>
+                  <small>(Hanami::Model::Sql)</small>
                 
               </li>
             
@@ -905,6 +907,13 @@
                 <span class='object_link'><a href="Hanami/Controller/UnknownFormatError.html" title="Hanami::Controller::UnknownFormatError (class)">UnknownFormatError</a></span>
                 
                   <small>(Hanami::Controller)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="Hanami/View/UnknownOrMissingRenderTypeLayoutError.html" title="Hanami::View::UnknownOrMissingRenderTypeLayoutError (class)">UnknownOrMissingRenderTypeLayoutError</a></span>
+                
+                  <small>(Hanami::View)</small>
                 
               </li>
             

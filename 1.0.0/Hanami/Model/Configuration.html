@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Model::Configuration
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -93,10 +95,11 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Configuration for the framework, models and adapters.</p>
+    
+<p>Configuration for the framework, models and adapters.</p>
 
-<p>Hanami::Model has its own global configuration that can be manipulated
-via <code>Hanami::Model.configure</code>.</p>
+<p>Hanami::Model has its own global configuration that can be manipulated via
+<code>Hanami::Model.configure</code>.</p>
 
 
   </div>
@@ -112,7 +115,8 @@ via <code>Hanami::Model.configure</code>.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -151,7 +155,8 @@ via <code>Hanami::Model.configure</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Migrations directory.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Migrations directory.</p>
 </div></span>
   
 </li>
@@ -174,7 +179,8 @@ via <code>Hanami::Model.configure</code>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Path for schema dump file.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Path for schema dump file.</p>
 </div></span>
   
 </li>
@@ -207,7 +213,6 @@ via <code>Hanami::Model.configure</code>.</p>
 </p>
 
 
-
   </div>
 </div>
 <div class="tags">
@@ -221,7 +226,8 @@ via <code>Hanami::Model.configure</code>.</p>
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -270,7 +276,8 @@ via <code>Hanami::Model.configure</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Migrations directory</p>
+    
+<p>Migrations directory</p>
 
 
   </div>
@@ -286,7 +293,8 @@ via <code>Hanami::Model.configure</code>.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -324,7 +332,8 @@ via <code>Hanami::Model.configure</code>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Path for schema dump file</p>
+    
+<p>Path for schema dump file</p>
 
 
   </div>
@@ -340,7 +349,8 @@ via <code>Hanami::Model.configure</code>.</p>
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>

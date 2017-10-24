@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::View::Dsl
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,14 +72,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/dsl.rb</dd>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/dsl.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Class level DSL</p>
+    
+<p>Class level DSL</p>
 
 
   </div>
@@ -93,7 +96,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -132,7 +136,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When a value is given, specify the handled format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify the handled format.</p>
 </div></span>
   
 </li>
@@ -155,7 +160,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When a value is given, it specifies the layout.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, it specifies the layout.</p>
 </div></span>
   
 </li>
@@ -178,7 +184,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When a value is given, specify a templates root path for the view.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify a templates root path for the view.</p>
 </div></span>
   
 </li>
@@ -201,7 +208,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>When a value is given, specify the relative path to the template.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>When a value is given, specify the relative path to the template.</p>
 </div></span>
   
 </li>
@@ -227,8 +235,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>When a value is given, specify the handled format.
-Otherwise, it returns the previously specified format.</p>
+    
+<p>When a value is given, specify the handled format. Otherwise, it returns
+the previously specified format.</p>
 
 
   </div>
@@ -270,7 +279,8 @@ Otherwise, it returns the previously specified format.</p>
       
       
         &mdash;
-        <div class='inline'><p>the format</p>
+        <div class='inline'>
+<p>the format</p>
 </div>
       
     </li>
@@ -288,7 +298,8 @@ Otherwise, it returns the previously specified format.</p>
       
       
         &mdash;
-        <div class='inline'><p>the specified format for this view, if set</p>
+        <div class='inline'>
+<p>the specified format for this view, if set</p>
 </div>
       
     </li>
@@ -303,7 +314,8 @@ Otherwise, it returns the previously specified format.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -314,7 +326,7 @@ Otherwise, it returns the previously specified format.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/dsl.rb#L77" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/dsl.rb#L77" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -345,12 +357,14 @@ Otherwise, it returns the previously specified format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>When a value is given, it specifies the layout.
-When false is given, Hanami::View::Rendering::NullLayout is returned.
-Otherwise, it returns the previously specified layout.</p>
+    
+<p>When a value is given, it specifies the layout. When false is given,
+Hanami::View::Rendering::NullLayout is returned. Otherwise, it returns the
+previously specified layout.</p>
 
-<p>When the global configuration is set (<code>Hanami::View.layout=</code>), after the
-loading process, it will return that layout if not otherwise specified.</p>
+<p>When the global configuration is set (<code>Hanami::View.layout=</code>),
+after the loading process, it will return that layout if not otherwise
+specified.</p>
 
 
   </div>
@@ -361,7 +375,8 @@ loading process, it will return that layout if not otherwise specified.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Default usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -375,7 +390,8 @@ loading process, it will return that layout if not otherwise specified.</p>
 <span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; nil</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom layout</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom layout</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -394,7 +410,8 @@ loading process, it will return that layout if not otherwise specified.</p>
 <span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :articles</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Global configuration</p>
+        <p class="example_title"><div class='inline'>
+<p>Global configuration</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -416,7 +433,8 @@ loading process, it will return that layout if not otherwise specified.</p>
 <span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :application</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Global configuration with custom layout</p>
+        <p class="example_title"><div class='inline'>
+<p>Global configuration with custom layout</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -443,7 +461,8 @@ loading process, it will return that layout if not otherwise specified.</p>
 <span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; :articles</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Disable layout for the view</p>
+        <p class="example_title"><div class='inline'>
+<p>Disable layout for the view</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -478,7 +497,8 @@ loading process, it will return that layout if not otherwise specified.</p>
       
       
         &mdash;
-        <div class='inline'><p>the layout name</p>
+        <div class='inline'>
+<p>the layout name</p>
 </div>
       
     </li>
@@ -496,7 +516,8 @@ loading process, it will return that layout if not otherwise specified.</p>
       
       
         &mdash;
-        <div class='inline'><p>the specified layout for this view, if set</p>
+        <div class='inline'>
+<p>the specified layout for this view, if set</p>
 </div>
       
     </li>
@@ -518,7 +539,8 @@ loading process, it will return that layout if not otherwise specified.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -529,7 +551,7 @@ loading process, it will return that layout if not otherwise specified.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/dsl.rb#L315" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/dsl.rb#L315" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -563,10 +585,12 @@ loading process, it will return that layout if not otherwise specified.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>When a value is given, specify a templates root path for the view.
+    
+<p>When a value is given, specify a templates root path for the view.
 Otherwise, it returns templates root path.</p>
 
-<p>When not initialized, it will return the global value from <code>Hanami::View.root</code>.</p>
+<p>When not initialized, it will return the global value from
+<code>Hanami::View.root</code>.</p>
 
 
   </div>
@@ -577,7 +601,8 @@ Otherwise, it returns templates root path.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Default usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -592,7 +617,8 @@ Otherwise, it returns templates root path.</p>
 </span><span class='const'>Articles</span><span class='op'>::</span><span class='const'>Show</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span>            <span class='comment'># =&gt; &#39;app/templates&#39;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom root</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom root</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -623,7 +649,8 @@ Otherwise, it returns templates root path.</p>
       
       
         &mdash;
-        <div class='inline'><p>the templates root for this view</p>
+        <div class='inline'>
+<p>the templates root for this view</p>
 </div>
       
     </li>
@@ -641,7 +668,8 @@ Otherwise, it returns templates root path.</p>
       
       
         &mdash;
-        <div class='inline'><p>the specified root for this view or the global value</p>
+        <div class='inline'>
+<p>the specified root for this view or the global value</p>
 </div>
       
     </li>
@@ -656,7 +684,8 @@ Otherwise, it returns templates root path.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -667,7 +696,7 @@ Otherwise, it returns templates root path.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/dsl.rb#L45" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/dsl.rb#L45" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -698,41 +727,38 @@ Otherwise, it returns templates root path.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>When a value is given, specify the relative path to the template.
+    
+<p>When a value is given, specify the relative path to the template.
 Otherwise, it returns the name that follows Hanami::View conventions.</p>
 
-<p> @example Default usage
-  require ‘hanami/view’</p>
+<p>@example Default usage  require &#39;hanami/view&#39;</p>
 
-<p>module Articles
-    class Show
-      include Hanami::View
-    end</p>
+<p>module Articles  class Show  include Hanami::View  end</p>
 
-<pre class="code ruby"><code class="ruby">class JsonShow &lt; Show
-  format :json
-end   end
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>JsonShow</span> <span class='op'>&lt;</span> <span class='const'>Show</span>
+  <span class='id identifier rubyid_format'>format</span> <span class='symbol'>:json</span>
+<span class='kw'>end</span>
 </code></pre>
 
-<p>Articles::Show.template     # =&gt; ‘articles/show’
-  Articles::JsonShow.template # =&gt; ‘articles/show’</p>
+<p>end</p>
 
-<p> @example Custom template
-  require ‘hanami/view’</p>
+<p>Articles::Show.template # =&gt; &#39;articles/show&#39; 
+Articles::JsonShow.template # =&gt; &#39;articles/show&#39;</p>
 
-<p>module Articles
-    class Show
-      include Hanami::View
-      template ‘articles/single_article’
-    end</p>
+<p>@example Custom template  require &#39;hanami/view&#39;</p>
 
-<pre class="code ruby"><code class="ruby">class JsonShow &lt; Show
-  format :json
-end   end
+<p>module Articles  class Show  include Hanami::View  template
+&#39;articles/single_article&#39;  end</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>JsonShow</span> <span class='op'>&lt;</span> <span class='const'>Show</span>
+  <span class='id identifier rubyid_format'>format</span> <span class='symbol'>:json</span>
+<span class='kw'>end</span>
 </code></pre>
 
-<p>Articles::Show.template     # =&gt; ‘articles/single_article’
-  Articles::JsonShow.template # =&gt; ‘articles/single_article’</p>
+<p>end</p>
+
+<p>Articles::Show.template # =&gt; &#39;articles/single_article&#39; 
+Articles::JsonShow.template # =&gt; &#39;articles/single_article&#39;</p>
 
 
   </div>
@@ -743,7 +769,8 @@ end   end
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>With namespace</p>
+        <p class="example_title"><div class='inline'>
+<p>With namespace</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -766,7 +793,8 @@ end   end
 </span><span class='const'>Furnitures</span><span class='op'>::</span><span class='const'>Catalog</span><span class='op'>::</span><span class='const'>Index</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;catalog/index&#39;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With nested namespace</p>
+        <p class="example_title"><div class='inline'>
+<p>With nested namespace</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -796,7 +824,8 @@ end   end
 </span><span class='const'>Frontend</span><span class='op'>::</span><span class='const'>Views</span><span class='op'>::</span><span class='const'>Sessions</span><span class='op'>::</span><span class='const'>New</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span> <span class='comment'># =&gt; &#39;sessions/new&#39;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With deeply nested namespace</p>
+        <p class="example_title"><div class='inline'>
+<p>With deeply nested namespace</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -846,7 +875,8 @@ end   end
       
       
         &mdash;
-        <div class='inline'><p>relative template path</p>
+        <div class='inline'>
+<p>relative template path</p>
 </div>
       
     </li>
@@ -864,8 +894,9 @@ end   end
       
       
         &mdash;
-        <div class='inline'><p>the specified template for this view or the name
-that follows the convention</p>
+        <div class='inline'>
+<p>the specified template for this view or the name that follows the
+convention</p>
 </div>
       
     </li>
@@ -880,7 +911,8 @@ that follows the convention</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -891,7 +923,7 @@ that follows the convention</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/dsl.rb#L206" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/dsl.rb#L206" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

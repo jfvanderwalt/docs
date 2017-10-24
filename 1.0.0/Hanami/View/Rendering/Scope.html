@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::View::Rendering::Scope
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -88,14 +90,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/scope.rb</dd>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/scope.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Rendering scope</p>
+    
+<p>Rendering scope</p>
 
 
   </div>
@@ -118,7 +121,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -157,7 +161,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the requested format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the requested format.</p>
 </div></span>
   
 </li>
@@ -180,7 +185,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an inspect String.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an inspect String.</p>
 </div></span>
   
 </li>
@@ -224,7 +230,6 @@
 </p>
 
 
-
   </div>
 </div>
 <div class="tags">
@@ -238,7 +243,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -249,7 +255,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/scope.rb#L66" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/scope.rb#L70" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -257,7 +263,11 @@
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='op'>::</span><span class='const'><span class='object_link'><a href="../../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../View.html" title="Hanami::View (module)">View</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Escape.html" title="Hanami::View::Escape (module)">Escape</a></span></span><span class='period'>.</span><span class='id identifier rubyid_html'>html</span><span class='lparen'>(</span>
-    <span class='kw'>if</span> <span class='ivar'>@view</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+    <span class='comment'># FIXME: this isn&#39;t compatible with Hanami 2.0, as it extends a view
+</span>    <span class='comment'># that we want to be frozen in the future
+</span>    <span class='comment'>#
+</span>    <span class='comment'># See https://github.com/hanami/view/issues/130#issuecomment-319326236
+</span>    <span class='kw'>if</span> <span class='ivar'>@view</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='ivar'>@view</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
     <span class='kw'>elsif</span> <span class='ivar'>@locals</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
       <span class='ivar'>@locals</span><span class='lbracket'>[</span><span class='id identifier rubyid_m'>m</span><span class='rbracket'>]</span>
@@ -291,7 +301,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the requested format.</p>
+    
+<p>Returns the requested format.</p>
 
 
   </div>
@@ -309,7 +320,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the requested format (eg. :html, :json, :xml, etc..)</p>
+        <div class='inline'>
+<p>the requested format (eg. :html, :json, :xml, etc..)</p>
 </div>
       
     </li>
@@ -324,7 +336,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -335,7 +348,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/scope.rb#L47" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/scope.rb#L47" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -362,7 +375,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns an inspect String</p>
+    
+<p>Returns an inspect String</p>
 
 
   </div>
@@ -380,7 +394,8 @@
       
       
         &mdash;
-        <div class='inline'><p>inspect String (contains classname, objectid in hex, available ivars)</p>
+        <div class='inline'>
+<p>inspect String (contains classname, objectid in hex, available ivars)</p>
 </div>
       
     </li>
@@ -395,7 +410,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -406,7 +422,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/scope.rb#L35" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/scope.rb#L35" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

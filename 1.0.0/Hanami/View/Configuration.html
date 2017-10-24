@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::View::Configuration
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -86,26 +88,28 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/configuration.rb</dd>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/configuration.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Configuration for the framework, controllers and actions.</p>
+    
+<p>Configuration for the framework, controllers and actions.</p>
 
 <p>Hanami::Controller has its own global configuration that can be manipulated
 via <code>Hanami::View.configure</code>.</p>
 
-<p>Every time that <code>Hanami::View</code> and <code>Hanami::Layout</code> are included, that
-global configuration is being copied to the recipient. The copy will
-inherit all the settings from the original, but all the subsequent changes
-aren’t reflected from the parent to the children, and viceversa.</p>
+<p>Every time that <code>Hanami::View</code> and <code>Hanami::Layout</code>
+are included, that global configuration is being copied to the recipient.
+The copy will inherit all the settings from the original, but all the
+subsequent changes aren&#39;t reflected from the parent to the children,
+and viceversa.</p>
 
 <p>This architecture allows to have a global configuration that capture the
-most common cases for an application, and let views and layouts
-layouts to specify exceptions.</p>
+most common cases for an application, and let views and layouts layouts to
+specify exceptions.</p>
 
 
   </div>
@@ -121,7 +125,8 @@ layouts to specify exceptions.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -157,7 +162,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Default encoding for templates.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Default encoding for templates.</p>
 </div></span>
   
 </li>
@@ -185,7 +191,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Set the global layout.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set the global layout.</p>
 </div></span>
   
 </li>
@@ -213,8 +220,7 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -241,8 +247,7 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -269,8 +274,7 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -297,7 +301,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Set the Ruby namespace where to lookup for views.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set the Ruby namespace where to lookup for views.</p>
 </div></span>
   
 </li>
@@ -325,8 +330,7 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -353,7 +357,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Set the root path where to search for templates.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set the root path where to search for templates.</p>
 </div></span>
   
 </li>
@@ -381,8 +386,7 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -419,7 +423,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize a configuration instance.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize a configuration instance.</p>
 </div></span>
   
 </li>
@@ -442,7 +447,8 @@ layouts to specify exceptions.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepare the views.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepare the views.</p>
 </div></span>
   
 </li>
@@ -465,7 +471,8 @@ layouts to specify exceptions.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize a configuration instance</p>
+    
+<p>Initialize a configuration instance</p>
 
 
   </div>
@@ -481,7 +488,8 @@ layouts to specify exceptions.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -492,7 +500,7 @@ layouts to specify exceptions.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L104" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L104" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -531,11 +539,12 @@ layouts to specify exceptions.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Default encoding for templates</p>
+    
+<p>Default encoding for templates</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -546,7 +555,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Set UTF-8 As A String</p>
+        <p class="example_title"><div class='inline'>
+<p>Set UTF-8 As A String</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -556,7 +566,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Set UTF-8 As An Encoding Constant</p>
+        <p class="example_title"><div class='inline'>
+<p>Set UTF-8 As An Encoding Constant</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -566,7 +577,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Raise An Error For Unknown Encoding</p>
+        <p class="example_title"><div class='inline'>
+<p>Raise An Error For Unknown Encoding</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -587,7 +599,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>default_encoding</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -606,8 +619,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>a string representation of the encoding,
-or an Encoding constant</p>
+        <div class='inline'>
+<p>a string representation of the encoding, or an Encoding constant</p>
 </div>
       
     </li>
@@ -625,7 +638,8 @@ or an Encoding constant</p>
       
       
         &mdash;
-        <div class='inline'><p>if the given value isn’t a supported encoding</p>
+        <div class='inline'>
+<p>if the given value isn&#39;t a supported encoding</p>
 </div>
       
     </li>
@@ -640,7 +654,8 @@ or an Encoding constant</p>
         <span class="signature">#<strong>default_encoding</strong>  &#x21d2; <tt>Encoding</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -675,7 +690,8 @@ or an Encoding constant</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -686,7 +702,7 @@ or an Encoding constant</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L289" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L289" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -723,14 +739,15 @@ or an Encoding constant</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Set the global layout</p>
+    
+<p>Set the global layout</p>
 
-<p>If not set, this value defaults to <code>nil</code>, while at the rendering time
-it will use <code>Hanami::View::Rendering::NullLayout</code>.</p>
+<p>If not set, this value defaults to <code>nil</code>, while at the rendering
+time it will use <code>Hanami::View::Rendering::NullLayout</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -741,7 +758,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -749,7 +767,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; nil</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -761,7 +780,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_layout'>layout</span> <span class='comment'># =&gt; ApplicationLayout</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value in a namespaced app</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value in a namespaced app</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -784,7 +804,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>layout</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -803,7 +824,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>the name of the layout</p>
+        <div class='inline'>
+<p>the name of the layout</p>
 </div>
       
     </li>
@@ -819,7 +841,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>layout</strong>  &#x21d2; <tt>Class</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -861,7 +884,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -872,7 +896,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L240" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L240" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -907,7 +931,6 @@ called without, it will return the already set value, or the default.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -921,7 +944,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -932,7 +956,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L41" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L41" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -963,7 +987,6 @@ called without, it will return the already set value, or the default.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -977,7 +1000,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -988,7 +1012,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L39" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L39" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1019,7 +1043,6 @@ called without, it will return the already set value, or the default.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1033,7 +1056,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1044,7 +1068,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L42" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L42" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1077,17 +1101,18 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Set the Ruby namespace where to lookup for views.</p>
+    
+<p>Set the Ruby namespace where to lookup for views.</p>
 
 <p>When multiple instances of the framework are used, we want to make sure
-that if a <code>MyApp</code> wants a <code>Dashboard::Index</code> view, we are loading the
-right one.</p>
+that if a <code>MyApp</code> wants a <code>Dashboard::Index</code> view, we
+are loading the right one.</p>
 
 <p>If not set, this value defaults to <code>Object</code>.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1098,7 +1123,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1106,7 +1132,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_namespace'>namespace</span> <span class='comment'># =&gt; Object</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1125,7 +1152,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>namespace</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -1144,7 +1172,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>a valid Ruby namespace identifier</p>
+        <div class='inline'>
+<p>a valid Ruby namespace identifier</p>
 </div>
       
     </li>
@@ -1160,7 +1189,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>namespace</strong>  &#x21d2; <tt>Class</tt>, ... </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -1195,7 +1225,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1206,7 +1237,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L142" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L142" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1241,7 +1272,6 @@ called without, it will return the already set value, or the default.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1255,7 +1285,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1266,7 +1297,7 @@ called without, it will return the already set value, or the default.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L43" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L43" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1299,13 +1330,14 @@ called without, it will return the already set value, or the default.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Set the root path where to search for templates</p>
+    
+<p>Set the root path where to search for templates</p>
 
 <p>If not set, this value defaults to the current directory.</p>
 
-<p>This is part of a DSL, for this reason when this method is called with
-an argument, it will set the corresponding instance variable. When
-called without, it will return the already set value, or the default.</p>
+<p>This is part of a DSL, for this reason when this method is called with an
+argument, it will set the corresponding instance variable. When called
+without, it will return the already set value, or the default.</p>
 
 
   </div>
@@ -1316,7 +1348,8 @@ called without, it will return the already set value, or the default.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Getting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Getting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1324,7 +1357,8 @@ called without, it will return the already set value, or the default.</p>
 <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../View.html" title="Hanami::View (module)">View</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='comment'># =&gt; #&lt;Pathname:.&gt;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Setting the value</p>
+        <p class="example_title"><div class='inline'>
+<p>Setting the value</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1345,7 +1379,8 @@ called without, it will return the already set value, or the default.</p>
         <span class="signature">#<strong>root</strong>(value)  &#x21d2; <tt>Object</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Sets the given value</p>
+    
+<p>Sets the given value</p>
 
 
   </div>
@@ -1364,8 +1399,8 @@ called without, it will return the already set value, or the default.</p>
       
       
         &mdash;
-        <div class='inline'><p>an object that can be
-coerced to Pathname</p>
+        <div class='inline'>
+<p>an object that can be coerced to Pathname</p>
 </div>
       
     </li>
@@ -1383,7 +1418,8 @@ coerced to Pathname</p>
       
       
         &mdash;
-        <div class='inline'><p>if the given path doesn’t exist</p>
+        <div class='inline'>
+<p>if the given path doesn&#39;t exist</p>
 </div>
       
     </li>
@@ -1398,7 +1434,8 @@ coerced to Pathname</p>
         <span class="signature">#<strong>root</strong>  &#x21d2; <tt>Pathname</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Gets the value</p>
+    
+<p>Gets the value</p>
 
 
   </div>
@@ -1444,7 +1481,8 @@ coerced to Pathname</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1455,7 +1493,7 @@ coerced to Pathname</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L187" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L187" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1490,7 +1528,6 @@ coerced to Pathname</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1504,7 +1541,8 @@ coerced to Pathname</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1515,7 +1553,7 @@ coerced to Pathname</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L40" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L40" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1549,10 +1587,11 @@ coerced to Pathname</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Prepare the views.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepare the views.</p>
 
-<p>The given block will be yielded when <code>Hanami::View</code> will be included by
-a view.</p>
+<p>The given block will be yielded when <code>Hanami::View</code> will be
+included by a view.</p>
 
 <p>This method can be called multiple times.</p>
 
@@ -1565,7 +1604,8 @@ a view.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Including shared utilities</p>
+        <p class="example_title"><div class='inline'>
+<p>Including shared utilities</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1597,7 +1637,8 @@ a view.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Preparing multiple times</p>
+        <p class="example_title"><div class='inline'>
+<p>Preparing multiple times</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -1645,7 +1686,8 @@ a view.</p>
       
       
         &mdash;
-        <div class='inline'><p>the code block</p>
+        <div class='inline'>
+<p>the code block</p>
 </div>
       
     </li>
@@ -1663,7 +1705,8 @@ a view.</p>
       
       
         &mdash;
-        <div class='inline'><p>if called without passing a block</p>
+        <div class='inline'>
+<p>if called without passing a block</p>
 </div>
       
     </li>
@@ -1687,7 +1730,8 @@ a view.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1698,7 +1742,7 @@ a view.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/configuration.rb#L375" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/configuration.rb#L375" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

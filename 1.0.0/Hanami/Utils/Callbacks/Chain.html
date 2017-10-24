@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Utils::Callbacks::Chain
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -86,14 +88,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/callbacks.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/callbacks.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Series of callbacks to be executed</p>
+    
+<p>Series of callbacks to be executed</p>
 
 
   </div>
@@ -109,7 +112,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -148,7 +152,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Appends the given callbacks to the end of the chain.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Appends the given callbacks to the end of the chain.</p>
 </div></span>
   
 </li>
@@ -171,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It freezes the object by preventing further modifications.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It freezes the object by preventing further modifications.</p>
 </div></span>
   
 </li>
@@ -196,7 +202,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a new chain.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a new chain.</p>
 </div></span>
   
 </li>
@@ -219,7 +226,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepends the given callbacks to the beginning of the chain.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepends the given callbacks to the beginning of the chain.</p>
 </div></span>
   
 </li>
@@ -242,7 +250,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Runs all the callbacks in the chain.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Runs all the callbacks in the chain.</p>
 </div></span>
   
 </li>
@@ -265,7 +274,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a new chain</p>
+    
+<p>Return a new chain</p>
 
 
   </div>
@@ -281,7 +291,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -292,7 +303,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/callbacks.rb#L18" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/callbacks.rb#L18" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -326,7 +337,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Appends the given callbacks to the end of the chain.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Appends the given callbacks to the end of the chain.</p>
 
 
   </div>
@@ -365,7 +377,8 @@
       
       
         &mdash;
-        <div class='inline'><p>one or multiple callbacks to append</p>
+        <div class='inline'>
+<p>one or multiple callbacks to append</p>
 </div>
       
     </li>
@@ -380,7 +393,8 @@
       
       
         &mdash;
-        <div class='inline'><p>an optional block to be appended</p>
+        <div class='inline'>
+<p>an optional block to be appended</p>
 </div>
       
     </li>
@@ -398,7 +412,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if the object was previously frozen</p>
+        <div class='inline'>
+<p>if the object was previously frozen</p>
 </div>
       
     </li>
@@ -428,7 +443,8 @@
       
       
         
-        <div class='inline'><p>0.3.4</p>
+        <div class='inline'>
+<p>0.3.4</p>
 </div>
       
     </li>
@@ -439,7 +455,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/callbacks.rb#L53" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/callbacks.rb#L53" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -470,7 +486,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It freezes the object by preventing further modifications.</p>
+    
+<p>It freezes the object by preventing further modifications.</p>
 
 
   </div>
@@ -508,7 +525,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -519,7 +537,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/callbacks.rb#L166" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/callbacks.rb#L166" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -547,7 +565,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Prepends the given callbacks to the beginning of the chain.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepends the given callbacks to the beginning of the chain.</p>
 
 
   </div>
@@ -586,7 +605,8 @@
       
       
         &mdash;
-        <div class='inline'><p>one or multiple callbacks to add</p>
+        <div class='inline'>
+<p>one or multiple callbacks to add</p>
 </div>
       
     </li>
@@ -601,7 +621,8 @@
       
       
         &mdash;
-        <div class='inline'><p>an optional block to be added</p>
+        <div class='inline'>
+<p>an optional block to be added</p>
 </div>
       
     </li>
@@ -619,7 +640,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if the object was previously frozen</p>
+        <div class='inline'>
+<p>if the object was previously frozen</p>
 </div>
       
     </li>
@@ -649,7 +671,8 @@
       
       
         
-        <div class='inline'><p>0.3.4</p>
+        <div class='inline'>
+<p>0.3.4</p>
 </div>
       
     </li>
@@ -660,7 +683,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/callbacks.rb#L92" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/callbacks.rb#L92" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -691,8 +714,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Runs all the callbacks in the chain.
-The only two ways to stop the execution are: <code>raise</code> or <code>throw</code>.</p>
+    
+<p>Runs all the callbacks in the chain. The only two ways to stop the
+execution are: <code>raise</code> or <code>throw</code>.</p>
 
 
   </div>
@@ -752,7 +776,8 @@ Those callbacks will be invoked within the context of `action`.</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the context where we want the chain to be invoked.</p>
+        <div class='inline'>
+<p>the context where we want the chain to be invoked.</p>
 </div>
       
     </li>
@@ -767,7 +792,8 @@ Those callbacks will be invoked within the context of `action`.</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the arguments that we want to pass to each single callback.</p>
+        <div class='inline'>
+<p>the arguments that we want to pass to each single callback.</p>
 </div>
       
     </li>
@@ -783,7 +809,8 @@ Those callbacks will be invoked within the context of `action`.</code></pre>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -794,7 +821,7 @@ Those callbacks will be invoked within the context of `action`.</code></pre>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/callbacks.rb#L145" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/callbacks.rb#L145" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

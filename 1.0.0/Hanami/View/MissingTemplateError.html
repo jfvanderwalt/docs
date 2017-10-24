@@ -10,7 +10,7 @@
     <title>
       Exception: Hanami::View::MissingTemplateError
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -90,23 +92,25 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/errors.rb</dd>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/errors.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Missing template error</p>
+    
+<p>Missing template error</p>
 
 <p>This is raised at the runtime when Hanami::View cannot find a template for
 the requested format.</p>
 
-<p>We can’t raise this error during the loading phase, because at that time
-we don’t know if a view implements its own rendering policy.
-A view is allowed to override <code>#render</code>, and this scenario can make the
-presence of a template useless. One typical example is the usage of a
-serializer that returns the output string, without rendering a template.</p>
+<p>We can&#39;t raise this error during the loading phase, because at that
+time we don&#39;t know if a view implements its own rendering policy. A
+view is allowed to override <code>#render</code>, and this scenario can
+make the presence of a template useless. One typical example is the usage
+of a serializer that returns the output string, without rendering a
+template.</p>
 
 
   </div>
@@ -122,7 +126,8 @@ serializer that returns the output string, without rendering a template.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

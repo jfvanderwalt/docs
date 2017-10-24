@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Interactor
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -70,14 +72,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/interactor.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/interactor.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hanami Interactor</p>
+    
+<p>Hanami Interactor</p>
 
 
   </div>
@@ -93,7 +96,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -144,7 +148,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Log an error without interrupting the flow.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Log an error without interrupting the flow.</p>
 </div></span>
   
 </li>
@@ -167,7 +172,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Log an error AND interrupting the flow.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Log an error AND interrupting the flow.</p>
 </div></span>
   
 </li>
@@ -190,7 +196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Fail and interrupt the current flow.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Fail and interrupt the current flow.</p>
 </div></span>
   
 </li>
@@ -213,7 +220,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Check if proceed with <tt>#call</tt> invokation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Check if proceed with <code>#call</code> invokation.</p>
 </div></span>
   
 </li>
@@ -236,8 +244,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -262,9 +269,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Log an error without interrupting the flow.</p>
+    
+<p>Log an error without interrupting the flow.</p>
 
-<p>When used, the returned result won’t be successful.</p>
+<p>When used, the returned result won&#39;t be successful.</p>
 
 
   </div>
@@ -327,7 +335,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the error message</p>
+        <div class='inline'>
+<p>the error message</p>
 </div>
       
     </li>
@@ -345,7 +354,8 @@
       
       
         
-        <div class='inline'><p>false</p>
+        <div class='inline'>
+<p>false</p>
 </div>
       
     </li>
@@ -367,7 +377,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -378,7 +389,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L373" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L370" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -406,9 +417,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Log an error AND interrupting the flow.</p>
+    
+<p>Log an error AND interrupting the flow.</p>
 
-<p>When used, the returned result won’t be successful.</p>
+<p>When used, the returned result won&#39;t be successful.</p>
 
 
   </div>
@@ -472,7 +484,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the error message</p>
+        <div class='inline'>
+<p>the error message</p>
 </div>
       
     </li>
@@ -495,7 +508,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -506,7 +520,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L427" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L424" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -534,7 +548,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Fail and interrupt the current flow.</p>
+    
+<p>Fail and interrupt the current flow.</p>
 
 
   </div>
@@ -552,7 +567,6 @@
 
   <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
     <span class='ivar'>@params</span>     <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span>
-    <span class='ivar'>@email_test</span> <span class='op'>=</span> <span class='const'>EmailTest</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@params</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span>
@@ -562,7 +576,7 @@
 
   <span class='id identifier rubyid_private'>private</span>
   <span class='kw'>def</span> <span class='id identifier rubyid_persist_email_test!'>persist_email_test!</span>
-    <span class='ivar'>@email_test</span> <span class='op'>=</span> <span class='const'>EmailTestRepository</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_persist'>persist</span><span class='lparen'>(</span><span class='ivar'>@email_test</span><span class='rparen'>)</span>
+    <span class='ivar'>@email_test</span> <span class='op'>=</span> <span class='const'>EmailTestRepository</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='ivar'>@params</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='comment'># IF THIS RAISES AN EXCEPTION WE FORCE A FAILURE
@@ -587,7 +601,8 @@
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -598,7 +613,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L318" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L315" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -626,8 +641,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Check if proceed with <tt>#call</tt> invokation.
-By default it returns <tt>true</tt>.</p>
+    
+<p>Check if proceed with <code>#call</code> invokation. By default it returns
+<code>true</code>.</p>
 
 <p>Developers can override it.</p>
 
@@ -647,7 +663,8 @@ By default it returns <tt>true</tt>.</p>
       
       
         &mdash;
-        <div class='inline'><p>the result of the check</p>
+        <div class='inline'>
+<p>the result of the check</p>
 </div>
       
     </li>
@@ -662,7 +679,8 @@ By default it returns <tt>true</tt>.</p>
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -673,7 +691,7 @@ By default it returns <tt>true</tt>.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L279" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L277" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -702,7 +720,6 @@ By default it returns <tt>true</tt>.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -716,7 +733,8 @@ By default it returns <tt>true</tt>.</p>
       
       
         
-        <div class='inline'><p>0.3.5</p>
+        <div class='inline'>
+<p>0.3.5</p>
 </div>
       
     </li>
@@ -727,7 +745,7 @@ By default it returns <tt>true</tt>.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/interactor.rb#L444" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/interactor.rb#L441" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

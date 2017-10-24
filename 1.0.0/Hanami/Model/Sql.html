@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Model::Sql
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -79,7 +81,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>SQL adapter</p>
+    
+<p>SQL adapter</p>
 
 
   </div>
@@ -95,7 +98,8 @@
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -144,7 +148,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns SQL fragment for ascending order for the given column.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns SQL fragment for ascending order for the given column.</p>
 </div></span>
   
 </li>
@@ -167,7 +172,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns SQL fragment for descending order for the given column.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns SQL fragment for descending order for the given column.</p>
 </div></span>
   
 </li>
@@ -190,7 +196,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a SQL fragment that references a database function by the given name This is useful for database migrations.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a SQL fragment that references a database function by the given
+name This is useful for database migrations.</p>
 </div></span>
   
 </li>
@@ -213,7 +221,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a literal SQL fragment for the given SQL fragment.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a literal SQL fragment for the given SQL fragment.</p>
 </div></span>
   
 </li>
@@ -239,7 +248,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns SQL fragment for ascending order for the given column</p>
+    
+<p>Returns SQL fragment for ascending order for the given column</p>
 
 
   </div>
@@ -258,7 +268,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the column name</p>
+        <div class='inline'>
+<p>the column name</p>
 </div>
       
     </li>
@@ -276,7 +287,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the SQL fragment</p>
+        <div class='inline'>
+<p>the SQL fragment</p>
 </div>
       
     </li>
@@ -291,7 +303,8 @@
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -329,7 +342,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns SQL fragment for descending order for the given column</p>
+    
+<p>Returns SQL fragment for descending order for the given column</p>
 
 
   </div>
@@ -348,7 +362,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the column name</p>
+        <div class='inline'>
+<p>the column name</p>
 </div>
       
     </li>
@@ -366,7 +381,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the SQL fragment</p>
+        <div class='inline'>
+<p>the SQL fragment</p>
 </div>
       
     </li>
@@ -381,7 +397,8 @@
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -419,8 +436,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a SQL fragment that references a database function by the given name
-This is useful for database migrations</p>
+    
+<p>Returns a SQL fragment that references a database function by the given
+name This is useful for database migrations</p>
 
 
   </div>
@@ -461,7 +479,8 @@ This is useful for database migrations</p>
       
       
         &mdash;
-        <div class='inline'><p>the function name</p>
+        <div class='inline'>
+<p>the function name</p>
 </div>
       
     </li>
@@ -479,7 +498,8 @@ This is useful for database migrations</p>
       
       
         &mdash;
-        <div class='inline'><p>the SQL fragment</p>
+        <div class='inline'>
+<p>the SQL fragment</p>
 </div>
       
     </li>
@@ -494,7 +514,8 @@ This is useful for database migrations</p>
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -532,8 +553,9 @@ This is useful for database migrations</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a literal SQL fragment for the given SQL fragment.
-This is useful for database migrations</p>
+    
+<p>Returns a literal SQL fragment for the given SQL fragment. This is useful
+for database migrations</p>
 
 
   </div>
@@ -580,7 +602,8 @@ This is useful for database migrations</p>
       
       
         &mdash;
-        <div class='inline'><p>the SQL fragment</p>
+        <div class='inline'>
+<p>the SQL fragment</p>
 </div>
       
     </li>
@@ -598,7 +621,8 @@ This is useful for database migrations</p>
       
       
         &mdash;
-        <div class='inline'><p>the literal SQL fragment</p>
+        <div class='inline'>
+<p>the literal SQL fragment</p>
 </div>
       
     </li>
@@ -613,7 +637,8 @@ This is useful for database migrations</p>
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>

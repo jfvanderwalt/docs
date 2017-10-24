@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Action
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -71,7 +73,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>gems/gems/hanami-1.0.0/lib/hanami/action/csrf_protection.rb<span class="defines">,<br />
-  gems/gems/hanami-1.0.0/lib/hanami/action/routing_helpers.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/glue.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/head.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/mime.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/rack.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cache.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/flash.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/params.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cookies.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/request.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/session.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/callable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/redirect.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/callbacks.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/exposable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/rack/file.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/throwable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cookie_jar.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/base_params.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/validatable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/configurable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cache/expires.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/rack/callable.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/exposable/guard.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cache/directives.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cache/cache_control.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action/cache/conditional_get.rb,<br /> gems/gems/hanami-controller-1.0.0/lib/hanami/action.rb</span>
+  gems/gems/hanami-1.0.0/lib/hanami/action/routing_helpers.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/glue.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/head.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/mime.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/rack.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cache.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/flash.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/params.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cookies.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/request.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/session.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/callable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/redirect.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/callbacks.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/exposable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/rack/file.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/throwable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cookie_jar.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/base_params.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/validatable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/configurable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cache/expires.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/rack/callable.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/exposable/guard.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cache/directives.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cache/cache_control.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action/cache/conditional_get.rb,<br /> gems/gems/hanami-controller-1.0.1/lib/hanami/action.rb</span>
 </dd>
   </dl>
   
@@ -79,7 +81,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>An HTTP endpoint</p>
+    
+<p>An HTTP endpoint</p>
 
 
   </div>
@@ -111,7 +114,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

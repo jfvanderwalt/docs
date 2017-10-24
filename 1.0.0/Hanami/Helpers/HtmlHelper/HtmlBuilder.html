@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Helpers::HtmlHelper::HtmlBuilder
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -98,7 +100,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>HTML Builder</p>
+    
+<p>HTML Builder</p>
 
 
   </div>
@@ -114,7 +117,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -159,7 +163,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a plain string of text.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a plain string of text.</p>
 </div></span>
   
 </li>
@@ -196,8 +201,9 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-<p>Forward missing methods to the current context.
-This allows to access views local variables from nested content blocks.</p>
+
+<p>Forward missing methods to the current context. This allows to access views
+local variables from nested content blocks.</p>
 
 
   </div>
@@ -213,7 +219,8 @@ This allows to access views local variables from nested content blocks.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -262,8 +269,9 @@ This allows to access views local variables from nested content blocks.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a plain string of text. This particularly useful when you
-want to build more complex HTML.</p>
+    
+<p>Defines a plain string of text. This particularly useful when you want to
+build more complex HTML.</p>
 
 
   </div>
@@ -302,7 +310,8 @@ want to build more complex HTML.</p>
       
       
         &mdash;
-        <div class='inline'><p>the text to be rendered.</p>
+        <div class='inline'>
+<p>the text to be rendered.</p>
 </div>
       
     </li>
@@ -340,7 +349,8 @@ want to build more complex HTML.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

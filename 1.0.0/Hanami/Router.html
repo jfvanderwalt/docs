@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Router
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -86,8 +88,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-router-1.0.0/lib/hanami/router.rb<span class="defines">,<br />
-  gems/gems/hanami-router-1.0.0/lib/hanami/router/version.rb</span>
+    <dd>gems/gems/hanami-router-1.0.1/lib/hanami/router.rb<span class="defines">,<br />
+  gems/gems/hanami-router-1.0.1/lib/hanami/router/version.rb</span>
 </dd>
   </dl>
   
@@ -95,7 +97,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Rack compatible, lightweight and fast HTTP Router.</p>
+    
+<p>Rack compatible, lightweight and fast HTTP Router.</p>
 
 
   </div>
@@ -106,7 +109,8 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>It offers an intuitive DSL, that supports most of the HTTP verbs:</p>
+        <p class="example_title"><div class='inline'>
+<p>It offers an intuitive DSL, that supports most of the HTTP verbs:</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -123,7 +127,8 @@
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify an endpoint with <code>:to</code> (Rack compatible object)</p>
+        <p class="example_title"><div class='inline'>
+<p>Specify an endpoint with <code>:to</code> (Rack compatible object)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -137,7 +142,8 @@
 </span><span class='comment'># This behavior can be changed by passing a custom resolver to `Hanami::Router#initialize`</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify an endpoint with <code>:to</code> (controller and action string)</p>
+        <p class="example_title"><div class='inline'>
+<p>Specify an endpoint with <code>:to</code> (controller and action string)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -149,7 +155,8 @@
 <span class='comment'># This is a builtin feature for a Hanami::Controller convention.</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Specify a named route with <code>:as</code></p>
+        <p class="example_title"><div class='inline'>
+<p>Specify a named route with <code>:as</code></p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -166,7 +173,8 @@
 </span><span class='comment'># This behavior can be changed by passing a custom route to `Hanami::Router#initialize`</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Mount an application</p>
+        <p class="example_title"><div class='inline'>
+<p>Mount an application</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -188,7 +196,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -214,7 +223,6 @@
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -228,7 +236,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -237,7 +246,7 @@
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.0</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.1</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
     
   </dl>
 
@@ -272,7 +281,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the given block as it is.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the given block as it is.</p>
 </div></span>
   
 </li>
@@ -304,7 +314,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resolve the given Rack env to a registered endpoint and invoke it.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resolve the given Rack env to a registered endpoint and invoke it.</p>
 </div></span>
   
 </li>
@@ -327,7 +338,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>To support defining routes in the <code>define</code> wrapper.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>To support defining routes in the <code>define</code> wrapper.</p>
 </div></span>
   
 </li>
@@ -350,7 +362,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a DELETE request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a DELETE request for the given path.</p>
 </div></span>
   
 </li>
@@ -373,7 +386,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a GET request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a GET request for the given path.</p>
 </div></span>
   
 </li>
@@ -398,7 +412,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize the router.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize the router.</p>
 </div></span>
   
 </li>
@@ -421,7 +436,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an routes inspector.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an routes inspector.</p>
 </div></span>
   
 </li>
@@ -444,7 +460,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a LINK request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a LINK request for the given path.</p>
 </div></span>
   
 </li>
@@ -467,7 +484,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Mount a Rack application at the specified path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Mount a Rack application at the specified path.</p>
 </div></span>
   
 </li>
@@ -490,7 +508,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a Ruby block: all the routes defined within it will be namespaced with the given relative path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a Ruby block: all the routes defined within it will be namespaced
+with the given relative path.</p>
 </div></span>
   
 </li>
@@ -513,7 +533,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a OPTIONS request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a OPTIONS request for the given path.</p>
 </div></span>
   
 </li>
@@ -536,7 +557,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a PATCH request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a PATCH request for the given path.</p>
 </div></span>
   
 </li>
@@ -559,7 +581,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generate an relative URL for a specified named route.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Generate an relative URL for a specified named route.</p>
 </div></span>
   
 </li>
@@ -582,7 +605,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a POST request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a POST request for the given path.</p>
 </div></span>
   
 </li>
@@ -605,7 +629,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a PUT request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a PUT request for the given path.</p>
 </div></span>
   
 </li>
@@ -628,7 +653,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Recognize the given env, path, or name and return a route for testing inspection.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Recognize the given env, path, or name and return a route for testing
+inspection.</p>
 </div></span>
   
 </li>
@@ -651,7 +678,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines an HTTP redirect.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines an HTTP redirect.</p>
 </div></span>
   
 </li>
@@ -674,7 +702,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a set of named routes for a single RESTful resource.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a set of named routes for a single RESTful resource.</p>
 </div></span>
   
 </li>
@@ -697,7 +726,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a set of named routes for a plural RESTful resource.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a set of named routes for a plural RESTful resource.</p>
 </div></span>
   
 </li>
@@ -720,7 +750,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a root route (a GET route for ‘/’).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a root route (a GET route for &#39;/&#39;).</p>
 </div></span>
   
 </li>
@@ -743,7 +774,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts a TRACE request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts a TRACE request for the given path.</p>
 </div></span>
   
 </li>
@@ -766,7 +798,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defines a route that accepts an UNLINK request for the given path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Defines a route that accepts an UNLINK request for the given path.</p>
 </div></span>
   
 </li>
@@ -789,7 +822,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generate a URL for a specified named route.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Generate a URL for a specified named route.</p>
 </div></span>
   
 </li>
@@ -812,7 +846,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize the router.</p>
+    
+<p>Initialize the router.</p>
 
 
   </div>
@@ -823,7 +858,8 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic example</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic example</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -840,7 +876,8 @@
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Body parsers</p>
+        <p class="example_title"><div class='inline'>
+<p>Body parsers</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;json&#39;
@@ -867,7 +904,8 @@ curl http://localhost:2300/books/1    \
 [200, {}, [&quot;{:published=&gt;\&quot;true\&quot;,:id=&gt;\&quot;1\&quot;}&quot;]]</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom body parser</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom body parser</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami/router&#39;
@@ -919,7 +957,8 @@ curl http://localhost:2300/authors/1 \
       
       
         &mdash;
-        <div class='inline'><p>the options to initialize the router</p>
+        <div class='inline'>
+<p>the options to initialize the router</p>
 </div>
       
     </li>
@@ -934,7 +973,8 @@ curl http://localhost:2300/authors/1 \
       
       
         &mdash;
-        <div class='inline'><p>the optional block to define the routes</p>
+        <div class='inline'>
+<p>the optional block to define the routes</p>
 </div>
       
     </li>
@@ -954,7 +994,8 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>The HTTP scheme (defaults to <code>"http"</code>)</p>
+            &mdash; <div class='inline'>
+<p>The HTTP scheme (defaults to <code>&quot;http&quot;</code>)</p>
 </div>
           
         </li>
@@ -966,7 +1007,8 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>The URL host (defaults to <code>"localhost"</code>)</p>
+            &mdash; <div class='inline'>
+<p>The URL host (defaults to <code>&quot;localhost&quot;</code>)</p>
 </div>
           
         </li>
@@ -978,7 +1020,8 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>The URL port (defaults to <code>"80"</code>)</p>
+            &mdash; <div class='inline'>
+<p>The URL port (defaults to <code>&quot;80&quot;</code>)</p>
 </div>
           
         </li>
@@ -990,7 +1033,9 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>the route resolver (defaults to <code>Hanami::Routing::EndpointResolver.new</code>)</p>
+            &mdash; <div class='inline'>
+<p>the route resolver (defaults to
+<code>Hanami::Routing::EndpointResolver.new</code>)</p>
 </div>
           
         </li>
@@ -1002,8 +1047,8 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>the route class
-(defaults to <code>Hanami::Routing::Route</code>)</p>
+            &mdash; <div class='inline'>
+<p>the route class (defaults to <code>Hanami::Routing::Route</code>)</p>
 </div>
           
         </li>
@@ -1015,8 +1060,9 @@ curl http://localhost:2300/authors/1 \
             
           </span>
           
-            &mdash; <div class='inline'><p>the separator between controller
-and action name (eg. ‘dashboard#show’, where ‘#’ is the :action_separator)</p>
+            &mdash; <div class='inline'>
+<p>the separator between controller and action name (eg.
+&#39;dashboard#show&#39;, where &#39;#&#39; is the :action_separator)</p>
 </div>
           
         </li>
@@ -1028,7 +1074,8 @@ and action name (eg. ‘dashboard#show’, where ‘#’ is the :action_separato
             
           </span>
           
-            &mdash; <div class='inline'><p>the body parsers for mime types</p>
+            &mdash; <div class='inline'>
+<p>the body parsers for mime types</p>
 </div>
           
         </li>
@@ -1047,7 +1094,8 @@ and action name (eg. ‘dashboard#show’, where ‘#’ is the :action_separato
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1058,7 +1106,7 @@ and action name (eg. ‘dashboard#show’, where ‘#’ is the :action_separato
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L237" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L237" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1093,23 +1141,24 @@ and action name (eg. ‘dashboard#show’, where ‘#’ is the :action_separato
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the given block as it is.</p>
+    
+<p>Returns the given block as it is.</p>
 
 <p>When Hanami::Router is used as a standalone gem and the routes are defined
 into a configuration file, some systems could raise an exception.</p>
 
 <p>Imagine the following file into a Ruby on Rails application:</p>
 
-<p>get ‘/’, to: ‘api#index’</p>
+<p>get &#39;/&#39;, to: &#39;api#index&#39;</p>
 
 <p>Because Ruby on Rails in production mode use to eager load code and the
 routes file uses top level method calls, it crashes the application.</p>
 
-<p>If we wrap these routes with <tt>Hanami::Router.define</tt>, the block
-doesn’t get yielded but just returned to the caller as it is.</p>
+<p>If we wrap these routes with <code>Hanami::Router.define</code>, the block
+doesn&#39;t get yielded but just returned to the caller as it is.</p>
 
-<p>Usually the receiver of this block is <tt>Hanami::Router#initialize</tt>,
-which finally evaluates the block.</p>
+<p>Usually the receiver of this block is
+<code>Hanami::Router#initialize</code>, which finally evaluates the block.</p>
 
 
   </div>
@@ -1139,7 +1188,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of route definitions</p>
+        <div class='inline'>
+<p>a set of route definitions</p>
 </div>
       
     </li>
@@ -1157,7 +1207,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>the given block</p>
+        <div class='inline'>
+<p>the given block</p>
 </div>
       
     </li>
@@ -1172,7 +1223,8 @@ which finally evaluates the block.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -1183,7 +1235,7 @@ which finally evaluates the block.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L140" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L140" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1216,7 +1268,8 @@ which finally evaluates the block.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Resolve the given Rack env to a registered endpoint and invoke it.</p>
+    
+<p>Resolve the given Rack env to a registered endpoint and invoke it.</p>
 
 
   </div>
@@ -1235,7 +1288,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>a Rack env instance</p>
+        <div class='inline'>
+<p>a Rack env instance</p>
 </div>
       
     </li>
@@ -1264,7 +1318,8 @@ which finally evaluates the block.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1275,7 +1330,7 @@ which finally evaluates the block.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1015" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1018" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1302,7 +1357,8 @@ which finally evaluates the block.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>To support defining routes in the <code>define</code> wrapper.</p>
+    
+<p>To support defining routes in the <code>define</code> wrapper.</p>
 
 
   </div>
@@ -1313,7 +1369,8 @@ which finally evaluates the block.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>In Hanami framework</p>
+        <p class="example_title"><div class='inline'>
+<p>In Hanami framework</p>
 </div></p>
       
       <pre class="example code"><code><span class='kw'>class</span> <span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Application.html" title="Hanami::Application (class)">Application</a></span></span>
@@ -1342,7 +1399,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>the block to define the routes</p>
+        <div class='inline'>
+<p>the block to define the routes</p>
 </div>
       
     </li>
@@ -1371,7 +1429,8 @@ which finally evaluates the block.</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1382,7 +1441,7 @@ which finally evaluates the block.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L276" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L276" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1409,7 +1468,8 @@ which finally evaluates the block.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a DELETE request for the given path.</p>
+    
+<p>Defines a route that accepts a DELETE request for the given path.</p>
 
 
   </div>
@@ -1428,7 +1488,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -1445,7 +1506,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -1460,7 +1522,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -1482,7 +1545,8 @@ which finally evaluates the block.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -1503,8 +1567,8 @@ which finally evaluates the block.</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -1526,7 +1590,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1537,7 +1602,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L488" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L488" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1564,7 +1629,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a GET request for the given path.</p>
+    
+<p>Defines a route that accepts a GET request for the given path.</p>
 
 
   </div>
@@ -1575,7 +1641,8 @@ option passed to the constructor</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Fixed matching string</p>
+        <p class="example_title"><div class='inline'>
+<p>Fixed matching string</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1584,7 +1651,8 @@ option passed to the constructor</p>
 <span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/hanami</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbracket'>[</span><span class='int'>200</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello from Hanami!</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>String matching with variables</p>
+        <p class="example_title"><div class='inline'>
+<p>String matching with variables</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1600,7 +1668,8 @@ option passed to the constructor</p>
   <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Variables Constraints</p>
+        <p class="example_title"><div class='inline'>
+<p>Variables Constraints</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1611,7 +1680,8 @@ option passed to the constructor</p>
   <span class='label'>to:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbracket'>[</span><span class='int'>200</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:id must be a number!</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>String matching with globbling</p>
+        <p class="example_title"><div class='inline'>
+<p>String matching with globbling</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1627,7 +1697,8 @@ option passed to the constructor</p>
   <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>String matching with optional tokens</p>
+        <p class="example_title"><div class='inline'>
+<p>String matching with optional tokens</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1639,7 +1710,8 @@ option passed to the constructor</p>
   <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Named routes</p>
+        <p class="example_title"><div class='inline'>
+<p>Named routes</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1653,7 +1725,8 @@ option passed to the constructor</p>
 </span><span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='lparen'>(</span><span class='symbol'>:hanami</span><span class='rparen'>)</span>  <span class='comment'># =&gt; &quot;https://hanamirb.org/hanami&quot;</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Duck typed endpoints (Rack compatible objects)</p>
+        <p class="example_title"><div class='inline'>
+<p>Duck typed endpoints (Rack compatible objects)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1668,7 +1741,8 @@ option passed to the constructor</p>
 <span class='comment'># Everything that responds to #call is invoked as it is</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Duck typed endpoints (strings)</p>
+        <p class="example_title"><div class='inline'>
+<p>Duck typed endpoints (strings)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1683,7 +1757,8 @@ option passed to the constructor</p>
 <span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/hanami</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>to:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rack_app</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># it will map to RackApp.new</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Duck typed endpoints (string: controller + action)</p>
+        <p class="example_title"><div class='inline'>
+<p>Duck typed endpoints (string: controller + action)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -1716,7 +1791,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -1733,7 +1809,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -1748,7 +1825,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -1770,7 +1848,8 @@ option passed to the constructor</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -1791,8 +1870,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -1807,7 +1886,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1818,7 +1898,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L412" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L412" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1845,7 +1925,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns an routes inspector</p>
+    
+<p>Returns an routes inspector</p>
 
 
   </div>
@@ -1889,7 +1970,8 @@ puts router.inspector
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -1900,7 +1982,7 @@ puts router.inspector
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1213" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1216" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1928,7 +2010,8 @@ puts router.inspector
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a LINK request for the given path.</p>
+    
+<p>Defines a route that accepts a LINK request for the given path.</p>
 
 
   </div>
@@ -1947,7 +2030,8 @@ puts router.inspector
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -1964,7 +2048,8 @@ puts router.inspector
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -1979,7 +2064,8 @@ puts router.inspector
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -2001,7 +2087,8 @@ puts router.inspector
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -2022,8 +2109,8 @@ puts router.inspector
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -2045,7 +2132,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -2056,7 +2144,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L526" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L526" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2083,14 +2171,14 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Mount a Rack application at the specified path.
-All the requests starting with the specified path, will be forwarded to
-the given application.</p>
+    
+<p>Mount a Rack application at the specified path. All the requests starting
+with the specified path, will be forwarded to the given application.</p>
 
-<p>All the other methods (eg #get) support callable objects, but they
-restrict the range of the acceptable HTTP verb. Mounting an application
-with #mount doesn’t apply this kind of restriction at the router level,
-but let the application to decide.</p>
+<p>All the other methods (eg #get) support callable objects, but they restrict
+the range of the acceptable HTTP verb. Mounting an application with #mount
+doesn&#39;t apply this kind of restriction at the router level, but let the
+application to decide.</p>
 
 
   </div>
@@ -2101,7 +2189,8 @@ but let the application to decide.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -2118,7 +2207,8 @@ but let the application to decide.</p>
 </span><span class='comment'># GET  /api/unknown  # =&gt; 404</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Difference between #get and #mount</p>
+        <p class="example_title"><div class='inline'>
+<p>Difference between #get and #mount</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -2139,7 +2229,8 @@ but let the application to decide.</p>
 </span><span class='comment'># POST /rack2        # =&gt; 200 (RackTwo.new)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Types of mountable applications</p>
+        <p class="example_title"><div class='inline'>
+<p>Types of mountable applications</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -2194,7 +2285,8 @@ but let the application to decide.</p>
       
       
         &mdash;
-        <div class='inline'><p>a class or an object that responds to #call</p>
+        <div class='inline'>
+<p>a class or an object that responds to #call</p>
 </div>
       
     </li>
@@ -2209,7 +2301,8 @@ but let the application to decide.</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the mount</p>
+        <div class='inline'>
+<p>the options to customize the mount</p>
 </div>
       
     </li>
@@ -2231,7 +2324,8 @@ but let the application to decide.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>relative path where to mount the app</p>
+            &mdash; <div class='inline'>
+<p>relative path where to mount the app</p>
 </div>
           
         </li>
@@ -2248,7 +2342,8 @@ but let the application to decide.</p>
       
       
         
-        <div class='inline'><p>0.1.1</p>
+        <div class='inline'>
+<p>0.1.1</p>
 </div>
       
     </li>
@@ -2259,7 +2354,7 @@ but let the application to decide.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1004" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1007" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2286,7 +2381,8 @@ but let the application to decide.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a Ruby block: all the routes defined within it will be namespaced
+    
+<p>Defines a Ruby block: all the routes defined within it will be namespaced
 with the given relative path.</p>
 
 <p>Namespaces blocks can be nested multiple times.</p>
@@ -2300,7 +2396,8 @@ with the given relative path.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic example</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic example</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -2312,7 +2409,8 @@ with the given relative path.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nested namespaces</p>
+        <p class="example_title"><div class='inline'>
+<p>Nested namespaces</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -2347,8 +2445,8 @@ with the given relative path.</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative path where the nested routes will
-be mounted</p>
+        <div class='inline'>
+<p>the relative path where the nested routes will be mounted</p>
 </div>
       
     </li>
@@ -2363,7 +2461,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>the block that defines the resources</p>
+        <div class='inline'>
+<p>the block that defines the resources</p>
 </div>
       
     </li>
@@ -2381,7 +2480,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>the generated namespace.</p>
+        <div class='inline'>
+<p>the generated namespace.</p>
 </div>
       
     </li>
@@ -2403,7 +2503,8 @@ be mounted</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2414,7 +2515,7 @@ be mounted</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L670" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L673" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2441,7 +2542,8 @@ be mounted</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a OPTIONS request for the given path.</p>
+    
+<p>Defines a route that accepts a OPTIONS request for the given path.</p>
 
 
   </div>
@@ -2460,7 +2562,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -2477,7 +2580,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -2492,7 +2596,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -2514,7 +2619,8 @@ be mounted</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -2535,8 +2641,8 @@ be mounted</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -2558,7 +2664,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2569,7 +2676,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L594" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L594" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2596,7 +2703,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a PATCH request for the given path.</p>
+    
+<p>Defines a route that accepts a PATCH request for the given path.</p>
 
 
   </div>
@@ -2615,7 +2723,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -2632,7 +2741,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -2647,7 +2757,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -2669,7 +2780,8 @@ option passed to the constructor</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -2690,8 +2802,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -2713,7 +2825,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2724,7 +2837,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L469" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L469" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2751,9 +2864,10 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Generate an relative URL for a specified named route.
-The additional arguments will be used to compose the relative URL - in
-  case it has tokens to match - and for compose the query string.</p>
+    
+<p>Generate an relative URL for a specified named route. The additional
+arguments will be used to compose the relative URL - in  case it has tokens
+to match - and for compose the query string.</p>
 
 
   </div>
@@ -2788,7 +2902,8 @@ The additional arguments will be used to compose the relative URL - in
       
       
         &mdash;
-        <div class='inline'><p>the route name</p>
+        <div class='inline'>
+<p>the route name</p>
 </div>
       
     </li>
@@ -2819,8 +2934,8 @@ The additional arguments will be used to compose the relative URL - in
       
       
         &mdash;
-        <div class='inline'><p>when the router fails to
-recognize a route, because of the given arguments.</p>
+        <div class='inline'>
+<p>when the router fails to recognize a route, because of the given arguments.</p>
 </div>
       
     </li>
@@ -2835,7 +2950,8 @@ recognize a route, because of the given arguments.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -2846,7 +2962,7 @@ recognize a route, because of the given arguments.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1161" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1164" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -2873,7 +2989,8 @@ recognize a route, because of the given arguments.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a POST request for the given path.</p>
+    
+<p>Defines a route that accepts a POST request for the given path.</p>
 
 
   </div>
@@ -2892,7 +3009,8 @@ recognize a route, because of the given arguments.</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -2909,7 +3027,8 @@ recognize a route, because of the given arguments.</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -2924,7 +3043,8 @@ recognize a route, because of the given arguments.</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -2946,7 +3066,8 @@ recognize a route, because of the given arguments.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -2967,8 +3088,8 @@ recognize a route, because of the given arguments.</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -2990,7 +3111,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3001,7 +3123,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L431" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L431" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -3028,7 +3150,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a PUT request for the given path.</p>
+    
+<p>Defines a route that accepts a PUT request for the given path.</p>
 
 
   </div>
@@ -3047,7 +3170,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -3064,7 +3188,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -3079,7 +3204,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -3101,7 +3227,8 @@ option passed to the constructor</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -3122,8 +3249,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -3145,7 +3272,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3156,7 +3284,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L450" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L450" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -3183,7 +3311,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Recognize the given env, path, or name and return a route for testing
+    
+<p>Recognize the given env, path, or name and return a route for testing
 inspection.</p>
 
 <p>If the route cannot be recognized, it still returns an object for testing
@@ -3198,7 +3327,8 @@ inspection.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Successful Path Recognition</p>
+        <p class="example_title"><div class='inline'>
+<p>Successful Path Recognition</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3213,7 +3343,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span>    <span class='comment'># =&gt; {:id=&gt;&quot;23&quot;}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Successful Rack Env Recognition</p>
+        <p class="example_title"><div class='inline'>
+<p>Successful Rack Env Recognition</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3228,7 +3359,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span>    <span class='comment'># =&gt; {:id=&gt;&quot;23&quot;}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Successful Named Route Recognition</p>
+        <p class="example_title"><div class='inline'>
+<p>Successful Named Route Recognition</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3243,7 +3375,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span>    <span class='comment'># =&gt; {:id=&gt;&quot;23&quot;}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failing Recognition For Unknown Path</p>
+        <p class="example_title"><div class='inline'>
+<p>Failing Recognition For Unknown Path</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3257,7 +3390,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_routable?'>routable?</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failing Recognition For Path With Wrong HTTP Verb</p>
+        <p class="example_title"><div class='inline'>
+<p>Failing Recognition For Path With Wrong HTTP Verb</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3271,7 +3405,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_routable?'>routable?</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failing Recognition For Rack Env With Wrong HTTP Verb</p>
+        <p class="example_title"><div class='inline'>
+<p>Failing Recognition For Rack Env With Wrong HTTP Verb</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3285,7 +3420,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_routable?'>routable?</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failing Recognition Named Route With Wrong Params</p>
+        <p class="example_title"><div class='inline'>
+<p>Failing Recognition Named Route With Wrong Params</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3299,7 +3435,8 @@ inspection.</p>
 </span><span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_routable?'>routable?</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Failing Recognition Named Route With Wrong HTTP Verb</p>
+        <p class="example_title"><div class='inline'>
+<p>Failing Recognition Named Route With Wrong HTTP Verb</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3327,7 +3464,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>Rack env, path or route name</p>
+        <div class='inline'>
+<p>Rack env, path or route name</p>
 </div>
       
     </li>
@@ -3344,7 +3482,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of options for Rack env or route params</p>
+        <div class='inline'>
+<p>a set of options for Rack env or route params</p>
 </div>
       
     </li>
@@ -3361,7 +3500,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of params</p>
+        <div class='inline'>
+<p>a set of params</p>
 </div>
       
     </li>
@@ -3379,7 +3519,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>the recognized route</p>
+        <div class='inline'>
+<p>the recognized route</p>
 </div>
       
     </li>
@@ -3403,7 +3544,8 @@ inspection.</p>
       
       
         
-        <div class='inline'><p>0.5.0</p>
+        <div class='inline'>
+<p>0.5.0</p>
 </div>
       
     </li>
@@ -3414,7 +3556,7 @@ inspection.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1127" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1130" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -3448,7 +3590,8 @@ inspection.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines an HTTP redirect</p>
+    
+<p>Defines an HTTP redirect</p>
 
 
   </div>
@@ -3486,7 +3629,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>the path that needs to be redirected</p>
+        <div class='inline'>
+<p>the path that needs to be redirected</p>
 </div>
       
     </li>
@@ -3503,7 +3647,8 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the redirect behavior</p>
+        <div class='inline'>
+<p>the options to customize the redirect behavior</p>
 </div>
       
     </li>
@@ -3525,7 +3670,8 @@ inspection.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>HTTP status to return (defaults to <code>301</code>)</p>
+            &mdash; <div class='inline'>
+<p>HTTP status to return (defaults to <code>301</code>)</p>
 </div>
           
         </li>
@@ -3546,8 +3692,9 @@ inspection.</p>
       
       
         &mdash;
-        <div class='inline'><p>the generated route.
-This may vary according to the <code>:route</code> option passed to the initializer</p>
+        <div class='inline'>
+<p>the generated route. This may vary according to the <code>:route</code>
+option passed to the initializer</p>
 </div>
       
     </li>
@@ -3569,7 +3716,8 @@ This may vary according to the <code>:route</code> option passed to the initiali
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3580,14 +3728,17 @@ This may vary according to the <code>:route</code> option passed to the initiali
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L624" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L624" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
     <tr>
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_redirect'>redirect</span> <span class='ivar'>@router</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>301</span>
+  <span class='id identifier rubyid_destination_path'>destination_path</span> <span class='op'>=</span> <span class='ivar'>@router</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='id identifier rubyid_destination_path'>destination_path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:code</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>301</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_route'>route</span><span class='op'>|</span>
+    <span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_dest'>dest</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'>Routing</span><span class='op'>::</span><span class='const'>RedirectEndpoint</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_destination_path'>destination_path</span><span class='comma'>,</span> <span class='id identifier rubyid_route'>route</span><span class='period'>.</span><span class='id identifier rubyid_dest'>dest</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
       </td>
     </tr>
@@ -3607,8 +3758,9 @@ This may vary according to the <code>:route</code> option passed to the initiali
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a set of named routes for a single RESTful resource.
-It has a built-in integration for Hanami::Controller.</p>
+    
+<p>Defines a set of named routes for a single RESTful resource. It has a
+built-in integration for Hanami::Controller.</p>
 
 
   </div>
@@ -3619,7 +3771,8 @@ It has a built-in integration for Hanami::Controller.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Default usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3642,7 +3795,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+----------------+-------------------+----------+----------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Limit the generated routes with :only</p>
+        <p class="example_title"><div class='inline'>
+<p>Limit the generated routes with :only</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3662,7 +3816,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+----------------+------------------+----------+----------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Limit the generated routes with :except</p>
+        <p class="example_title"><div class='inline'>
+<p>Limit the generated routes with :except</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3682,7 +3837,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+----------------+------------------+----------+----------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Additional single routes</p>
+        <p class="example_title"><div class='inline'>
+<p>Additional single routes</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3704,7 +3860,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+--------------------+--------------------+------+--------------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Additional collection routes</p>
+        <p class="example_title"><div class='inline'>
+<p>Additional collection routes</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3739,7 +3896,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>the name of the resource</p>
+        <div class='inline'>
+<p>the name of the resource</p>
 </div>
       
     </li>
@@ -3756,7 +3914,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of options to customize the routes</p>
+        <div class='inline'>
+<p>a set of options to customize the routes</p>
 </div>
       
     </li>
@@ -3771,7 +3930,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>a block of code to generate additional routes</p>
+        <div class='inline'>
+<p>a block of code to generate additional routes</p>
 </div>
       
     </li>
@@ -3793,8 +3953,8 @@ It has a built-in integration for Hanami::Controller.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>a subset of the default routes
-that we want to generate</p>
+            &mdash; <div class='inline'>
+<p>a subset of the default routes that we want to generate</p>
 </div>
           
         </li>
@@ -3806,8 +3966,8 @@ that we want to generate</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>prevent the given routes to be
-generated</p>
+            &mdash; <div class='inline'>
+<p>prevent the given routes to be generated</p>
 </div>
           
         </li>
@@ -3850,7 +4010,8 @@ generated</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -3861,7 +4022,7 @@ generated</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L792" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L795" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -3888,8 +4049,9 @@ generated</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a set of named routes for a plural RESTful resource.
-It has a built-in integration for Hanami::Controller.</p>
+    
+<p>Defines a set of named routes for a plural RESTful resource. It has a
+built-in integration for Hanami::Controller.</p>
 
 
   </div>
@@ -3900,7 +4062,8 @@ It has a built-in integration for Hanami::Controller.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Default usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Default usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3924,7 +4087,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+--------------------+-------------------+----------+----------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Limit the generated routes with :only</p>
+        <p class="example_title"><div class='inline'>
+<p>Limit the generated routes with :only</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3942,7 +4106,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +------+-----------+-----------------+--------+-------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Limit the generated routes with :except</p>
+        <p class="example_title"><div class='inline'>
+<p>Limit the generated routes with :except</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3964,7 +4129,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+--------------------+-------------------+----------+----------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Additional single routes</p>
+        <p class="example_title"><div class='inline'>
+<p>Additional single routes</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -3986,7 +4152,8 @@ It has a built-in integration for Hanami::Controller.</p>
 </span><span class='comment'># +--------+-----------------------+-------------------+------+-------------------+</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Additional collection routes</p>
+        <p class="example_title"><div class='inline'>
+<p>Additional collection routes</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -4021,7 +4188,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>the name of the resource</p>
+        <div class='inline'>
+<p>the name of the resource</p>
 </div>
       
     </li>
@@ -4038,7 +4206,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>a set of options to customize the routes</p>
+        <div class='inline'>
+<p>a set of options to customize the routes</p>
 </div>
       
     </li>
@@ -4053,7 +4222,8 @@ It has a built-in integration for Hanami::Controller.</p>
       
       
         &mdash;
-        <div class='inline'><p>a block of code to generate additional routes</p>
+        <div class='inline'>
+<p>a block of code to generate additional routes</p>
 </div>
       
     </li>
@@ -4075,8 +4245,8 @@ It has a built-in integration for Hanami::Controller.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>a subset of the default routes
-that we want to generate</p>
+            &mdash; <div class='inline'>
+<p>a subset of the default routes that we want to generate</p>
 </div>
           
         </li>
@@ -4088,8 +4258,8 @@ that we want to generate</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>prevent the given routes to be
-generated</p>
+            &mdash; <div class='inline'>
+<p>prevent the given routes to be generated</p>
 </div>
           
         </li>
@@ -4132,7 +4302,8 @@ generated</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -4143,7 +4314,7 @@ generated</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L915" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L918" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -4170,7 +4341,8 @@ generated</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a root route (a GET route for ‘/’)</p>
+    
+<p>Defines a root route (a GET route for &#39;/&#39;)</p>
 
 
   </div>
@@ -4181,7 +4353,8 @@ generated</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Fixed matching string</p>
+        <p class="example_title"><div class='inline'>
+<p>Fixed matching string</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -4190,7 +4363,8 @@ generated</p>
 <span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span> <span class='label'>to:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_env'>env</span><span class='rparen'>)</span> <span class='tlambeg'>{</span> <span class='lbracket'>[</span><span class='int'>200</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello from Hanami!</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='rbrace'>}</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Included names as <code>root</code> (for path and url helpers)</p>
+        <p class="example_title"><div class='inline'>
+<p>Included names as <code>root</code> (for path and url helpers)</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/router</span><span class='tstring_end'>&#39;</span></span>
@@ -4217,7 +4391,8 @@ generated</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -4232,7 +4407,8 @@ generated</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -4252,7 +4428,8 @@ generated</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -4273,8 +4450,8 @@ generated</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -4289,7 +4466,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -4300,7 +4478,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L575" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L575" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -4327,7 +4505,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts a TRACE request for the given path.</p>
+    
+<p>Defines a route that accepts a TRACE request for the given path.</p>
 
 
   </div>
@@ -4346,7 +4525,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -4363,7 +4543,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -4378,7 +4559,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -4400,7 +4582,8 @@ option passed to the constructor</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -4421,8 +4604,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -4444,7 +4627,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -4455,7 +4639,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L507" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L507" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -4482,7 +4666,8 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Defines a route that accepts an UNLINK request for the given path.</p>
+    
+<p>Defines a route that accepts an UNLINK request for the given path.</p>
 
 
   </div>
@@ -4501,7 +4686,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the relative URL to be matched</p>
+        <div class='inline'>
+<p>the relative URL to be matched</p>
 </div>
       
     </li>
@@ -4518,7 +4704,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the options to customize the route</p>
+        <div class='inline'>
+<p>the options to customize the route</p>
 </div>
       
     </li>
@@ -4533,7 +4720,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>the anonymous proc to be used as endpoint for the route</p>
+        <div class='inline'>
+<p>the anonymous proc to be used as endpoint for the route</p>
 </div>
       
     </li>
@@ -4555,7 +4743,8 @@ option passed to the constructor</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>the endpoint</p>
+            &mdash; <div class='inline'>
+<p>the endpoint</p>
 </div>
           
         </li>
@@ -4576,8 +4765,8 @@ option passed to the constructor</p>
       
       
         &mdash;
-        <div class='inline'><p>this may vary according to the :route
-option passed to the constructor</p>
+        <div class='inline'>
+<p>this may vary according to the :route option passed to the constructor</p>
 </div>
       
     </li>
@@ -4599,7 +4788,8 @@ option passed to the constructor</p>
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -4610,7 +4800,7 @@ option passed to the constructor</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L545" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L545" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -4637,9 +4827,10 @@ option passed to the constructor</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Generate a URL for a specified named route.
-The additional arguments will be used to compose the relative URL - in
-  case it has tokens to match - and for compose the query string.</p>
+    
+<p>Generate a URL for a specified named route. The additional arguments will
+be used to compose the relative URL - in  case it has tokens to match - and
+for compose the query string.</p>
 
 
   </div>
@@ -4674,7 +4865,8 @@ The additional arguments will be used to compose the relative URL - in
       
       
         &mdash;
-        <div class='inline'><p>the route name</p>
+        <div class='inline'>
+<p>the route name</p>
 </div>
       
     </li>
@@ -4705,8 +4897,8 @@ The additional arguments will be used to compose the relative URL - in
       
       
         &mdash;
-        <div class='inline'><p>when the router fails to
-recognize a route, because of the given arguments.</p>
+        <div class='inline'>
+<p>when the router fails to recognize a route, because of the given arguments.</p>
 </div>
       
     </li>
@@ -4721,7 +4913,8 @@ recognize a route, because of the given arguments.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -4732,7 +4925,7 @@ recognize a route, because of the given arguments.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/router/blob/v1.0.0/lib/hanami/router.rb#L1188" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/router/blob/v1.0.1/lib/hanami/router.rb#L1191" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

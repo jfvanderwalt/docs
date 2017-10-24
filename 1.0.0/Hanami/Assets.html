@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Assets
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -84,7 +86,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Assets management for Ruby web applications</p>
+    
+<p>Assets management for Ruby web applications</p>
 
 
   </div>
@@ -100,7 +103,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -149,7 +153,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure framework.</p>
 </div></span>
   
 </li>
@@ -172,7 +177,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepare assets for deploys.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepare assets for deploys.</p>
 </div></span>
   
 </li>
@@ -195,7 +201,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Duplicate the framework and generate modules for the target application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Duplicate the framework and generate modules for the target application.</p>
 </div></span>
   
 </li>
@@ -218,7 +225,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Preload the framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Preload the framework.</p>
 </div></span>
   
 </li>
@@ -241,7 +249,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Precompile assets.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Precompile assets.</p>
 </div></span>
   
 </li>
@@ -264,7 +273,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Global assets sources.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Global assets sources.</p>
 </div></span>
   
 </li>
@@ -296,7 +306,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure framework</p>
+    
+<p>Configure framework</p>
 
 
   </div>
@@ -315,7 +326,8 @@
       
       
         &mdash;
-        <div class='inline'><p>configuration code block</p>
+        <div class='inline'>
+<p>configuration code block</p>
 </div>
       
     </li>
@@ -333,7 +345,8 @@
       
       
         
-        <div class='inline'><p>self</p>
+        <div class='inline'>
+<p>self</p>
 </div>
       
     </li>
@@ -355,7 +368,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -394,7 +408,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Prepare assets for deploys</p>
+    
+<p>Prepare assets for deploys</p>
 
 
   </div>
@@ -410,7 +425,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -452,7 +468,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Duplicate the framework and generate modules for the target application</p>
+    
+<p>Duplicate the framework and generate modules for the target application</p>
 
 
   </div>
@@ -471,7 +488,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace of the application</p>
+        <div class='inline'>
+<p>the Ruby namespace of the application</p>
 </div>
       
     </li>
@@ -486,7 +504,8 @@
       
       
         &mdash;
-        <div class='inline'><p>an optional block to configure the framework</p>
+        <div class='inline'>
+<p>an optional block to configure the framework</p>
 </div>
       
     </li>
@@ -504,7 +523,8 @@
       
       
         &mdash;
-        <div class='inline'><p>a copy of Hanami::Assets</p>
+        <div class='inline'>
+<p>a copy of Hanami::Assets</p>
 </div>
       
     </li>
@@ -528,7 +548,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -569,7 +590,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Preload the framework</p>
+    
+<p>Preload the framework</p>
 
 <p>This MUST be used in production mode</p>
 
@@ -582,7 +604,8 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Direct Invocation</p>
+        <p class="example_title"><div class='inline'>
+<p>Direct Invocation</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/assets</span><span class='tstring_end'>&#39;</span></span>
@@ -590,7 +613,8 @@
 <span class='const'><span class='object_link'><a href="../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Assets (module)">Assets</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load!'>load!</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Load Via Configuration Block</p>
+        <p class="example_title"><div class='inline'>
+<p>Load Via Configuration Block</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/assets</span><span class='tstring_end'>&#39;</span></span>
@@ -610,7 +634,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -648,7 +673,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Precompile assets</p>
+    
+<p>Precompile assets</p>
 
 
   </div>
@@ -664,7 +690,8 @@
       
       
         
-        <div class='inline'><p>0.4.0</p>
+        <div class='inline'>
+<p>0.4.0</p>
 </div>
       
     </li>
@@ -706,7 +733,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Global assets sources</p>
+    
+<p>Global assets sources</p>
 
 <p>This is designed for third party integration gems with frontend frameworks
 like Bootstrap, Ember.js or React.</p>
@@ -723,7 +751,8 @@ and make them available to Hanami::Assets.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Ember.js Integration</p>
+        <p class="example_title"><div class='inline'>
+<p>Ember.js Integration</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># lib/hanami/emberjs.rb (third party gem)
@@ -755,7 +784,8 @@ and make them available to Hanami::Assets.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>

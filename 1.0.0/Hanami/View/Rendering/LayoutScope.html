@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::View::Rendering::LayoutScope
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -78,14 +80,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_scope.rb</dd>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_scope.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Scope for layout rendering</p>
+    
+<p>Scope for layout rendering</p>
 
 
   </div>
@@ -101,7 +104,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -144,7 +148,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the classname as string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the classname as string.</p>
 </div></span>
   
 </li>
@@ -167,7 +172,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the requested format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the requested format.</p>
 </div></span>
   
 </li>
@@ -190,7 +196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an inspect String.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an inspect String.</p>
 </div></span>
   
 </li>
@@ -213,7 +220,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It tries to invoke a method for the view or a local for the given key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It tries to invoke a method for the view or a local for the given key.</p>
 </div></span>
   
 </li>
@@ -236,7 +244,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The current locals.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The current locals.</p>
 </div></span>
   
 </li>
@@ -259,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Render a partial or a template within a layout template.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Render a partial or a template within a layout template.</p>
 </div></span>
   
 </li>
@@ -282,7 +292,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The current view.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The current view.</p>
 </div></span>
   
 </li>
@@ -313,6 +324,7 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
+
 <p>Forward all the missing methods to the view scope or to the layout.</p>
 
 
@@ -353,7 +365,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -364,14 +377,18 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L215" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L226" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
     <tr>
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='comment'># FIXME: this isn&#39;t compatible with Hanami 2.0, as it extends a view
+</span>  <span class='comment'># that we want to be frozen in the future
+</span>  <span class='comment'>#
+</span>  <span class='comment'># See https://github.com/hanami/view/issues/130#issuecomment-319326236
+</span>  <span class='kw'>if</span> <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
     <span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_layout'>layout</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
@@ -404,7 +421,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the classname as string</p>
+    
+<p>Returns the classname as string</p>
 
 
   </div>
@@ -422,7 +440,8 @@
       
       
         
-        <div class='inline'><p>classname</p>
+        <div class='inline'>
+<p>classname</p>
 </div>
       
     </li>
@@ -437,7 +456,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -448,7 +468,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L31" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L39" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -475,7 +495,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the requested format.</p>
+    
+<p>Returns the requested format.</p>
 
 
   </div>
@@ -493,7 +514,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the requested format (eg. :html, :json, :xml, etc..)</p>
+        <div class='inline'>
+<p>the requested format (eg. :html, :json, :xml, etc..)</p>
 </div>
       
     </li>
@@ -508,7 +530,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -519,7 +542,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L98" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L109" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -546,7 +569,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns an inspect String</p>
+    
+<p>Returns an inspect String</p>
 
 
   </div>
@@ -564,7 +588,8 @@
       
       
         &mdash;
-        <div class='inline'><p>inspect String (contains classname, objectid in hex, available ivars)</p>
+        <div class='inline'>
+<p>inspect String (contains classname, objectid in hex, available ivars)</p>
 </div>
       
     </li>
@@ -579,7 +604,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -590,7 +616,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L40" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L48" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -620,8 +646,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It tries to invoke a method for the view or a local for the given key.
-If the lookup fails, it returns a null object.</p>
+    
+<p>It tries to invoke a method for the view or a local for the given key. If
+the lookup fails, it returns a null object.</p>
 
 
   </div>
@@ -632,7 +659,8 @@ If the lookup fails, it returns a null object.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Safe method navigation</p>
+        <p class="example_title"><div class='inline'>
+<p>Safe method navigation</p>
 </div></p>
       
       <pre class="example code"><code>&lt;% if local(:plan).overdue? %&gt;
@@ -640,7 +668,8 @@ If the lookup fails, it returns a null object.</p>
 &lt;% end %&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Optional Contents</p>
+        <p class="example_title"><div class='inline'>
+<p>Optional Contents</p>
 </div></p>
       
       <pre class="example code"><code># Given the following layout template
@@ -688,7 +717,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the returning value</p>
+        <div class='inline'>
+<p>the returning value</p>
 </div>
       
     </li>
@@ -703,7 +733,8 @@ end</code></pre>
       
       
         
-        <div class='inline'><p>0.7.0</p>
+        <div class='inline'>
+<p>0.7.0</p>
 </div>
       
     </li>
@@ -714,7 +745,7 @@ end</code></pre>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L164" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L175" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -745,7 +776,8 @@ end</code></pre>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The current locals.</p>
+    
+<p>The current locals.</p>
 
 
   </div>
@@ -763,7 +795,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the current locals</p>
+        <div class='inline'>
+<p>the current locals</p>
 </div>
       
     </li>
@@ -778,7 +811,8 @@ end</code></pre>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -789,7 +823,7 @@ end</code></pre>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L116" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L127" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -816,7 +850,8 @@ end</code></pre>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Render a partial or a template within a layout template.</p>
+    
+<p>Render a partial or a template within a layout template.</p>
 
 
   </div>
@@ -827,7 +862,8 @@ end</code></pre>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Rendering partial</p>
+        <p class="example_title"><div class='inline'>
+<p>Rendering partial</p>
 </div></p>
       
       <pre class="example code"><code># Given a partial under:
@@ -840,7 +876,8 @@ end</code></pre>
 &lt;%= render partial: &#39;shared/sidebar&#39; %&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Rendering template</p>
+        <p class="example_title"><div class='inline'>
+<p>Rendering template</p>
 </div></p>
       
       <pre class="example code"><code># Given a template under:
@@ -853,7 +890,8 @@ end</code></pre>
 &lt;%= render template: &#39;articles/index&#39; %&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Rendering partial, using optional :locals</p>
+        <p class="example_title"><div class='inline'>
+<p>Rendering partial, using optional :locals</p>
 </div></p>
       
       <pre class="example code"><code># Given a partial under:
@@ -898,7 +936,8 @@ end</code></pre>
             
           </span>
           
-            &mdash; <div class='inline'><p>the partial template to render</p>
+            &mdash; <div class='inline'>
+<p>the partial template to render</p>
 </div>
           
         </li>
@@ -910,7 +949,8 @@ end</code></pre>
             
           </span>
           
-            &mdash; <div class='inline'><p>the template to render</p>
+            &mdash; <div class='inline'>
+<p>the template to render</p>
 </div>
           
         </li>
@@ -929,7 +969,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the output of the rendering process</p>
+        <div class='inline'>
+<p>the output of the rendering process</p>
 </div>
       
     </li>
@@ -944,7 +985,8 @@ end</code></pre>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -955,13 +997,16 @@ end</code></pre>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L89" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L97" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
     <tr>
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='const'><span class='object_link'><a href="../Rendering.html#KNOWN_RENDER_TYPES-constant" title="Hanami::View::Rendering::KNOWN_RENDER_TYPES (constant)">KNOWN_RENDER_TYPES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_render_type'>render_type</span><span class='op'>|</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='id identifier rubyid_render_type'>render_type</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+    <span class='op'>::</span><span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../UnknownOrMissingRenderTypeLayoutError.html" title="Hanami::View::UnknownOrMissingRenderTypeLayoutError (class)">UnknownOrMissingRenderTypeLayoutError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Rendering.html#KNOWN_RENDER_TYPES-constant" title="Hanami::View::Rendering::KNOWN_RENDER_TYPES (constant)">KNOWN_RENDER_TYPES</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
   <span class='id identifier rubyid_renderer'>renderer</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span>
 <span class='kw'>end</span></pre>
       </td>
@@ -982,7 +1027,8 @@ end</code></pre>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The current view.</p>
+    
+<p>The current view.</p>
 
 
   </div>
@@ -1000,7 +1046,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the current view</p>
+        <div class='inline'>
+<p>the current view</p>
 </div>
       
     </li>
@@ -1015,7 +1062,8 @@ end</code></pre>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1026,7 +1074,7 @@ end</code></pre>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view/rendering/layout_scope.rb#L107" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view/rendering/layout_scope.rb#L118" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

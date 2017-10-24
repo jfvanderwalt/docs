@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Utils::Hash
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -77,6 +79,11 @@
 
   
   
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>Transproc::Registry</dd>
+  </dl>
+  
   
   
   
@@ -86,14 +93,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/hash.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/hash.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hash on steroids</p>
+    
+<p>Hash on steroids</p>
 
 
   </div>
@@ -109,7 +117,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -123,6 +132,87 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deep_dup-class_method" title="deep_dup (class method)">.<strong>deep_dup</strong>(input)  &#x21d2; ::Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deep duplicate hash values.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deep_symbolize-class_method" title="deep_symbolize (class method)">.<strong>deep_symbolize</strong>(input)  &#x21d2; ::Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deep symbolize the given hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#symbolize-class_method" title="symbolize (class method)">.<strong>symbolize</strong>(input)  &#x21d2; ::Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Symbolize the given hash.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -150,7 +240,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Equality.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Equality.</p>
 </div></span>
   
 </li>
@@ -173,7 +264,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the value object corresponding to the key object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the value object corresponding to the key object.</p>
 </div></span>
   
 </li>
@@ -196,7 +288,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Associates the value given by value with the key given by key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Associates the value given by value with the key given by key.</p>
 </div></span>
   
 </li>
@@ -219,7 +312,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return a deep copy of the current Hanami::Utils::Hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return a deep copy of the current Hanami::Utils::Hash.</p>
 </div></span>
   
 </li>
@@ -242,7 +336,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert in-place all the keys to Symbol instances, nested hashes are converted too.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Convert in-place all the keys to Symbol instances, nested hashes are
+converted too.</p>
 </div></span>
   
 </li>
@@ -265,7 +361,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deletes the key-value pair and returns the value from hsh whose key is equal to key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes the key-value pair and returns the value from hsh whose key is
+equal to key.</p>
 </div></span>
   
 </li>
@@ -288,7 +386,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the hash of the internal @hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the hash of the internal @hash.</p>
 </div></span>
   
 </li>
@@ -313,7 +412,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initialize the hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize the hash.</p>
 </div></span>
   
 </li>
@@ -336,7 +436,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a string describing the internal @hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a string describing the internal @hash.</p>
 </div></span>
   
 </li>
@@ -359,7 +460,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a new array populated with the keys from this hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a new array populated with the keys from this hash.</p>
 </div></span>
   
 </li>
@@ -382,7 +484,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert in-place all the keys to Symbol instances, nested hashes are converted too.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Convert in-place all the keys to Symbol instances, nested hashes are
+converted too.</p>
 </div></span>
   
 </li>
@@ -405,7 +509,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Convert in-place all the keys to Symbol instances.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Convert in-place all the keys to Symbol instances.</p>
 </div></span>
   
 </li>
@@ -428,7 +533,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts into a nested array of [ key, value ] arrays.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts into a nested array of [ key, value ] arrays.</p>
 </div></span>
   
 </li>
@@ -453,7 +559,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a Ruby Hash as duplicated version of self.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a Ruby Hash as duplicated version of self.</p>
 </div></span>
   
 </li>
@@ -462,7 +569,8 @@
     </ul>
   
 
-<div id="constructor_details" class="method_details_list">
+
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -476,7 +584,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initialize the hash</p>
+    
+<p>Initialize the hash</p>
 
 
   </div>
@@ -487,7 +596,8 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Passing a Hash</p>
+        <p class="example_title"><div class='inline'>
+<p>Passing a Hash</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/utils/hash</span><span class='tstring_end'>&#39;</span></span>
@@ -496,7 +606,8 @@
 <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>l</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 23</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Passing a block for default</p>
+        <p class="example_title"><div class='inline'>
+<p>Passing a block for default</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/utils/hash</span><span class='tstring_end'>&#39;</span></span>
@@ -522,7 +633,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the value we want to use to initialize this instance</p>
+        <div class='inline'>
+<p>the value we want to use to initialize this instance</p>
 </div>
       
     </li>
@@ -537,7 +649,8 @@
       
       
         &mdash;
-        <div class='inline'><p>define the default value</p>
+        <div class='inline'>
+<p>define the default value</p>
 </div>
       
     </li>
@@ -560,7 +673,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -571,7 +685,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L46" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L142" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -579,7 +693,7 @@
       <td>
         <pre class="code"><span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
   <span class='ivar'>@hash</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-  <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_default_proc'>default_proc</span> <span class='op'>=</span> <span class='id identifier rubyid_blk'>blk</span>
+  <span class='ivar'>@hash</span><span class='period'>.</span><span class='id identifier rubyid_default_proc'>default_proc</span> <span class='op'>=</span> <span class='id identifier rubyid_blk'>blk</span> <span class='kw'>if</span> <span class='id identifier rubyid_blk'>blk</span>
 <span class='kw'>end</span></pre>
       </td>
     </tr>
@@ -611,7 +725,8 @@
   <strong>This method is part of a private API.</strong>
   You should avoid using this method if possible, as it may be removed or be changed in the future.
 </p>
-<p>Override Ruby’s method_missing in order to provide ::Hash interface</p>
+
+<p>Override Ruby&#39;s method_missing in order to provide ::Hash interface</p>
 
 
   </div>
@@ -629,7 +744,8 @@
       
       
         &mdash;
-        <div class='inline'><p>If doesn’t respond to the given method</p>
+        <div class='inline'>
+<p>If doesn&#39;t respond to the given method</p>
 </div>
       
     </li>
@@ -644,7 +760,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -655,7 +772,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L303" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L399" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -678,6 +795,386 @@
 </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="deep_dup-class_method">
+  
+    .<strong>deep_dup</strong>(input)  &#x21d2; <tt>::Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deep duplicate hash values</p>
+
+<p>The output of this function is a shallow duplicate of the input. Any
+further modification on the input, won&#39;t be reflected on the output and
+viceversa.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic Usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/utils/hash</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='id identifier rubyid_input'>input</span>  <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>b</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Utils::Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deep_dup'>deep_dup</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='comment'># =&gt; {&quot;a&quot;=&gt;{&quot;b&quot;=&gt;{&quot;c&quot;=&gt;[1,2,3]}}}
+</span>
+<span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
+  <span class='comment'># =&gt; Hash
+</span>
+<span class='comment'># mutations on input aren&#39;t reflected on output
+</span>
+<span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>b</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='int'>4</span>
+<span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>b</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'># =&gt; [1, 2, 3]
+</span>
+<span class='comment'># mutations on output aren&#39;t reflected on input
+</span>
+<span class='id identifier rubyid_output'>output</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>b</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_input'>input</span>
+  <span class='comment'># =&gt; {&quot;a&quot;=&gt;{&quot;b&quot;=&gt;{&quot;c&quot;=&gt;[1,2,3,4]}}}</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the shallow duplicate of input</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.1</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L107" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_deep_dup'>deep_dup</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='op'>|</span>
+    <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_v'>v</span>
+                <span class='kw'>when</span> <span class='op'>::</span><span class='const'>Hash</span>
+                  <span class='id identifier rubyid_deep_dup'>deep_dup</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+                <span class='kw'>else</span>
+                  <span class='const'><span class='object_link'><a href="Duplicable.html" title="Hanami::Utils::Duplicable (module)">Duplicable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'><span class='object_link'><a href="Duplicable.html#dup-class_method" title="Hanami::Utils::Duplicable.dup (method)">dup</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
+                <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deep_symbolize-class_method">
+  
+    .<strong>deep_symbolize</strong>(input)  &#x21d2; <tt>::Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deep symbolize the given hash</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic Usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/utils/hash</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Utils::Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deep_symbolize'>deep_symbolize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='comment'># =&gt; {:foo=&gt;&quot;bar&quot;, :baz=&gt;{a:=&gt;1}}
+</span>
+<span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
+  <span class='comment'># =&gt; Hash</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the deep symbolized hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#symbolize-class_method" title="Hanami::Utils::Hash.symbolize (method)">symbolize</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.1</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L66" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_deep_symbolize'>deep_symbolize</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:deep_symbolize_keys</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="symbolize-class_method">
+  
+    .<strong>symbolize</strong>(input)  &#x21d2; <tt>::Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Symbolize the given hash</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Basic Usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/utils/hash</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hanami.html" title="Hanami (module)">Hanami</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Utils.html" title="Hanami::Utils (module)">Utils</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Hanami::Utils::Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_symbolize'>symbolize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='comment'># =&gt; {:foo=&gt;&quot;bar&quot;, :baz=&gt;{&quot;a&quot;=&gt;1}}
+</span>
+<span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
+  <span class='comment'># =&gt; Hash</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the input</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the symbolized hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#deep_symbolize-class_method" title="Hanami::Utils::Hash.deep_symbolize (method)">deep_symbolize</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.1</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div class="source">
+  <p class="source_link">Source:
+    <button class="source_show">Show</button>
+    |
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L44" target="_blank" class="github_url">on GitHub</a>
+  </p>
+
+  <table class="source_code">
+    <tr>
+      <td>
+        <pre class="code"><span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_symbolize'>symbolize</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='symbol'>:symbolize_keys</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -697,7 +1194,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Equality</p>
+    
+<p>Equality</p>
 
 
   </div>
@@ -726,7 +1224,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -737,7 +1236,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L273" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L369" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -764,7 +1263,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the value object corresponding to the key object.</p>
+    
+<p>Retrieves the value object corresponding to the key object.</p>
 
 
   </div>
@@ -783,7 +1283,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the key</p>
+        <div class='inline'>
+<p>the key</p>
 </div>
       
     </li>
@@ -801,7 +1302,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the correspoding value, if present</p>
+        <div class='inline'>
+<p>the correspoding value, if present</p>
 </div>
       
     </li>
@@ -823,7 +1325,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -834,7 +1337,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L225" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L321" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -861,7 +1364,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Associates the value given by value with the key given by key.</p>
+    
+<p>Associates the value given by value with the key given by key.</p>
 
 
   </div>
@@ -880,7 +1384,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the key to assign</p>
+        <div class='inline'>
+<p>the key to assign</p>
 </div>
       
     </li>
@@ -895,7 +1400,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the value to assign</p>
+        <div class='inline'>
+<p>the value to assign</p>
 </div>
       
     </li>
@@ -918,7 +1424,8 @@
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -929,7 +1436,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L237" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L333" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -956,7 +1463,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return a deep copy of the current Hanami::Utils::Hash</p>
+    
+<p>Return a deep copy of the current Hanami::Utils::Hash</p>
 
 
   </div>
@@ -1035,7 +1543,8 @@
       
       
         &mdash;
-        <div class='inline'><p>a deep duplicated self</p>
+        <div class='inline'>
+<p>a deep duplicated self</p>
 </div>
       
     </li>
@@ -1050,7 +1559,8 @@
       
       
         
-        <div class='inline'><p>0.3.1</p>
+        <div class='inline'>
+<p>0.3.1</p>
 </div>
       
     </li>
@@ -1061,7 +1571,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L185" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L281" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1090,7 +1600,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert in-place all the keys to Symbol instances, nested hashes are converted too.</p>
+    
+<p>Convert in-place all the keys to Symbol instances, nested hashes are
+converted too.</p>
 
 
   </div>
@@ -1122,7 +1634,8 @@
       
       
         &mdash;
-        <div class='inline'><p>self</p>
+        <div class='inline'>
+<p>self</p>
 </div>
       
     </li>
@@ -1137,7 +1650,8 @@
       
       
         
-        <div class='inline'><p>1.0.0</p>
+        <div class='inline'>
+<p>1.0.0</p>
 </div>
       
     </li>
@@ -1148,7 +1662,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L88" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L184" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1182,7 +1696,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Deletes the key-value pair and returns the value from hsh whose key is
+    
+<p>Deletes the key-value pair and returns the value from hsh whose key is
 equal to key.</p>
 
 
@@ -1202,7 +1717,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>the key to remove</p>
+        <div class='inline'>
+<p>the key to remove</p>
 </div>
       
     </li>
@@ -1220,7 +1736,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>the value hold by the given key, if present</p>
+        <div class='inline'>
+<p>the value hold by the given key, if present</p>
 </div>
       
     </li>
@@ -1242,7 +1759,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1253,7 +1771,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L212" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L308" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1280,7 +1798,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the hash of the internal @hash</p>
+    
+<p>Returns the hash of the internal @hash</p>
 
 
   </div>
@@ -1309,7 +1828,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1320,7 +1840,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L284" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L380" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1347,7 +1867,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a string describing the internal @hash</p>
+    
+<p>Returns a string describing the internal @hash</p>
 
 
   </div>
@@ -1376,7 +1897,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1387,7 +1909,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L293" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L389" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1414,7 +1936,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new array populated with the keys from this hash</p>
+    
+<p>Returns a new array populated with the keys from this hash</p>
 
 
   </div>
@@ -1432,7 +1955,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>the keys</p>
+        <div class='inline'>
+<p>the keys</p>
 </div>
       
     </li>
@@ -1454,7 +1978,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1465,7 +1990,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L198" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L294" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1492,7 +2017,9 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert in-place all the keys to Symbol instances, nested hashes are converted too.</p>
+    
+<p>Convert in-place all the keys to Symbol instances, nested hashes are
+converted too.</p>
 
 
   </div>
@@ -1524,7 +2051,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>self</p>
+        <div class='inline'>
+<p>self</p>
 </div>
       
     </li>
@@ -1539,7 +2067,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.2</p>
+        <div class='inline'>
+<p>0.3.2</p>
 </div>
       
     </li>
@@ -1550,7 +2079,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L113" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L209" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1584,7 +2113,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Convert in-place all the keys to Symbol instances.</p>
+    
+<p>Convert in-place all the keys to Symbol instances.</p>
 
 
   </div>
@@ -1616,7 +2146,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>self</p>
+        <div class='inline'>
+<p>self</p>
 </div>
       
     </li>
@@ -1631,7 +2162,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -1642,7 +2174,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L65" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L161" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1674,7 +2206,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts into a nested array of [ key, value ] arrays.</p>
+    
+<p>Converts into a nested array of [ key, value ] arrays.</p>
 
 
   </div>
@@ -1692,7 +2225,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>the array</p>
+        <div class='inline'>
+<p>the array</p>
 </div>
       
     </li>
@@ -1714,7 +2248,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1725,7 +2260,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L264" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L360" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -1756,7 +2291,8 @@ equal to key.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a Ruby Hash as duplicated version of self</p>
+    
+<p>Returns a Ruby Hash as duplicated version of self</p>
 
 
   </div>
@@ -1774,7 +2310,8 @@ equal to key.</p>
       
       
         &mdash;
-        <div class='inline'><p>the hash</p>
+        <div class='inline'>
+<p>the hash</p>
 </div>
       
     </li>
@@ -1796,7 +2333,8 @@ equal to key.</p>
       
       
         
-        <div class='inline'><p>0.3.0</p>
+        <div class='inline'>
+<p>0.3.0</p>
 </div>
       
     </li>
@@ -1807,7 +2345,7 @@ equal to key.</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/hash.rb#L248" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/hash.rb#L344" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

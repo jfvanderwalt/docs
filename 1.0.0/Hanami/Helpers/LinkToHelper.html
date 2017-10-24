@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::Helpers::LinkToHelper
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -82,10 +84,11 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>LinkTo Helper</p>
+    
+<p>LinkTo Helper</p>
 
-<p>Including <tt>Hanami::Helpers::LinkTo</tt> will include the
-<tt>link_to</tt> public method.</p>
+<p>Including <code>Hanami::Helpers::LinkTo</code> will include the
+<code>link_to</code> public method.</p>
 
 <p>This helper can be used both in views and templates.</p>
 
@@ -103,7 +106,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -142,7 +146,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generates an anchor tag for the given arguments.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Generates an anchor tag for the given arguments.</p>
 </div></span>
   
 </li>
@@ -183,7 +188,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Generates an anchor tag for the given arguments.</p>
+    
+<p>Generates an anchor tag for the given arguments.</p>
 
 <p>Contents are automatically escaped.</p>
 
@@ -196,35 +202,40 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Both content and URL are strings</p>
+        <p class="example_title"><div class='inline'>
+<p>Both content and URL are strings</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to(&#39;Home&#39;, &#39;/&#39;) %&gt;
   # =&gt; &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Content string with route helper</p>
+        <p class="example_title"><div class='inline'>
+<p>Content string with route helper</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to(&#39;Home&#39;, routes.path(:home)) %&gt;
   # =&gt; &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to(&#39;Home&#39;, routes.path(:home), class: &#39;button&#39;) %&gt;
   # =&gt; &lt;a href=&quot;/&quot; class=&quot;button&quot;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic content escape (XSS protection)</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic content escape (XSS protection)</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to(%(&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;), &#39;/&#39;) %&gt;
   # =&gt; &lt;a href=&quot;/&quot;&gt;&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Automatic content block escape (XSS protection)</p>
+        <p class="example_title"><div class='inline'>
+<p>Automatic content block escape (XSS protection)</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -235,7 +246,8 @@
   # =&gt; &lt;a href=&quot;/&quot;&gt;\n&amp;lt;script&amp;gt;alert(&amp;apos;xss&amp;apos;)&amp;lt;&amp;#x2F;script&amp;gt;\n&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Content as block with string URL</p>
+        <p class="example_title"><div class='inline'>
+<p>Content as block with string URL</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -246,7 +258,8 @@
   # =&gt; &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Content as block</p>
+        <p class="example_title"><div class='inline'>
+<p>Content as block</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -257,7 +270,8 @@
   # =&gt; &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Content as block with HTML attributes</p>
+        <p class="example_title"><div class='inline'>
+<p>Content as block with HTML attributes</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -268,7 +282,8 @@
   # =&gt; &lt;a href=&quot;/&quot; id: &#39;home-link&#39;&gt;Home&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Content as HTML builder block</p>
+        <p class="example_title"><div class='inline'>
+<p>Content as HTML builder block</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -279,7 +294,8 @@
   # =&gt; &lt;a href=&quot;/&quot;&gt;&lt;strong&gt;Home&lt;/strong&gt;&lt;/a&gt;</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Provides both content as first argument and block</p>
+        <p class="example_title"><div class='inline'>
+<p>Provides both content as first argument and block</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -290,14 +306,16 @@
   # =&gt; ArgumentError</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Without any argument</p>
+        <p class="example_title"><div class='inline'>
+<p>Without any argument</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to %&gt;
   # =&gt; ArgumentError</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Without any argument and empty block</p>
+        <p class="example_title"><div class='inline'>
+<p>Without any argument and empty block</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%=
@@ -307,7 +325,8 @@
   # =&gt; ArgumentError</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>With only content</p>
+        <p class="example_title"><div class='inline'>
+<p>With only content</p>
 </div></p>
       
       <pre class="example code"><code>&lt;%= link_to &#39;Home&#39; %&gt;
@@ -323,7 +342,8 @@
         <span class="signature">#<strong>link_to</strong>(content, url, options)  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Use string as content</p>
+    
+<p>Use string as content</p>
 
 
   </div>
@@ -342,7 +362,8 @@
       
       
         &mdash;
-        <div class='inline'><p>content used in the a tag</p>
+        <div class='inline'>
+<p>content used in the a tag</p>
 </div>
       
     </li>
@@ -357,7 +378,8 @@
       
       
         &mdash;
-        <div class='inline'><p>url used in href attribute</p>
+        <div class='inline'>
+<p>url used in href attribute</p>
 </div>
       
     </li>
@@ -372,7 +394,8 @@
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the a tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the a tag</p>
 </div>
       
     </li>
@@ -388,7 +411,8 @@
         <span class="signature">#<strong>link_to</strong>(url, options, &amp;blk)  &#x21d2; <tt>String</tt> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Use block as content</p>
+    
+<p>Use block as content</p>
 
 
   </div>
@@ -407,7 +431,8 @@
       
       
         &mdash;
-        <div class='inline'><p>url used in href attribute</p>
+        <div class='inline'>
+<p>url used in href attribute</p>
 </div>
       
     </li>
@@ -422,7 +447,8 @@
       
       
         &mdash;
-        <div class='inline'><p>HTML attributes to pass to the a tag</p>
+        <div class='inline'>
+<p>HTML attributes to pass to the a tag</p>
 </div>
       
     </li>
@@ -437,7 +463,8 @@
       
       
         &mdash;
-        <div class='inline'><p>A block that describes the contents of the a tag</p>
+        <div class='inline'>
+<p>A block that describes the contents of the a tag</p>
 </div>
       
     </li>
@@ -461,7 +488,8 @@
       
       
         &mdash;
-        <div class='inline'><p>HTML markup for the link</p>
+        <div class='inline'>
+<p>HTML markup for the link</p>
 </div>
       
     </li>
@@ -478,7 +506,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if the signature isn’t respected</p>
+        <div class='inline'>
+<p>if the signature isn&#39;t respected</p>
 </div>
       
     </li>
@@ -500,7 +529,8 @@
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>

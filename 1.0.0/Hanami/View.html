@@ -10,7 +10,7 @@
     <title>
       Module: Hanami::View
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -75,8 +77,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-view-1.0.0/lib/hanami/view.rb<span class="defines">,<br />
-  gems/gems/hanami-view-1.0.0/lib/hanami/view/dsl.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/errors.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/escape.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/version.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/template.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/inheritable.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/configuration.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/scope.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/registry.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_local.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_layout.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/view_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_scope.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_file.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/null_template.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template_name.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/layout_registry.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/template_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/templates_finder.rb,<br /> gems/gems/hanami-view-1.0.0/lib/hanami/view/rendering/partial_templates_finder.rb</span>
+    <dd>gems/gems/hanami-view-1.0.1/lib/hanami/view.rb<span class="defines">,<br />
+  gems/gems/hanami-view-1.0.1/lib/hanami/view/dsl.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/errors.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/escape.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/version.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/template.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/inheritable.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/configuration.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/scope.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/registry.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_local.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_layout.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/view_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_scope.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_file.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/null_template.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template_name.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/layout_registry.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/template_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/templates_finder.rb,<br /> gems/gems/hanami-view-1.0.1/lib/hanami/view/rendering/partial_templates_finder.rb</span>
 </dd>
   </dl>
   
@@ -84,7 +86,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>View</p>
+    
+<p>View</p>
 
 
   </div>
@@ -100,7 +103,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -115,7 +119,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="View/Configuration.html" title="Hanami::View::Configuration (class)">Configuration</a></span>, <span class='object_link'><a href="View/Error.html" title="Hanami::View::Error (class)">Error</a></span>, <span class='object_link'><a href="View/MissingFormatError.html" title="Hanami::View::MissingFormatError (class)">MissingFormatError</a></span>, <span class='object_link'><a href="View/MissingTemplateError.html" title="Hanami::View::MissingTemplateError (class)">MissingTemplateError</a></span>, <span class='object_link'><a href="View/MissingTemplateLayoutError.html" title="Hanami::View::MissingTemplateLayoutError (class)">MissingTemplateLayoutError</a></span>, <span class='object_link'><a href="View/Template.html" title="Hanami::View::Template (class)">Template</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="View/Configuration.html" title="Hanami::View::Configuration (class)">Configuration</a></span>, <span class='object_link'><a href="View/Error.html" title="Hanami::View::Error (class)">Error</a></span>, <span class='object_link'><a href="View/MissingFormatError.html" title="Hanami::View::MissingFormatError (class)">MissingFormatError</a></span>, <span class='object_link'><a href="View/MissingTemplateError.html" title="Hanami::View::MissingTemplateError (class)">MissingTemplateError</a></span>, <span class='object_link'><a href="View/MissingTemplateLayoutError.html" title="Hanami::View::MissingTemplateLayoutError (class)">MissingTemplateLayoutError</a></span>, <span class='object_link'><a href="View/Template.html" title="Hanami::View::Template (class)">Template</a></span>, <span class='object_link'><a href="View/UnknownOrMissingRenderTypeLayoutError.html" title="Hanami::View::UnknownOrMissingRenderTypeLayoutError (class)">UnknownOrMissingRenderTypeLayoutError</a></span>
     
   
 </p>
@@ -126,7 +130,8 @@
       <dt id="VERSION-constant" class="">VERSION =
         <div class="docstring">
   <div class="discussion">
-    <p>Defines the version</p>
+    
+<p>Defines the version</p>
 
 
   </div>
@@ -142,7 +147,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -151,7 +157,7 @@
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.0</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1.0.1</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
     
   </dl>
 
@@ -186,7 +192,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Configure the framework.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Configure the framework.</p>
 </div></span>
   
 </li>
@@ -209,7 +216,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Duplicate the framework and generate modules for the target application.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Duplicate the framework and generate modules for the target application.</p>
 </div></span>
   
 </li>
@@ -241,8 +249,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Configure the framework.
-It yields the given block in the context of the configuration</p>
+    
+<p>Configure the framework. It yields the given block in the context of the
+configuration</p>
 
 
   </div>
@@ -273,7 +282,8 @@ It yields the given block in the context of the configuration</p>
       
       
         &mdash;
-        <div class='inline'><p>the configuration block</p>
+        <div class='inline'>
+<p>the configuration block</p>
 </div>
       
     </li>
@@ -296,7 +306,8 @@ It yields the given block in the context of the configuration</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -307,7 +318,7 @@ It yields the given block in the context of the configuration</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view.rb#L45" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view.rb#L45" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -334,13 +345,10 @@ It yields the given block in the context of the configuration</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Duplicate the framework and generate modules for the target application</p>
+    
+<p>Duplicate the framework and generate modules for the target application</p>
 
-<p>module MyApp::Views::Dashboard
-   class Index
-     include MyApp::View
-   end
- end</p>
+<p>module MyApp::Views::Dashboard  class Index  include MyApp::View  end  end</p>
 
 
   </div>
@@ -351,7 +359,8 @@ It yields the given block in the context of the configuration</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Basic usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Basic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -369,7 +378,8 @@ It yields the given block in the context of the configuration</p>
 </span><span class='comment'># 5. Configure MyApp::Views as the default namespace for views</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Compare code</p>
+        <p class="example_title"><div class='inline'>
+<p>Compare code</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -399,7 +409,8 @@ It yields the given block in the context of the configuration</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Custom views module</p>
+        <p class="example_title"><div class='inline'>
+<p>Custom views module</p>
 </div></p>
       
       <pre class="example code"><code>require &#39;hanami/view
@@ -417,7 +428,8 @@ module MyApp::Vs::Dashboard
 end</code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nil views module</p>
+        <p class="example_title"><div class='inline'>
+<p>Nil views module</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -434,7 +446,8 @@ end</code></pre>
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Block usage</p>
+        <p class="example_title"><div class='inline'>
+<p>Block usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hanami/view</span><span class='tstring_end'>&#39;</span></span>
@@ -462,7 +475,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace of the application</p>
+        <div class='inline'>
+<p>the Ruby namespace of the application</p>
 </div>
       
     </li>
@@ -479,8 +493,8 @@ end</code></pre>
       
       
         &mdash;
-        <div class='inline'><p>the optional namespace where the application’s
-views will live</p>
+        <div class='inline'>
+<p>the optional namespace where the application&#39;s views will live</p>
 </div>
       
     </li>
@@ -495,7 +509,8 @@ views will live</p>
       
       
         &mdash;
-        <div class='inline'><p>an optional block to configure the framework</p>
+        <div class='inline'>
+<p>an optional block to configure the framework</p>
 </div>
       
     </li>
@@ -513,7 +528,8 @@ views will live</p>
       
       
         &mdash;
-        <div class='inline'><p>a copy of Hanami::View</p>
+        <div class='inline'>
+<p>a copy of Hanami::View</p>
 </div>
       
     </li>
@@ -539,7 +555,8 @@ views will live</p>
       
       
         
-        <div class='inline'><p>0.2.0</p>
+        <div class='inline'>
+<p>0.2.0</p>
 </div>
       
     </li>
@@ -550,7 +567,7 @@ views will live</p>
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/view/blob/v1.0.0/lib/hanami/view.rb#L203" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/view/blob/v1.0.1/lib/hanami/view.rb#L203" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">

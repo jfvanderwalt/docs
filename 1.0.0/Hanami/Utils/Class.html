@@ -10,7 +10,7 @@
     <title>
       Class: Hanami::Utils::Class
       
-        &mdash; Hanami Docs 1.0.0
+        &mdash; Hanami API docs | v1.0.0
     
     </title>
 
@@ -22,7 +22,7 @@
     
 
     <link href="http://hanamirb.org/images/favicon.ico" rel="icon" type="image/ico">
-    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 
   </head>
   <body>
@@ -30,7 +30,7 @@
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Hanami docs</a>
+      <a class="navbar-brand" href="/">Hanami API docs</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -38,7 +38,9 @@
 
         <ul class="navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="http://hanamirb.org">Original site</a>
+            <select id="select-version" class="form-control">
+              ["<option value='/1.1.0.rc1'>v1.1.0.rc1</option>", "<option value='/1.0.0'>v1.0.0</option>"]
+            </select>
           </li>
         </ul>
       </div>
@@ -86,14 +88,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>gems/gems/hanami-utils-1.0.0/lib/hanami/utils/class.rb</dd>
+    <dd>gems/gems/hanami-utils-1.0.4/lib/hanami/utils/class.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Class utilities</p>
+    
+<p>Class utilities</p>
 
 
   </div>
@@ -109,7 +112,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -148,7 +152,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Loads a class for the given name, only if it’s defined.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Loads a class for the given name, only if it&#39;s defined.</p>
 </div></span>
   
 </li>
@@ -171,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Loads a class for the given name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Loads a class for the given name.</p>
 </div></span>
   
 </li>
@@ -194,7 +200,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Loads a class from the given pattern name and namespace.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Loads a class from the given pattern name and namespace.</p>
 </div></span>
   
 </li>
@@ -220,7 +227,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Loads a class for the given name, only if it’s defined.</p>
+    
+<p>Loads a class for the given name, only if it&#39;s defined.</p>
 
 
   </div>
@@ -264,7 +272,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the specific class name</p>
+        <div class='inline'>
+<p>the specific class name</p>
 </div>
       
     </li>
@@ -281,7 +290,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace where we want to perform the lookup.</p>
+        <div class='inline'>
+<p>the Ruby namespace where we want to perform the lookup.</p>
 </div>
       
     </li>
@@ -299,7 +309,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the Ruby constant, or nil if not found.</p>
+        <div class='inline'>
+<p>the Ruby constant, or nil if not found.</p>
 </div>
       
     </li>
@@ -314,7 +325,8 @@
       
       
         
-        <div class='inline'><p>0.8.0</p>
+        <div class='inline'>
+<p>0.8.0</p>
 </div>
       
     </li>
@@ -325,7 +337,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/class.rb#L71" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/class.rb#L71" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -352,7 +364,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Loads a class for the given name.</p>
+    
+<p>Loads a class for the given name.</p>
 
 
   </div>
@@ -399,7 +412,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the specific class name</p>
+        <div class='inline'>
+<p>the specific class name</p>
 </div>
       
     </li>
@@ -416,7 +430,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace where we want to perform the lookup.</p>
+        <div class='inline'>
+<p>the Ruby namespace where we want to perform the lookup.</p>
 </div>
       
     </li>
@@ -434,7 +449,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the found Ruby constant.</p>
+        <div class='inline'>
+<p>the found Ruby constant.</p>
 </div>
       
     </li>
@@ -451,7 +467,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if no constant can be found.</p>
+        <div class='inline'>
+<p>if no constant can be found.</p>
 </div>
       
     </li>
@@ -466,7 +483,8 @@
       
       
         
-        <div class='inline'><p>0.1.0</p>
+        <div class='inline'>
+<p>0.1.0</p>
 </div>
       
     </li>
@@ -477,7 +495,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/class.rb#L40" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/class.rb#L40" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
@@ -504,7 +522,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Loads a class from the given pattern name and namespace</p>
+    
+<p>Loads a class from the given pattern name and namespace</p>
 
 
   </div>
@@ -554,7 +573,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the class name pattern</p>
+        <div class='inline'>
+<p>the class name pattern</p>
 </div>
       
     </li>
@@ -571,7 +591,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the Ruby namespace where we want to perform the lookup.</p>
+        <div class='inline'>
+<p>the Ruby namespace where we want to perform the lookup.</p>
 </div>
       
     </li>
@@ -589,7 +610,8 @@
       
       
         &mdash;
-        <div class='inline'><p>the found Ruby constant.</p>
+        <div class='inline'>
+<p>the found Ruby constant.</p>
 </div>
       
     </li>
@@ -606,7 +628,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if no constant can be found.</p>
+        <div class='inline'>
+<p>if no constant can be found.</p>
 </div>
       
     </li>
@@ -628,7 +651,8 @@
       
       
         
-        <div class='inline'><p>0.3.1</p>
+        <div class='inline'>
+<p>0.3.1</p>
 </div>
       
     </li>
@@ -639,7 +663,7 @@
   <p class="source_link">Source:
     <button class="source_show">Show</button>
     |
-    <a href="https://github.com/hanami/utils/blob/v1.0.0/lib/hanami/utils/class.rb#L112" target="_blank" class="github_url">on GitHub</a>
+    <a href="https://github.com/hanami/utils/blob/v1.0.4/lib/hanami/utils/class.rb#L112" target="_blank" class="github_url">on GitHub</a>
   </p>
 
   <table class="source_code">
